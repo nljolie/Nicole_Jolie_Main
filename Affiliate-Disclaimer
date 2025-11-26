@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Disclaimer - Nicole Jolie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="global-header"></div>
+
+    <section class="bg-cream" style="padding: 100px 0; min-height: 60vh;">
+        <div class="container">
+            <div style="background: white; padding: 40px; border-radius: 8px; border: 1px solid #ddd; max-width: 900px; margin: 0 auto;">
+                
+                <h1 class="text-rust" style="margin-bottom: 30px;">Affiliate Disclaimer</h1>
+                
+                <div style="font-family: var(--font-body); color: var(--text-dark); line-height: 1.8;">
+                    <p><strong>Last Updated: November 2025</strong></p>
+                    <p>Affiliate Disclaimer
+Effective Date: September 28, 2025
+AFFILIATE RELATIONSHIP DISCLOSURE
+NicoleJolie.com may receive compensation when you click on certain links or purchase products/services through our recommendations.
+FTC COMPLIANCE
+In compliance with FTC guidelines, we disclose that some links on this website are affiliate links. This means we may earn a commission if you make a purchase through these links, at no additional cost to you.
+TYPES OF AFFILIATE RELATIONSHIPS
+We may have affiliate relationships with providers of:
+AI and automation tools recommended for professional discovery
+Educational platforms for GEO and AEO training
+Professional development resources
+Technology solutions for AI Trust building
+Business tools that support credibility enhancement
+RECOMMENDATION INTEGRITY
+Our affiliate relationships do NOT influence our collaborative consulting recommendations. We only recommend products or services that:
+Align with our AI Trust Consultant expertise
+Support effective GEO/AEO implementation
+Have proven value for professional discovery
+We would recommend regardless of compensation
+NO GUARANTEES
+Affiliate product recommendations come with NO GUARANTEES of results. Your success with any recommended product depends entirely on your implementation and market factors beyond our control.
+COLLABORATIVE CONSULTING FOCUS
+Our primary business model is collaborative consulting, not affiliate commissions. Affiliate income is supplemental and does not compromise our commitment to providing honest, strategic guidance.
+TRANSPARENCY COMMITMENT
+We are committed to transparency regarding all affiliate relationships and will clearly identify affiliate links where practical.
+CLIENT RESPONSIBILITY
+You are solely responsible for:
+Researching any products before purchase
+Understanding terms and conditions of affiliate products
+Your experience with recommended products or services
+Any results achieved through affiliate product usage
+Contact Information:
+c/o Nevada Registered Agent
+732 S 6TH ST, STE V
+LAS VEGAS, NV 89101
+(775) 401-6800
+</p>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="global-footer"></div>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+</body>
+</html>
+
