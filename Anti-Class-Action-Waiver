@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Class Action Waiver - Nicole Jolie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="global-header"></div>
+
+    <section class="bg-cream" style="padding: 100px 0; min-height: 60vh;">
+        <div class="container">
+            <div style="background: white; padding: 40px; border-radius: 8px; border: 1px solid #ddd; max-width: 900px; margin: 0 auto;">
+                
+                <h1 class="text-rust" style="margin-bottom: 30px;">Anti-Class Action Waiver</h1>
+                
+                <div style="font-family: var(--font-body); color: var(--text-dark); line-height: 1.8;">
+                    <p><strong>Last Updated: November 2025</strong></p>
+                    <p>Anti-Class Action Provision
+Effective Date: September 28, 2025
+MANDATORY INDIVIDUAL ARBITRATION
+Any dispute, claim, or controversy arising out of or relating to your use of nicolejolie.com and /or NicoleJolie.com services must be resolved through binding individual arbitration.
+CLASS ACTION WAIVER
+YOU EXPRESSLY WAIVE YOUR RIGHT TO PARTICIPATE IN ANY CLASS ACTION, CLASS ARBITRATION, OR REPRESENTATIVE ACTION against nicolejolie.com, NicoleJolie.com or Worthy of Success, LLC.
+INDIVIDUAL BASIS ONLY
+All disputes must be brought in your individual capacity only. You cannot:
+Join your claim with those of other parties
+Participate in a class action lawsuit
+Seek relief on behalf of other similarly situated individuals
+Consolidate your dispute with others
+ARBITRATION RULES
+Arbitration will be conducted under the Commercial Arbitration Rules of the American Arbitration Association (AAA) in Austin, Texas.
+COLLABORATIVE CONSULTING DISPUTES
+Given the collaborative nature of our consulting services, disputes typically arise from:
+Implementation challenges (client responsibility)
+Expectation management (no guarantees provided)
+Results attribution (client's efforts determine outcomes)
+WAIVER ENFORCEABILITY
+If this class action waiver is found unenforceable, the entire arbitration provision shall be void, and disputes will be resolved in Texas state courts.
+SURVIVAL
+This provision survives termination of your relationship with NicoleJolie.com and applies to all past, present, and future claims.
+ACKNOWLEDGMENT
+By using our services, you acknowledge understanding this provision and agree to resolve disputes individually through arbitration only.
+Contact Information:
+Attn:  Worthy of Success LLC
+c/o Nevada Registered Agent
+732 S 6TH ST, STE V
+LAS VEGAS, NV 89101
+(775) 401-6800
+</p>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="global-footer"></div>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+</body>
+</html>
+
