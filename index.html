@@ -32,13 +32,6 @@
           "@type": "Service",
           "name": "Gen X AI Rising Community",
           "description": "A community for Gen X entrepreneurs to learn AI Search visibility and automation frameworks.",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "12",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
           "offers": {
             "@type": "Offer",
             "price": "97.00",
@@ -50,36 +43,9 @@
         {
           "@type": "FAQPage",
           "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Why is the founding-member price only $97 for the entire year?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Because this offer is for the people who recognize value when it appears. This $97 founding-member rate is a gift for early adopters. It will never return." }
-            },
-            {
-              "@type": "Question",
-              "name": "Will this $97 price ever be offered again?",
-              "acceptedAnswer": { "@type": "Answer", "text": "No. The founding-member rate is available once, until December 15, 2025. After that, enrollment reopens at $497 per year." }
-            },
-            {
-              "@type": "Question",
-              "name": "Is the $97 payment refundable?",
-              "acceptedAnswer": { "@type": "Answer", "text": "No. This is a one-time, non-refundable annual membership. This community is built for people who show up and take action." }
-            },
-            {
-              "@type": "Question",
-              "name": "What do I get as a founding member?",
-              "acceptedAnswer": { "@type": "Answer", "text": "You get weekly live calls, live business reviews, actionable Q&A sessions, practical AI Search frameworks, and automation strategies." }
-            },
-            {
-              "@type": "Question",
-              "name": "When do the weekly calls begin?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Weekly calls begin after December 15th, 2025." }
-            },
-            {
-              "@type": "Question",
-              "name": "What if I'm not tech-savvy?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Perfect. This community is built specifically for Gen X entrepreneurs who want clarity, not chaos. Everything is broken down simply." }
-            }
+            { "@type": "Question", "name": "Why is the founding-member price only $97?", "acceptedAnswer": { "@type": "Answer", "text": "This rate is a gift for early adopters. It will never return." } },
+            { "@type": "Question", "name": "Will this $97 price ever be offered again?", "acceptedAnswer": { "@type": "Answer", "text": "No. After Dec 15, 2025, it rises to $297/year." } },
+            { "@type": "Question", "name": "Is the $97 payment refundable?", "acceptedAnswer": { "@type": "Answer", "text": "No. This is a non-refundable membership for committed entrepreneurs." } }
           ]
         }
       ]
@@ -87,35 +53,42 @@
     </script>
 
     <style>
-        /* Typography Hierarchy - "Pop" Factor */
-        h1.hero-title { font-size: 64px; line-height: 1.05; margin-bottom: 30px; letter-spacing: -1px; }
-        h2.section-title { font-size: 48px; margin-bottom: 30px; line-height: 1.1; }
-        h3.sub-title { font-size: 32px; font-weight: 500; font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: var(--primary-rust); }
-        p.body-text { font-size: 20px; font-family: 'Inter', sans-serif; line-height: 1.7; margin-bottom: 25px; }
+        /* SOFTENED CORNERS & BETTER SPACING */
+        .container { max-width: 1100px; }
         
-        /* Visual Depth - No Flat Boxes */
+        /* Rounded Visuals */
+        .depth-card, .depth-card-dark, .video-wrapper, .btn-primary, img.depth-card {
+            border-radius: 20px !important;
+        }
+
+        /* Typography Updates */
+        h1.hero-title { font-size: 60px; line-height: 1.1; margin-bottom: 25px; letter-spacing: -0.5px; }
+        h2.section-title { font-size: 46px; margin-bottom: 30px; line-height: 1.15; }
+        h3.sub-title { font-size: 28px; font-weight: 600; font-family: 'Cormorant Garamond', serif; margin-bottom: 15px; color: var(--primary-rust); }
+        p.body-text { font-size: 19px; font-family: 'Inter', sans-serif; line-height: 1.6; margin-bottom: 20px; }
+        
+        /* Depth & Padding Fixes */
         .depth-card {
             background: #fff;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            border-radius: 4px; 
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
             border: 1px solid rgba(0,0,0,0.05);
+            padding: 35px !important; /* Reduced from 60px */
             transform: translateY(0);
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
         }
-        .depth-card:hover { transform: translateY(-8px); box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3); }
+        .depth-card:hover { transform: translateY(-5px); box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.2); }
         
-        /* Dark Mode Depth */
         .depth-card-dark {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.15);
             backdrop-filter: blur(10px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            padding: 30px !important;
+            border-radius: 20px;
         }
 
         /* Video Styling */
         .video-wrapper {
             position: relative;
-            border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
             border: 4px solid white;
@@ -123,23 +96,24 @@
         .video-wrapper video { width: 100%; display: block; }
 
         /* Lists & FAQ */
-        .check-list { list-style: none; margin-top: 30px; }
-        .check-list li { font-size: 20px; margin-bottom: 20px; display: flex; align-items: flex-start; gap: 20px; }
-        .check-list i { color: var(--accent-ochre); margin-top: 6px; font-size: 24px; }
+        .check-list { list-style: none; margin-top: 20px; }
+        .check-list li { font-size: 19px; margin-bottom: 15px; display: flex; align-items: flex-start; gap: 15px; }
+        .check-list i { color: var(--accent-ochre); margin-top: 5px; font-size: 22px; }
         
-        .faq-item { border-bottom: 1px solid rgba(146, 63, 38, 0.2); padding: 30px 0; }
-        .faq-question { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; cursor: pointer; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center; }
+        .faq-item { border-bottom: 1px solid rgba(146, 63, 38, 0.15); padding: 25px 0; }
+        .faq-question { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; cursor: pointer; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center; }
         .faq-answer { font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.6; margin-top: 15px; color: #444; display: none; }
         .faq-item.active .faq-answer { display: block; }
         .faq-item.active .faq-question { color: var(--primary-rust); }
 
         /* Mobile Adjustments */
         @media (max-width: 768px) {
-            h1.hero-title { font-size: 40px; }
-            h2.section-title { font-size: 34px; }
-            h3.sub-title { font-size: 26px; }
-            p.body-text { font-size: 18px; }
-            .container { padding: 0 25px; }
+            h1.hero-title { font-size: 38px; }
+            h2.section-title { font-size: 32px; }
+            h3.sub-title { font-size: 24px; }
+            p.body-text { font-size: 17px; }
+            .container { padding: 0 20px; }
+            .depth-card { padding: 25px !important; }
         }
     </style>
 </head>
@@ -161,39 +135,47 @@
         </picture>
     </section>
 
-    <section class="bg-cream" style="padding: 120px 0;">
-        <div class="container" style="max-width: 900px;">
+    <section class="bg-cream" style="padding: 100px 0;">
+        <div class="container" style="max-width: 950px;">
             <h1 class="hero-title text-rust" style="text-align: center;">Transform Your Business So You Get Found in AI Search</h1>
-            <h3 class="sub-title text-dark" style="text-align: center; margin-bottom: 50px; line-height: 1.4;">
+            
+            <h3 class="sub-title text-dark" style="text-align: center; margin-bottom: 40px; line-height: 1.4;">
                 Gen X AI Rising is a community for Gen X entrepreneurs who are ready to stop being invisible to AI and start getting recommended, remembered, and chosen.
             </h3>
+            
             <div style="text-align: center;">
                 <p class="body-text">Founding Member rate: <strong>$97 for the full year</strong> until December 15, 2025.</p>
-                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" class="btn-primary" style="font-size: 22px; padding: 20px 50px; display: inline-block; margin-top: 20px; box-shadow: 0 10px 20px rgba(146, 63, 38, 0.3);">Join Gen X AI Rising Now</a>
+                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="font-size: 22px; padding: 20px 50px; display: inline-block; margin-top: 20px; box-shadow: 0 10px 20px rgba(146, 63, 38, 0.3);">Join Gen X AI Rising Now</a>
             </div>
         </div>
     </section>
 
-    <section class="bg-dark" style="padding: 120px 0;">
+    <section class="bg-dark" style="padding: 100px 0;">
         <div class="container">
             <h2 class="section-title text-ochre">AI Is Now the Gatekeeper. <br>Most Gen X Businesses Are Locked Out.</h2>
-            <div style="max-width: 800px;">
-                <p class="body-text text-light">Your next clients are no longer scrolling Google results. They are opening AI assistants and asking for the best option.</p>
+            
+            <div style="max-width: 850px;">
+                <p class="body-text text-light">Your next clients are no longer scrolling Google results or wandering through websites. They are opening AI assistants and asking for the best option.</p>
+                
                 <div style="margin: 40px 0; border-left: 6px solid var(--accent-ochre); padding-left: 40px;">
-                    <p class="body-text text-light" style="font-style: italic; font-size: 24px;">"Who should I hire for this?"</p>
+                    <p class="body-text text-light" style="font-style: italic; font-size: 24px; margin-bottom: 15px;">"Who should I hire for this?"</p>
                     <p class="body-text text-light" style="font-style: italic; font-size: 24px;">"Which coach is best for..."</p>
                 </div>
-                <p class="body-text text-light">These systems do not care how long you have been in business. <strong>Because AI cannot see them clearly enough to recommend them.</strong></p>
+
+                <p class="body-text text-light">These systems do not care how long you have been in business. They care whether they can clearly understand who you are, what you do, and why you are credible.</p>
+                <p class="body-text text-light">Most Gen X entrepreneurs are invisible here. Not because they lack skill. Not because they lack experience. <strong>Because AI cannot see them clearly enough to recommend them.</strong></p>
                 <p class="body-text text-light">This is the problem Gen X AI Rising is built to solve.</p>
-                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" class="btn-primary" style="margin-top: 30px; display: inline-block;">Become Visible in AI Search</a>
+                
+                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="margin-top: 30px; display: inline-block;">Become Visible in AI Search</a>
             </div>
         </div>
     </section>
 
-    <section class="bg-cream" style="padding: 120px 0; text-align: center;">
+    <section class="bg-cream" style="padding: 100px 0; text-align: center;">
         <div class="container">
             <h2 class="section-title text-rust">See What It's Like to Work With Nicole</h2>
-            <p class="body-text" style="margin-bottom: 60px;">Real results from entrepreneurs who transformed their visibility.</p>
+            <p class="body-text" style="margin-bottom: 50px;">Real results from entrepreneurs who transformed their visibility.</p>
+            
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
                 <div class="video-wrapper">
                     <video controls preload="none">
@@ -217,22 +199,37 @@
         </div>
     </section>
 
-    <section class="bg-cream" style="padding: 120px 0; border-top: 1px solid #ddd;">
+    <section class="bg-dark" style="padding: 120px 0; border-top: 1px solid rgba(255,255,255,0.1);">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 80px; align-items: center;">
-                <div>
-                    <h2 class="section-title text-rust">You Are Losing Clients You Never Even See</h2>
-                    <p class="body-text">When AI cannot recognize you, it recommends someone else.</p>
+            <h2 class="section-title text-ochre" style="text-align: center; margin-bottom: 60px;">What Changes When AI Can Finally See You</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px;">
+                
+                <div style="padding: 40px; background: rgba(255,255,255,0.03); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+                    <h3 class="sub-title text-light" style="opacity: 0.8;">Before: The Struggle</h3>
                     <ul class="check-list">
-                        <li><i class="fas fa-arrow-right"></i> Someone younger.</li>
-                        <li><i class="fas fa-arrow-right"></i> Someone louder.</li>
-                        <li><i class="fas fa-arrow-right"></i> Someone less qualified, but readable to AI.</li>
+                        <li><i class="fas fa-times" style="color: rgba(255,255,255,0.4);"></i> <span class="text-light">Hoping people find your site</span></li>
+                        <li><i class="fas fa-times" style="color: rgba(255,255,255,0.4);"></i> <span class="text-light">Posting content that disappears</span></li>
+                        <li><i class="fas fa-times" style="color: rgba(255,255,255,0.4);"></i> <span class="text-light">Relying on referrals alone</span></li>
+                        <li><i class="fas fa-times" style="color: rgba(255,255,255,0.4);"></i> <span class="text-light">Losing clients you never see</span></li>
                     </ul>
                 </div>
-                <div class="depth-card" style="padding: 40px; background: white;">
-                    <p class="body-text">You never see the lead. You never see the missed opportunity. You only feel the slow bleed: fewer inquiries, weaker pipeline, more doubt.</p>
-                    <p class="body-text" style="font-size: 24px; color: var(--primary-rust); font-weight: 700;">Your expertise is not the issue. Your visibility is.</p>
+
+                <div class="depth-card bg-cream" style="padding: 40px; border-left: 8px solid var(--primary-rust);">
+                    <h3 class="sub-title text-rust">After: The Gen X AI Rising Way</h3>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check-circle"></i> Being recommended in AI search</li>
+                        <li><i class="fas fa-check-circle"></i> Being seen as a clear, trusted option</li>
+                        <li><i class="fas fa-check-circle"></i> Attracting leads who already understand your value</li>
+                        <li><i class="fas fa-check-circle"></i> Outpacing competitors with authority</li>
+                    </ul>
                 </div>
+
+            </div>
+            
+            <div style="margin-top: 60px; text-align: center;">
+                <p class="body-text text-light">This is not about chasing hype. This is about protecting the next decade of your business.</p>
+                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="margin-top: 20px; display: inline-block;">Join Gen X AI Rising Before December 15</a>
             </div>
         </div>
     </section>
@@ -244,98 +241,73 @@
         </picture>
     </section>
 
-    <section class="bg-dark" style="padding: 120px 0;">
+    <section class="bg-cream" style="padding: 120px 0;">
         <div class="container">
-            <h2 class="section-title text-ochre" style="text-align: center;">What Changes When AI Can Finally See You</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px; margin-top: 60px;">
-                <div style="padding: 40px; border-left: 1px solid rgba(255,255,255,0.2);">
-                    <h3 class="sub-title text-light" style="opacity: 0.6;">You go from:</h3>
-                    <ul class="check-list">
-                        <li><i class="fas fa-times text-light" style="opacity: 0.5;"></i> Hoping people find your site</li>
-                        <li><i class="fas fa-times text-light" style="opacity: 0.5;"></i> Posting content that disappears</li>
-                        <li><i class="fas fa-times text-light" style="opacity: 0.5;"></i> Relying on referrals alone</li>
-                    </ul>
+            <h2 class="section-title text-rust" style="text-align: center; margin-bottom: 60px;">What You Get as a Founding Member</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="depth-card">
+                    <h3 class="sub-title" style="font-size: 24px;">1. Weekly Live Sessions</h3>
+                    <p class="body-text" style="font-size: 17px;">Focused on AI Search visibility, authority building, and practical automations. Clear topics. Straight answers.</p>
                 </div>
-                <div class="depth-card bg-cream" style="padding: 40px; transform: scale(1.05);">
-                    <h3 class="sub-title text-rust">To:</h3>
-                    <ul class="check-list">
-                        <li><i class="fas fa-check-circle"></i> Being recommended in AI search</li>
-                        <li><i class="fas fa-check-circle"></i> Being seen as a clear, trusted option</li>
-                        <li><i class="fas fa-check-circle"></i> Attracting leads who already understand your value</li>
-                    </ul>
+                <div class="depth-card">
+                    <h3 class="sub-title" style="font-size: 24px;">2. Visibility Frameworks</h3>
+                    <p class="body-text" style="font-size: 17px;">Step-by-step guidance on how to define your entity, structure your offers, and strengthen the signals that matter to AI.</p>
+                </div>
+                <div class="depth-card">
+                    <h3 class="sub-title" style="font-size: 24px;">3. Automation Playbooks</h3>
+                    <p class="body-text" style="font-size: 17px;">Implement practical automations that respond to inquiries, book calls, and follow up. No endless tool-juggling.</p>
+                </div>
+                <div class="depth-card">
+                    <h3 class="sub-title" style="font-size: 24px;">4. Content Clarity for AI</h3>
+                    <p class="body-text" style="font-size: 17px;">Learn how to create content and positioning that AI can actually use, instead of content that disappears.</p>
+                </div>
+                <div class="depth-card">
+                    <h3 class="sub-title" style="font-size: 24px;">5. Direct Access</h3>
+                    <p class="body-text" style="font-size: 17px;">While the group is small, ask questions and get feedback. Once the price rises, this level of access changes.</p>
+                </div>
+                <div class="depth-card">
+                    <h3 class="sub-title" style="font-size: 24px;">6. Focused Peer Group</h3>
+                    <p class="body-text" style="font-size: 17px;">You are not dropped into a loud, random crowd. You are surrounded by people at your experience level.</p>
                 </div>
             </div>
+            
             <div style="text-align: center; margin-top: 60px;">
-                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" class="btn-primary" style="display: inline-block; font-size: 20px; padding: 15px 40px;">Join Gen X AI Rising Before December 15</a>
+                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="display: inline-block; font-size: 20px; padding: 15px 40px;">Claim Your Founding Member Rate</a>
             </div>
         </div>
     </section>
 
-    <section class="bg-cream" style="padding: 120px 0;">
-        <div class="container">
-            <h2 class="section-title text-rust" style="text-align: center;">A Community Built for Gen X Entrepreneurs <br>Who Refuse To Be Left Behind</h2>
-            <div style="max-width: 800px; margin: 50px auto 0;">
-                <div class="depth-card" style="padding: 40px; background: white;">
-                    <ul class="check-list" style="margin-top: 0;">
-                        <li><i class="fas fa-star"></i> Want AI to recognize and recommend them</li>
-                        <li><i class="fas fa-star"></i> Want clarity instead of chaos</li>
-                        <li><i class="fas fa-star"></i> Want systems instead of constant scrambling</li>
-                        <li><i class="fas fa-star"></i> Want to stay competitive without making "learning AI" a full-time job</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-dark" style="padding: 120px 0;">
-        <div class="container">
-            <h2 class="section-title text-ochre" style="text-align: center; margin-bottom: 80px;">What You Get as a Founding Member</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
-                <div class="depth-card-dark" style="padding: 30px; border-radius: 8px;">
-                    <h3 class="sub-title text-light">1. Weekly Live Sessions</h3>
-                    <p class="body-text text-light" style="opacity: 0.9;">Focused on AI Search visibility, authority building, and practical automations. Clear topics. Straight answers. No fluff.</p>
-                </div>
-                <div class="depth-card-dark" style="padding: 30px; border-radius: 8px;">
-                    <h3 class="sub-title text-light">2. AI Search Visibility Frameworks</h3>
-                    <p class="body-text text-light" style="opacity: 0.9;">Step-by-step guidance on how to define your entity, structure your offers, and strengthen the signals that matter to AI.</p>
-                </div>
-                <div class="depth-card-dark" style="padding: 30px; border-radius: 8px;">
-                    <h3 class="sub-title text-light">3. Simple Automation Playbooks</h3>
-                    <p class="body-text text-light" style="opacity: 0.9;">Implement practical automations that respond to inquiries, book calls, and follow up. No endless tool-juggling.</p>
-                </div>
-                <div class="depth-card-dark" style="padding: 30px; border-radius: 8px;">
-                    <h3 class="sub-title text-light">4. Content Clarity for AI</h3>
-                    <p class="body-text text-light" style="opacity: 0.9;">Learn how to create content and positioning that AI can actually use, instead of content that disappears.</p>
-                </div>
-                <div class="depth-card-dark" style="padding: 30px; border-radius: 8px;">
-                    <h3 class="sub-title text-light">5. Direct Access</h3>
-                    <p class="body-text text-light" style="opacity: 0.9;">While the group is small, ask questions and get feedback. Once the price rises, this level of access changes.</p>
-                </div>
-                <div class="depth-card-dark" style="padding: 30px; border-radius: 8px;">
-                    <h3 class="sub-title text-light">6. A Focused Gen X Peer Group</h3>
-                    <p class="body-text text-light" style="opacity: 0.9;">You are not dropped into a loud, random crowd. You are surrounded by people at your experience level.</p>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 80px;">
-                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" class="btn-primary" style="display: inline-block; font-size: 20px; padding: 15px 40px;">Claim Your Founding Member Rate</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-cream" style="padding: 120px 0;">
+    <section class="bg-cream" style="padding: 0 0 100px 0;">
         <div id="global-reviews"></div>
     </section>
 
     <section class="bg-dark" style="padding: 120px 0; text-align: center;">
         <div class="container">
             <h2 class="section-title text-ochre">Founding Member Enrollment</h2>
-            <div class="depth-card bg-cream" style="max-width: 800px; margin: 60px auto; padding: 60px; border-radius: 8px; border: 4px solid var(--primary-rust);">
+            
+            <div class="depth-card bg-cream" style="max-width: 750px; margin: 60px auto; padding: 50px; border: 4px solid var(--primary-rust);">
                 <h3 class="sub-title text-dark">Available Until December 15, 2025</h3>
                 <h1 style="font-size: 100px; color: var(--primary-rust); font-weight: 700; margin: 20px 0; line-height: 1;">$97</h1>
                 <p class="body-text" style="text-transform: uppercase; font-weight: 700; letter-spacing: 2px;">For the Full Year</p>
-                <hr style="border: 0; border-top: 1px solid rgba(146, 63, 38, 0.3); margin: 40px 0;">
-                <p class="body-text" style="font-size: 18px;">After December 15, enrollment reopens at $497/year.</p>
-                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" class="btn-primary" style="width: 100%; font-size: 24px; padding: 25px;">Join Gen X AI Rising for $97</a>
+                
+                <hr style="border: 0; border-top: 1px solid rgba(146, 63, 38, 0.3); margin: 30px 0;">
+                
+                <p class="body-text" style="font-size: 18px;">After December 15, enrollment reopens at <br><strong>$297/year</strong> or <strong>$29.99/month</strong>.</p>
+                
+                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="width: 100%; font-size: 24px; padding: 20px;">Join Gen X AI Rising for $97</a>
+
+                <div style="margin-top: 40px; text-align: left;">
+                    <ul class="check-list">
+                        <li><i class="fas fa-check-circle"></i> <strong>Become the Trusted Authority</strong> AI LLMs Recommend</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Capture High-Intent Clients</strong> Searching for You</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Outpace Competitors</strong> with Strategic Positioning</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="max-width: 800px; margin: 40px auto 0;">
+                <p class="body-text text-light">You know what one new client is worth. $97 to change how AI sees your business is not a risk. It is a decision.</p>
             </div>
         </div>
     </section>
@@ -344,25 +316,18 @@
         <div class="container">
             <div style="display: flex; flex-wrap: wrap; gap: 80px; align-items: center;">
                 <div style="flex: 0 0 450px;">
-                    <img src="https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/Nicole_red_suit_512x512.png" alt="Nicole Jolie AI Search Consultant" class="depth-card" style="width: 100%; border-radius: 4px; border: 8px solid white;">
+                    <img src="https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/Nicole_red_suit_512x512.png" alt="Nicole Jolie AI Search Consultant" class="depth-card" style="width: 100%; border-radius: 20px; border: 8px solid white;">
                 </div>
                 <div style="flex: 1;">
                     <h2 class="section-title text-rust">Who Is Behind Gen X AI Rising</h2>
                     <h3 class="sub-title text-dark">I am Nicole Jolie.</h3>
                     <p class="body-text">I work with Gen X entrepreneurs who are excellent at what they do and tired of not being seen.</p>
                     <p class="body-text">I have spent years around best-selling authors, podcasters, real estate agents, and seven-figure team leaders who have one thing in common: <strong>their experience is real, but their digital structure does not reflect it.</strong></p>
-                    <div style="margin-top: 30px; background: white; padding: 30px; border-left: 5px solid var(--primary-rust); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <div style="margin-top: 30px; background: white; padding: 30px; border-left: 5px solid var(--primary-rust); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 8px;">
                         <p class="body-text" style="margin-bottom: 0; font-style: italic;">I built Gen X AI Rising for people like you: experienced, driven, and unwilling to disappear just because the rules of visibility changed.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="bg-dark" style="padding: 120px 0; text-align: center;">
-        <div class="container">
-            <h2 class="section-title text-ochre">You Already Built the Experience. <br>Now Build the Visibility.</h2>
-            <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" class="btn-primary" style="font-size: 26px; padding: 25px 60px; box-shadow: 0 0 30px rgba(204, 140, 34, 0.4);">Join Gen X AI Rising</a>
         </div>
     </section>
 
@@ -383,15 +348,11 @@
                 </div>
                 <div class="faq-item" onclick="this.classList.toggle('active')">
                     <div class="faq-question">Will this $97 price ever be offered again? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">No. After December 15, 2025, enrollment reopens at $497 per year.</div>
+                    <div class="faq-answer">No. After December 15, 2025, enrollment reopens at $297 per year or $29.99 per month.</div>
                 </div>
                 <div class="faq-item" onclick="this.classList.toggle('active')">
                     <div class="faq-question">Is the $97 payment refundable? <i class="fas fa-chevron-down"></i></div>
                     <div class="faq-answer">No. This is a one-time, non-refundable annual membership.</div>
-                </div>
-                <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">What do I get as a founding member? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">Weekly live calls, business reviews, AI frameworks, and automation playbooks.</div>
                 </div>
                 <div class="faq-item" onclick="this.classList.toggle('active')">
                     <div class="faq-question">When do the weekly calls begin? <i class="fas fa-chevron-down"></i></div>
@@ -405,17 +366,17 @@
         </div>
     </section>
 
-    <section class="bg-dark" style="padding: 100px 0;">
+    <section class="bg-dark" style="padding: 120px 0;">
         <div class="container">
             <h2 class="section-title text-light" style="text-align: center;">Your Risk Is Not in Joining. <br><span class="text-rust">Your Risk Is in Staying Invisible.</span></h2>
             <div style="max-width: 800px; margin: 50px auto; font-size: 20px;">
-                <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 8px; margin-top: 30px; border-left: 4px solid var(--accent-ochre);">
+                <div style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; margin-top: 30px; border-left: 4px solid var(--accent-ochre);">
                     <p class="body-text text-light" style="margin-bottom: 10px;"><strong>The real risk is NOT joining.</strong></p>
                     <p class="body-text text-light">The real risk is spending the next year guessing how AI works, hoping visibility improves, and watching competitors rise because AI can understand them better.</p>
                 </div>
             </div>
             <div style="text-align: center;">
-                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" class="btn-primary" style="font-size: 24px; padding: 20px 50px;">Join Gen X AI Rising</a>
+                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="font-size: 24px; padding: 20px 60px; border-radius: 20px;">Join Gen X AI Rising</a>
             </div>
         </div>
     </section>
@@ -423,15 +384,15 @@
     <div id="global-footer"></div>
 
     <div id="popupModal" class="modal" style="display:none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8);">
-        <div class="modal-content bg-ivory" style="margin: 5% auto; padding: 50px; width: 90%; max-width: 550px; text-align: center; border-radius: 4px; position: relative; color: var(--text-dark); border: 1px solid var(--accent-ochre); box-shadow: 0 25px 50px rgba(0,0,0,0.5);">
+        <div class="modal-content bg-ivory" style="margin: 5% auto; padding: 50px; width: 90%; max-width: 550px; text-align: center; border-radius: 20px; position: relative; color: var(--text-dark); border: 1px solid var(--accent-ochre); box-shadow: 0 25px 50px rgba(0,0,0,0.5);">
             <span class="close-btn" onclick="closeModal()" style="position: absolute; top: 15px; right: 25px; font-size: 30px; cursor: pointer;">&times;</span>
             <h3 class="text-rust" style="font-size: 32px; line-height: 1.2; margin-bottom: 15px;">Stop Losing Clients to Your Competition.</h3>
             <h4 style="font-family: 'Cormorant Garamond'; font-size: 28px; font-weight: 500;">Start ranking in AI Search.</h4>
             <p style="margin-top: 25px; font-weight: bold; font-size: 18px;">Get the FREE Download Now!</p>
             <form id="leadForm" style="margin-top: 30px;">
-                <input type="text" id="name" placeholder="First Name" required style="width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
-                <input type="email" id="email" placeholder="Email Address" required style="width: 100%; padding: 15px; margin-bottom: 25px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
-                <button type="submit" class="btn-primary" style="width: 100%; font-size: 18px; padding: 15px;">Get The Guide</button>
+                <input type="text" id="name" placeholder="First Name" required style="width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+                <input type="email" id="email" placeholder="Email Address" required style="width: 100%; padding: 15px; margin-bottom: 25px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+                <button type="submit" class="btn-primary" style="width: 100%; font-size: 18px; padding: 15px; border-radius: 8px;">Get The Guide</button>
             </form>
             <p id="formStatus" style="margin-top: 15px; font-size: 14px; color: var(--primary-rust);"></p>
         </div>
@@ -443,7 +404,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
         const SUPABASE_URL = 'https://exdstuwcxfcrtcrtextsob.supabase.co';
-        // IMPORTANT: PASTE YOUR ANON KEY HERE
+        // PASTE YOUR ANON KEY BELOW
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV4ZHN0dXdjeGZ0Y3J0ZXh0c29iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMyMzcyNDYsImV4cCI6MjA3ODgxMzI0Nn0.dGhuF6fET9TgdM2pKuqj5qNGlsq-vqgZhWHCO4Nmf78';
         const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
