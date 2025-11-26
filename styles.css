@@ -1,6 +1,5 @@
 /* =========================================
-   1. BRAND CONFIGURATION (LOCKED)
-   Based on Sasha Calderon Brand Board
+   1. BRAND CONFIGURATION (Sasha Calderon Theme)
    ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,500&family=Inter:wght@400;600&display=swap');
 
@@ -45,33 +44,18 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 20px;
 }
 
-/* =========================================
-   3. UTILITY CLASSES (CONTRAST RULES)
-   ========================================= */
-/* Dark Section (Luxury Feel) */
-.bg-dark {
-    background-color: var(--bg-charcoal);
-    color: var(--text-light);
+p {
+    margin-bottom: 20px;
 }
 
-/* Light Section (Readability Focus) */
-.bg-cream {
-    background-color: var(--bg-cream);
-    color: var(--text-dark);
-}
-
-/* Rust Accent Text */
-.text-rust {
-    color: var(--primary-rust);
-}
-
-/* Ochre Accent Text (Gold Substitute) */
-.text-ochre {
-    color: var(--accent-ochre);
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* =========================================
-   4. COMPONENT STYLES
+   3. UTILITY CLASSES (CONTRAST & LAYOUT)
    ========================================= */
 .container {
     width: 90%;
@@ -80,42 +64,75 @@ h1, h2, h3, h4, h5 {
     padding: 0 20px;
 }
 
-/* Buttons */
+/* Backgrounds */
+.bg-dark {
+    background-color: var(--bg-charcoal);
+    color: var(--text-light);
+}
+
+.bg-cream {
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+}
+
+.bg-ivory {
+    background-color: var(--bg-ivory);
+    color: var(--text-dark);
+}
+
+/* Text Colors */
+.text-rust { color: var(--primary-rust); }
+.text-ochre { color: var(--accent-ochre); }
+.text-light { color: var(--text-light); }
+.text-dark { color: var(--text-dark); }
+
+/* =========================================
+   4. COMPONENT STYLES
+   ========================================= */
+
+/* --- BUTTONS --- */
 .btn-primary {
     background-color: var(--primary-rust);
     color: var(--text-light);
-    padding: 14px 28px;
+    padding: 16px 32px;
     border: none;
     font-family: var(--font-body);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
 }
 
 .btn-primary:hover {
-    background-color: var(--accent-ochre); /* Hover turns to Gold/Ochre */
+    background-color: var(--accent-ochre);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Header/Nav */
+/* --- HEADER / NAV --- */
 .site-header {
-    padding: 30px 0;
+    padding: 25px 0;
     background-color: var(--bg-charcoal);
-    border-bottom: 1px solid rgba(238, 224, 200, 0.1); /* Subtle Cream Border */
+    border-bottom: 1px solid rgba(238, 224, 200, 0.1);
 }
 
-.logo {
+.logo a {
     font-family: var(--font-header);
-    font-size: 32px;
+    font-size: 28px;
     color: var(--text-light);
     text-decoration: none;
+    letter-spacing: 1px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 
 .nav-links a {
@@ -125,11 +142,142 @@ h1, h2, h3, h4, h5 {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: color 0.3s;
 }
 
-/* Footer (4-Column Layout) */
+.nav-links a:hover {
+    color: var(--accent-ochre);
+}
+
+/* --- HERO & BANNERS --- */
+.hero-section, .banner-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* --- VIDEO SECTION --- */
+.video-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border: 4px solid white;
+    background: #000;
+}
+
+.video-wrapper video {
+    width: 100%;
+    display: block;
+}
+
+/* --- REVIEW GRID (NEW STATIC LAYOUT) --- */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 Columns Side-by-Side */
+    gap: 40px; /* Generous spacing */
+    margin-top: 50px;
+    text-align: left;
+}
+
+.review-card-static {
+    background-color: var(--bg-ivory);
+    border: 1px solid rgba(146, 63, 38, 0.1); /* Subtle Rust border */
+    border-radius: 8px;
+    padding: 40px;
+    
+    /* DEPTH SHADOWS (To make it pop) */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensures equal height in rows */
+}
+
+.review-card-static:hover {
+    transform: translateY(-5px); /* Lifts up slightly */
+    box-shadow: 0 20px 40px rgba(146, 63, 38, 0.15); /* Rust tinted shadow */
+}
+
+.review-stars {
+    color: var(--accent-ochre);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.review-body {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+}
+
+.review-name {
+    font-family: var(--font-header);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--primary-rust);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 20px;
+    display: block;
+}
+
+.review-title {
+    font-size: 14px;
+    color: #666;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* --- DEPTH CARDS (Pricing/Features) --- */
+.depth-card {
+    background: #fff;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+}
+
+.depth-card-dark {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* --- FAQ SECTION --- */
+.faq-item {
+    border-bottom: 1px solid rgba(146, 63, 38, 0.2);
+    padding: 30px 0;
+}
+
+.faq-question {
+    font-family: var(--font-header);
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 15px;
+    color: #444;
+    display: none;
+}
+
+.faq-item.active .faq-answer { display: block; }
+.faq-item.active .faq-question { color: var(--primary-rust); }
+
+/* --- FOOTER --- */
 .site-footer {
-    background-color: var(--bg-charcoal); /* Deep Dark Background */
+    background-color: var(--bg-charcoal);
     color: var(--bg-ivory);
     padding: 80px 0 20px;
     border-top: 1px solid rgba(238, 224, 200, 0.1);
@@ -137,7 +285,7 @@ h1, h2, h3, h4, h5 {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 Columns Desktop */
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 40px;
 }
 
@@ -149,33 +297,75 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 20px;
 }
 
-.footer-links {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 10px;
-}
-
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
 .footer-links a {
     color: var(--bg-ivory);
     text-decoration: none;
     font-size: 14px;
     transition: 0.3s;
+    opacity: 0.8;
 }
-
 .footer-links a:hover {
     color: var(--accent-ochre);
+    opacity: 1;
 }
 
-/* Mobile Responsive */
+/* --- MODAL / POPUP --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.85);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--bg-ivory);
+    margin: 5% auto;
+    padding: 50px;
+    width: 90%;
+    max-width: 550px;
+    text-align: center;
+    border-radius: 4px;
+    position: relative;
+    color: var(--text-dark);
+    border: 2px solid var(--accent-ochre);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--primary-rust);
+}
+
+/* =========================================
+   5. MOBILE RESPONSIVENESS
+   ========================================= */
 @media (max-width: 768px) {
+    .reviews-grid {
+        grid-template-columns: 1fr; /* Stack reviews vertically on mobile */
+    }
+
     .footer-grid {
-        grid-template-columns: 1fr; /* 1 Column Mobile */
+        grid-template-columns: 1fr;
         text-align: center;
     }
-    
+
     .nav-links {
-        display: none; /* We will add a mobile menu toggle later */
+        display: none; /* Simple hiding for now, hamburger menu logic is separate */
     }
+    
+    h1 { font-size: 36px !important; }
+    h2 { font-size: 30px !important; }
+    
+    .container { padding: 0 25px; }
 }
