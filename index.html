@@ -72,15 +72,16 @@
             background: #fff;
             box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
             border: 1px solid rgba(0,0,0,0.05);
-            padding: 35px !important; /* Reduced from 60px */
+            padding: 35px !important;
             transform: translateY(0);
             transition: all 0.3s ease;
         }
         .depth-card:hover { transform: translateY(-5px); box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.2); }
         
+        /* FIX: Lighter Background for Dark Mode Cards */
         .depth-card-dark {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.1) !important; /* LIGHTER for visibility */
+            border: 1px solid rgba(255,255,255,0.2);
             backdrop-filter: blur(10px);
             padding: 30px !important;
             border-radius: 20px;
@@ -205,13 +206,13 @@
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px;">
                 
-                <div style="padding: 40px; background: rgba(255,255,255,0.03); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
-                    <h3 class="sub-title text-light" style="opacity: 0.8;">Before: The Struggle</h3>
+                <div style="padding: 40px; background: rgba(255,255,255,0.1); border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 class="sub-title text-light" style="opacity: 1;">Before: The Struggle</h3>
                     <ul class="check-list">
-                        <li><i class="fas fa-times" style="color: rgba(255,255,255,0.4);"></i> <span class="text-light">Hoping people find your site</span></li>
-                        <li><i class="fas fa-times" style="color: rgba(255,255,255,0.4);"></i> <span class="text-light">Posting content that disappears</span></li>
-                        <li><i class="fas fa-times" style="color: rgba(255,255,255,0.4);"></i> <span class="text-light">Relying on referrals alone</span></li>
-                        <li><i class="fas fa-times" style="color: rgba(255,255,255,0.4);"></i> <span class="text-light">Losing clients you never see</span></li>
+                        <li><i class="fas fa-times" style="color: #ff6b6b;"></i> <span class="text-light">Hoping people find your site</span></li>
+                        <li><i class="fas fa-times" style="color: #ff6b6b;"></i> <span class="text-light">Posting content that disappears</span></li>
+                        <li><i class="fas fa-times" style="color: #ff6b6b;"></i> <span class="text-light">Relying on referrals alone</span></li>
+                        <li><i class="fas fa-times" style="color: #ff6b6b;"></i> <span class="text-light">Losing clients you never see</span></li>
                     </ul>
                 </div>
 
@@ -282,7 +283,7 @@
         <div id="global-reviews"></div>
     </section>
 
-    <section class="bg-dark" style="padding: 120px 0; text-align: center;">
+    <section id="pricing" class="bg-dark" style="padding: 120px 0; text-align: center;">
         <div class="container">
             <h2 class="section-title text-ochre">Founding Member Enrollment</h2>
             
@@ -307,7 +308,7 @@
             </div>
             
             <div style="max-width: 800px; margin: 40px auto 0;">
-                <p class="body-text text-light">You know what one new client is worth. $97 to change how AI sees your business is not a risk. It is a decision.</p>
+                <p class="body-text text-light" style="font-size: 22px; font-weight: 600;">One client covers your year. Making your business visible in AI search is not negotiable.</p>
             </div>
         </div>
     </section>
@@ -355,6 +356,10 @@
                     <div class="faq-answer">No. This is a one-time, non-refundable annual membership.</div>
                 </div>
                 <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">What do I get as a founding member? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Weekly live calls, live business reviews, actionable Q&A sessions, AI frameworks, and automation playbooks.</div>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('active')">
                     <div class="faq-question">When do the weekly calls begin? <i class="fas fa-chevron-down"></i></div>
                     <div class="faq-answer">After December 15th, 2025. Exact schedule will be posted in the community.</div>
                 </div>
@@ -368,15 +373,14 @@
 
     <section class="bg-dark" style="padding: 120px 0;">
         <div class="container">
-            <h2 class="section-title text-light" style="text-align: center;">Your Risk Is Not in Joining. <br><span class="text-rust">Your Risk Is in Staying Invisible.</span></h2>
-            <div style="max-width: 800px; margin: 50px auto; font-size: 20px;">
-                <div style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; margin-top: 30px; border-left: 4px solid var(--accent-ochre);">
-                    <p class="body-text text-light" style="margin-bottom: 10px;"><strong>The real risk is NOT joining.</strong></p>
-                    <p class="body-text text-light">The real risk is spending the next year guessing how AI works, hoping visibility improves, and watching competitors rise because AI can understand them better.</p>
-                </div>
+            
+            <div style="background: #F5F0E7; padding: 40px; border-radius: 20px; max-width: 800px; margin: 0 auto; box-shadow: 0 20px 60px rgba(0,0,0,0.5); border: 2px solid var(--accent-ochre);">
+                <h2 class="section-title text-rust" style="text-align: center; margin-bottom: 20px; font-size: 36px;">The Real Risk Is Not Joining.</h2>
+                <p class="body-text text-dark" style="font-size: 22px; text-align: center; line-height: 1.5;">The real risk is spending the next year guessing how AI works, hoping visibility improves, and watching competitors rise because AI can understand them better.</p>
             </div>
-            <div style="text-align: center;">
-                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="font-size: 24px; padding: 20px 60px; border-radius: 20px;">Join Gen X AI Rising</a>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="font-size: 26px; padding: 25px 70px; border-radius: 50px; background-color: var(--accent-ochre); color: black;">Join Gen X AI Rising</a>
             </div>
         </div>
     </section>
