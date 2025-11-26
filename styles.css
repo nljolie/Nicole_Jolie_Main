@@ -1,0 +1,181 @@
+/* =========================================
+   1. BRAND CONFIGURATION (LOCKED)
+   Based on Sasha Calderon Brand Board
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,500&family=Inter:wght@400;600&display=swap');
+
+:root {
+    /* --- COLOR PALETTE --- */
+    --primary-rust: #923F26;        /* Deep Rust / Burnt Umber */
+    --accent-ochre: #CC8C22;        /* Golden Ochre */
+    
+    --bg-cream: #EEE0C8;            /* Warm Cream (Main Light BG) */
+    --bg-charcoal: #19110E;         /* Charcoal Brown (Main Dark BG) */
+    --bg-ivory: #F5F0E7;            /* Soft Ivory (Alternative Light) */
+    
+    --text-dark: #19110E;           /* For Light Backgrounds */
+    --text-light: #F5F0E7;          /* For Dark Backgrounds */
+    
+    /* --- FONTS --- */
+    --font-header: 'Cormorant Garamond', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* =========================================
+   2. GLOBAL RESET & TYPOGRAPHY
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: var(--bg-charcoal); /* Default to Dark Luxury Mode */
+    color: var(--text-light);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-header);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   3. UTILITY CLASSES (CONTRAST RULES)
+   ========================================= */
+/* Dark Section (Luxury Feel) */
+.bg-dark {
+    background-color: var(--bg-charcoal);
+    color: var(--text-light);
+}
+
+/* Light Section (Readability Focus) */
+.bg-cream {
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+}
+
+/* Rust Accent Text */
+.text-rust {
+    color: var(--primary-rust);
+}
+
+/* Ochre Accent Text (Gold Substitute) */
+.text-ochre {
+    color: var(--accent-ochre);
+}
+
+/* =========================================
+   4. COMPONENT STYLES
+   ========================================= */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-rust);
+    color: var(--text-light);
+    padding: 14px 28px;
+    border: none;
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-ochre); /* Hover turns to Gold/Ochre */
+}
+
+/* Header/Nav */
+.site-header {
+    padding: 30px 0;
+    background-color: var(--bg-charcoal);
+    border-bottom: 1px solid rgba(238, 224, 200, 0.1); /* Subtle Cream Border */
+}
+
+.logo {
+    font-family: var(--font-header);
+    font-size: 32px;
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Footer (4-Column Layout) */
+.site-footer {
+    background-color: var(--bg-charcoal); /* Deep Dark Background */
+    color: var(--bg-ivory);
+    padding: 80px 0 20px;
+    border-top: 1px solid rgba(238, 224, 200, 0.1);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Columns Desktop */
+    gap: 40px;
+}
+
+.footer-col h3 {
+    color: var(--primary-rust);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--bg-ivory);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--accent-ochre);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* 1 Column Mobile */
+        text-align: center;
+    }
+    
+    .nav-links {
+        display: none; /* We will add a mobile menu toggle later */
+    }
+}
