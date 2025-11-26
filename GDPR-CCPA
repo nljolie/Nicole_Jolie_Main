@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR & CCPA - Nicole Jolie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="global-header"></div>
+
+    <section class="bg-cream" style="padding: 100px 0; min-height: 60vh;">
+        <div class="container">
+            <div style="background: white; padding: 40px; border-radius: 8px; border: 1px solid #ddd; max-width: 900px; margin: 0 auto;">
+                
+                <h1 class="text-rust" style="margin-bottom: 30px;">GDPR & CCPA Compliance</h1>
+                
+                <div style="font-family: var(--font-body); color: var(--text-dark); line-height: 1.8;">
+                    <p><strong>Last Updated: November 2025</strong></p>
+                    <p>GDPR & CCPA POLICY
+Effective Date: September 28, 2025
+PRIVACY RIGHTS COMPLIANCE
+Worthy of Success, LLC complies with the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA) regarding your personal data rights.
+GDPR RIGHTS (EU RESIDENTS)
+Under GDPR, you have the right to:
+Access your personal data we process
+Rectify inaccurate or incomplete data
+Erase your personal data ("right to be forgotten")
+Restrict processing of your data
+Data portability (receive data in structured format)
+Object to processing based on legitimate interests
+Withdraw consent for data processing
+CCPA RIGHTS (CALIFORNIA RESIDENTS)
+Under CCPA, California residents have the right to:
+Know what personal information we collect and how it's used
+Access your personal information
+Delete your personal information
+Opt-out of sale of personal information (we don't sell data)
+Non-discrimination for exercising privacy rights
+DATA WE COLLECT
+For our collaborative consulting services, we may collect:
+Contact information (name, email, phone)
+Professional background for AI Search Assessment and/or report
+Communication records from consulting sessions
+Website usage data and analytics
+Payment information (processed by third parties)
+LAWFUL BASIS FOR PROCESSING
+We process data based on:
+Consent for marketing communications
+Contract performance for consulting services
+Legitimate interests for business operations
+Legal compliance requirements
+DATA SHARING
+We do not sell personal data. We may share data with:
+Service providers (email, analytics, payment processing)
+Legal authorities when required by law
+Business successors in case of acquisition
+EXERCISING YOUR RIGHTS
+To exercise your privacy rights, contact us at:
+Mail: Worthy of Success, LLC, 1401 Lavaca Street, #40861, Austin, TX  78701
+Subject: "Privacy Rights Request"
+Include: Your full name, email, and specific request
+RESPONSE TIMEFRAME
+We will respond to verified requests within 30 days (GDPR) or 45 days (CCPA).
+Contact Information:
+Worthy of Success, LLC
+c/o Nevada Registered Agent
+732 S 6TH ST, STE V
+LAS VEGAS, NV 89101
+(775) 401-6800		
+</p>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="global-footer"></div>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+</body>
+</html>
+
