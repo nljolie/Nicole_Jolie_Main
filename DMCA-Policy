@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMCA Policy - Nicole Jolie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="global-header"></div>
+
+    <section class="bg-cream" style="padding: 100px 0; min-height: 60vh;">
+        <div class="container">
+            <div style="background: white; padding: 40px; border-radius: 8px; border: 1px solid #ddd; max-width: 900px; margin: 0 auto;">
+                
+                <h1 class="text-rust" style="margin-bottom: 30px;">DMCA Policy</h1>
+                
+                <div style="font-family: var(--font-body); color: var(--text-dark); line-height: 1.8;">
+                    <p><strong>Last Updated: November 2025</strong></p>
+                    <p>DMCA POLICY
+Effective Date: September 28, 2025
+DIGITAL MILLENNIUM COPYRIGHT ACT COMPLIANCE
+Worthy of Success, LLC, and NicoleJolie.com respects intellectual property rights and complies with the Digital Millennium Copyright Act (DMCA).
+COPYRIGHT INFRINGEMENT CLAIMS
+If you believe content on our website infringes your copyright, provide our designated agent with:
+Physical or electronic signature of the copyright owner
+Description of the copyrighted work claimed to be infringed
+Description of the infringing material and its location on our site
+Your contact information (address, phone, email)
+Statement of good faith belief that use is not authorized
+Statement that information is accurate and you have authority to act
+DESIGNATED AGENT
+DMCA notices should be sent to:
+Contact Information:
+c/o Nevada Registered Agent
+732 S 6TH ST, STE V
+LAS VEGAS, NV 89101
+(775) 401-6800
+COUNTER-NOTIFICATION
+If you believe your content was removed by mistake, you may file a counter-notification containing:
+Your physical or electronic signature
+Description of removed content and its former location
+Statement under penalty of perjury that removal was mistake
+Your contact information
+Consent to jurisdiction of federal court
+COLLABORATIVE CONSULTING CONTENT
+Our collaborative consulting services involve strategic guidance only. Clients are 100% responsible for:
+All content they create and post
+Ensuring their content doesn't infringe copyrights
+Obtaining proper licenses for materials they use
+Compliance with copyright laws in their implementation
+REPEAT INFRINGER POLICY
+We will terminate services for users who are repeat copyright infringers.
+NO MONITORING OBLIGATION
+We have no obligation to monitor content but will respond to valid DMCA notices promptly.
+</p>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="global-footer"></div>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+</body>
+</html>
+
