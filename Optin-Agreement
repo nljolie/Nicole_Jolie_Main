@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opt-In Agreement - Nicole Jolie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="global-header"></div>
+
+    <section class="bg-cream" style="padding: 100px 0; min-height: 60vh;">
+        <div class="container">
+            <div style="background: white; padding: 40px; border-radius: 8px; border: 1px solid #ddd; max-width: 900px; margin: 0 auto;">
+                
+                <h1 class="text-rust" style="margin-bottom: 30px;">Opt-In Agreement</h1>
+                
+                <div style="font-family: var(--font-body); color: var(--text-dark); line-height: 1.8;">
+                    <p><strong>Last Updated: November 2025</strong></p>
+                    <p>Optin Agreement
+Effective Date: September 28, 2025
+EMAIL COMMUNICATION CONSENT
+By providing your email address to NicoleJolie.com, you explicitly consent to receive communications from us regarding our AI Trust Consulting services.
+TYPES OF COMMUNICATIONS
+You consent to receive the following types of communications:
+Educational content about Generative Engine Optimization (GEO)
+Ask Engine Optimization (AEO) strategies and updates
+AI Trust industry insights and trends
+Service updates and collaborative consulting opportunities
+Cred Score analysis results and recommendations
+Promotional offers for our collaborative consulting services
+FREQUENCY
+Communications frequency may vary based on:
+Industry developments in AI search and discovery
+Your engagement level with our content
+Availability of new collaborative consulting opportunities
+Updates to GEO/AEO best practices
+DATA USAGE
+Your email address and related information will be used to:
+Deliver requested Cred Score assessments
+Provide educational content about AI Trust strategies
+Send updates about our collaborative consulting services
+Share relevant industry insights for professional development
+UNSUBSCRIBE RIGHTS
+You maintain the right to unsubscribe from our communications at any time by:
+Clicking the unsubscribe link in any email
+Contacting us directly at the information below
+Updating your preferences in your account settings
+NO GUARANTEES
+Participation in our email communications does NOT guarantee any specific results, earnings, or improvements to your AI Search Visibility or Generative Engine Optimization Score. All results remain your responsibility.
+CONSENT CONFIRMATION
+By providing your email address, you confirm that:
+You are over 18 years of age
+The email address belongs to you
+You understand this is for collaborative consulting communications
+You accept our Privacy Policy and Terms of Service
+Contact Information:
+Attn:  Worthy of Success LLC
+c/o Nevada Registered Agent
+732 S 6TH ST, STE V
+LAS VEGAS, NV 89101
+(775) 401-6800
+</p>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="global-footer"></div>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+</body>
+</html>
+
