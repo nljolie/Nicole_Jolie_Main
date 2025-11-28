@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicole Jolie | Gen X AI Rising</title>
-<link rel="icon" type="image/png" href="https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/favicon+nj.png">
-    <meta name="description" content="Gen X AI Rising is a community for Gen X entrepreneurs ready to stop being invisible to AI and start getting recommended.">
-    
+    <link rel="icon" type="image/png" href="https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/favicon+nj.png">
+    <meta name="description" content="Stop being invisible to AI. Join the community for Gen X entrepreneurs ready to dominate AI Search. Start your 7-Day Free Trial.">
     <link rel="canonical" href="https://nicolejolie.com/" />
     <meta property="og:title" content="Nicole Jolie | Gen X AI Rising" />
-    <meta property="og:description" content="Stop being invisible to AI. Join the community for Gen X entrepreneurs ready to dominate AI Search." />
+    <meta property="og:description" content="Is it worth $49 to finally get found? Join the 7-Day Free Trial." />
     <meta property="og:image" content="https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/Nicole_red_suit_512x512.png" />
     <meta property="og:type" content="website" />
-    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -35,18 +33,27 @@
           "description": "A community for Gen X entrepreneurs to learn AI Search visibility and automation frameworks.",
           "offers": {
             "@type": "Offer",
-            "price": "97.00",
+            "price": "49.00",
             "priceCurrency": "USD",
-            "priceValidUntil": "2025-12-15",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "49.00",
+                "priceCurrency": "USD",
+                "referenceQuantity": {
+                    "@type": "QuantitativeValue",
+                    "value": "1",
+                    "unitCode": "MON"
+                }
+            },
             "url": "https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb"
-          }
-        },
-        {
-          "@type": "FAQPage",
+          },
           "mainEntity": [
-            { "@type": "Question", "name": "Why is the founding-member price only $97?", "acceptedAnswer": { "@type": "Answer", "text": "This rate is a gift for early adopters. It will never return." } },
-            { "@type": "Question", "name": "Will this $97 price ever be offered again?", "acceptedAnswer": { "@type": "Answer", "text": "No. After Dec 15, 2025, it rises to $297/year." } },
-            { "@type": "Question", "name": "Is the $97 payment refundable?", "acceptedAnswer": { "@type": "Answer", "text": "No. This is a non-refundable membership for committed entrepreneurs." } }
+            { "@type": "Question", "name": "Why is there a 7-Day Free Trial?", 
+              "acceptedAnswer": { "@type": "Answer", "text": "Because you shouldn't have to pay to see if this works. I take the risk, not you. Step inside, see the framework, then decide." } },
+            { "@type": "Question", "name": "Why $49/month instead of a high-ticket coaching fee?", 
+              "acceptedAnswer": { "@type": "Answer", "text": "You have spent enough on expensive theory. This is about affordable access. For less than $2 a day, you get the visibility that makes your other investments actually pay off." } },
+            { "@type": "Question", "name": "Can I cancel my membership?", 
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can cancel anytime. No contracts, no hoops to jump through. If you want to go back to being invisible, that is your choice." }}
           ]
         }
       ]
@@ -55,7 +62,7 @@
 
     <style>
         /* SOFTENED CORNERS & BETTER SPACING */
-        .container { max-width: 1100px; }
+        .container { max-width: 1100px; padding: 0 20px; margin: 0 auto; }
         
         /* Rounded Visuals */
         .depth-card, .depth-card-dark, .video-wrapper, .btn-primary, img.depth-card {
@@ -67,7 +74,7 @@
         h2.section-title { font-size: 46px; margin-bottom: 30px; line-height: 1.15; }
         h3.sub-title { font-size: 28px; font-weight: 600; font-family: 'Cormorant Garamond', serif; margin-bottom: 15px; color: var(--primary-rust); }
         p.body-text { font-size: 19px; font-family: 'Inter', sans-serif; line-height: 1.6; margin-bottom: 20px; }
-        
+
         /* Depth & Padding Fixes */
         .depth-card {
             background: #fff;
@@ -78,7 +85,7 @@
             transition: all 0.3s ease;
         }
         .depth-card:hover { transform: translateY(-5px); box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.2); }
-        
+
         /* FIX: Lighter Background for Dark Mode Cards */
         .depth-card-dark {
             background: rgba(255,255,255,0.1) !important; /* LIGHTER for visibility */
@@ -98,12 +105,21 @@
         .video-wrapper video { width: 100%; display: block; }
 
         /* Lists & FAQ */
-        .check-list { list-style: none; margin-top: 20px; }
+        .check-list { list-style: none; margin-top: 20px; padding: 0; }
         .check-list li { font-size: 19px; margin-bottom: 15px; display: flex; align-items: flex-start; gap: 15px; }
         .check-list i { color: var(--accent-ochre); margin-top: 5px; font-size: 22px; }
-        
+
         .faq-item { border-bottom: 1px solid rgba(146, 63, 38, 0.15); padding: 25px 0; }
-        .faq-question { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; cursor: pointer; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center; }
+        .faq-question { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 24px; 
+            font-weight: 600; 
+            cursor: pointer; 
+            color: var(--text-dark); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
         .faq-answer { font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.6; margin-top: 15px; color: #444; display: none; }
         .faq-item.active .faq-answer { display: block; }
         .faq-item.active .faq-question { color: var(--primary-rust); }
@@ -139,36 +155,40 @@
 
     <section class="bg-cream" style="padding: 100px 0;">
         <div class="container" style="max-width: 950px;">
-            <h1 class="hero-title text-rust" style="text-align: center;">Transform Your Business So You Get Found in AI Search</h1>
-            
+            <h1 class="hero-title text-rust" style="text-align: center;">You Can’t Monetize a Ghost.</h1>
             <h3 class="sub-title text-dark" style="text-align: center; margin-bottom: 40px; line-height: 1.4;">
-                Gen X AI Rising is a community for Gen X entrepreneurs who are ready to stop being invisible to AI and start getting recommended, remembered, and chosen.
+                Getting seen is the number one thing. If they can't find you, they can't buy from you. And if they can't see you, <strong>they don't trust you.</strong>
             </h3>
             
             <div style="text-align: center;">
-                <p class="body-text">Founding Member rate: <strong>$97 for the full year</strong> until December 15, 2025.</p>
-                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="font-size: 22px; padding: 20px 50px; display: inline-block; margin-top: 20px; box-shadow: 0 10px 20px rgba(146, 63, 38, 0.3);">Join Gen X AI Rising Now</a>
+                <p class="body-text" style="font-size: 20px; margin-bottom: 25px;">
+                    Start with a <strong>7-Day FREE Trial.</strong> Then just <strong>$49/month</strong> to secure your visibility.
+                </p>
+                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="font-size: 22px; padding: 20px 50px; display: inline-block; box-shadow: 0 10px 20px rgba(146, 63, 38, 0.3);">Start My Free 7-Day Trial</a>
+                <p style="margin-top: 15px; font-size: 14px; opacity: 0.8;">Cancel anytime. Zero risk.</p>
             </div>
         </div>
     </section>
 
     <section class="bg-dark" style="padding: 100px 0;">
         <div class="container">
-            <h2 class="section-title text-ochre">AI Is Now the Gatekeeper. <br>Most Gen X Businesses Are Locked Out.</h2>
+            <h2 class="section-title text-ochre">A $5,000 Coaching Program Cannot Help You If No One Can Find You.</h2>
             
             <div style="max-width: 850px;">
-                <p class="body-text text-light">Your next clients are no longer scrolling Google results or wandering through websites. They are opening AI assistants and asking for the best option.</p>
+                <p class="body-text text-light">You are likely spending thousands of dollars on business coaching, masterminds, and strategy. You are chasing the "next big thing" to make money.</p>
                 
-                <div style="margin: 40px 0; border-left: 6px solid var(--accent-ochre); padding-left: 40px;">
-                    <p class="body-text text-light" style="font-style: italic; font-size: 24px; margin-bottom: 15px;">"Who should I hire for this?"</p>
-                    <p class="body-text text-light" style="font-style: italic; font-size: 24px;">"Which coach is best for..."</p>
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-left: 6px solid var(--accent-ochre); margin: 40px 0;">
+                    <p class="body-text text-light" style="font-size: 22px; font-weight: 600; margin-bottom: 15px; color: var(--accent-ochre);">The "Invisible Business" Trap:</p>
+                    <p class="body-text text-light" style="margin-bottom: 0;">
+                        How are you going to make money to pay off the coaching program you just spent $5,000 on if nobody can find you? 
+                        <br><br>
+                        AI Search is the new gatekeeper. If these systems don't see you clearly, they won't recommend you. And if they don't recommend you, your coaching investment is wasted.
+                    </p>
                 </div>
-
-                <p class="body-text text-light">These systems do not care how long you have been in business. They care whether they can clearly understand who you are, what you do, and why you are credible.</p>
-                <p class="body-text text-light">Most Gen X entrepreneurs are invisible here. Not because they lack skill. Not because they lack experience. <strong>Because AI cannot see them clearly enough to recommend them.</strong></p>
-                <p class="body-text text-light">This is the problem Gen X AI Rising is built to solve.</p>
                 
-                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="margin-top: 30px; display: inline-block;">Become Visible in AI Search</a>
+                <p class="body-text text-light">Gen X AI Rising is not another "course." It is the solution to the visibility problem that makes your other investments actually work.</p>
+                
+                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="margin-top: 30px; display: inline-block;">Fix Your Visibility (Free for 7 Days)</a>
             </div>
         </div>
     </section>
@@ -177,7 +197,6 @@
         <div class="container">
             <h2 class="section-title text-rust">See What It's Like to Work With Nicole</h2>
             <p class="body-text" style="margin-bottom: 50px;">Real results from entrepreneurs who transformed their visibility.</p>
-            
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
                 <div class="video-wrapper">
                     <video controls preload="none">
@@ -203,35 +222,34 @@
 
     <section class="bg-dark" style="padding: 120px 0; border-top: 1px solid rgba(255,255,255,0.1);">
         <div class="container">
-            <h2 class="section-title text-ochre" style="text-align: center; margin-bottom: 60px;">What Changes When AI Can Finally See You</h2>
+            <h2 class="section-title text-ochre" style="text-align: center; margin-bottom: 60px;">What Changes When You Stop Being Invisible</h2>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px;">
                 
                 <div style="padding: 40px; background: rgba(255,255,255,0.1); border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);">
-                    <h3 class="sub-title text-light" style="opacity: 1;">Before: The Struggle</h3>
+                    <h3 class="sub-title text-light" style="opacity: 1;">The "Ghost" Economy (Current State)</h3>
                     <ul class="check-list">
-                        <li><i class="fas fa-times" style="color: #ff6b6b;"></i> <span class="text-light">Hoping people find your site</span></li>
-                        <li><i class="fas fa-times" style="color: #ff6b6b;"></i> <span class="text-light">Posting content that disappears</span></li>
-                        <li><i class="fas fa-times" style="color: #ff6b6b;"></i> <span class="text-light">Relying on referrals alone</span></li>
-                        <li><i class="fas fa-times" style="color: #ff6b6b;"></i> <span class="text-light">Losing clients you never see</span></li>
+                        <li><i class="fas fa-times" style="color: #ff6b6b;"></i> <span class="text-light">Spending $5k+ on coaching you can't repay</span></li>
+                        <li><i class="fas fa-times" style="color: #ff6b6b;"></i> <span class="text-light">Invisible to the AI tools your clients use</span></li>
+                        <li><i class="fas fa-times" style="color: #ff6b6b;"></i> <span class="text-light">Watching inferior competitors get the leads</span></li>
+                        <li><i class="fas fa-times" style="color: #ff6b6b;"></i> <span class="text-light">Hustling harder for diminishing returns</span></li>
                     </ul>
                 </div>
 
                 <div class="depth-card bg-cream" style="padding: 40px; border-left: 8px solid var(--primary-rust);">
-                    <h3 class="sub-title text-rust">After: The Gen X AI Rising Way</h3>
+                    <h3 class="sub-title text-rust">The Gen X AI Rising Way</h3>
                     <ul class="check-list">
-                        <li><i class="fas fa-check-circle"></i> Being recommended in AI search</li>
-                        <li><i class="fas fa-check-circle"></i> Being seen as a clear, trusted option</li>
-                        <li><i class="fas fa-check-circle"></i> Attracting leads who already understand your value</li>
-                        <li><i class="fas fa-check-circle"></i> Outpacing competitors with authority</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Trusted Recommendation:</strong> AI suggests YOU first.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Asset Protection:</strong> Your business future is secure.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>High Intent Leads:</strong> People who already trust you.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Authority:</strong> You stop chasing; they come to you.</li>
                     </ul>
                 </div>
-
             </div>
-            
+
             <div style="margin-top: 60px; text-align: center;">
-                <p class="body-text text-light">This is not about chasing hype. This is about protecting the next decade of your business.</p>
-                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="margin-top: 20px; display: inline-block;">Join Gen X AI Rising Before December 15</a>
+                <p class="body-text text-light">This is not about chasing hype. This is about protecting the investment you've already made in your business.</p>
+                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="margin-top: 20px; display: inline-block;">Start Your 7-Day Free Trial</a>
             </div>
         </div>
     </section>
@@ -245,37 +263,35 @@
 
     <section class="bg-cream" style="padding: 120px 0;">
         <div class="container">
-            <h2 class="section-title text-rust" style="text-align: center; margin-bottom: 60px;">What You Get as a Founding Member</h2>
-            
+            <h2 class="section-title text-rust" style="text-align: center; margin-bottom: 60px;">You Are Paying For ACCESS.</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                 <div class="depth-card">
                     <h3 class="sub-title" style="font-size: 24px;">1. Weekly Live Sessions</h3>
-                    <p class="body-text" style="font-size: 17px;">Focused on AI Search visibility, authority building, and practical automations. Clear topics. Straight answers.</p>
+                    <p class="body-text" style="font-size: 17px;">Focused on AI Search visibility. Clear topics. Straight answers. No fluff.</p>
                 </div>
                 <div class="depth-card">
                     <h3 class="sub-title" style="font-size: 24px;">2. Visibility Frameworks</h3>
-                    <p class="body-text" style="font-size: 17px;">Step-by-step guidance on how to define your entity, structure your offers, and strengthen the signals that matter to AI.</p>
+                    <p class="body-text" style="font-size: 17px;">Step-by-step guidance on how to define your entity so AI can actually see you.</p>
                 </div>
                 <div class="depth-card">
                     <h3 class="sub-title" style="font-size: 24px;">3. Automation Playbooks</h3>
-                    <p class="body-text" style="font-size: 17px;">Implement practical automations that respond to inquiries, book calls, and follow up. No endless tool-juggling.</p>
+                    <p class="body-text" style="font-size: 17px;">Practical automations that respond to inquiries and book calls. Stop doing it manually.</p>
                 </div>
                 <div class="depth-card">
                     <h3 class="sub-title" style="font-size: 24px;">4. Content Clarity for AI</h3>
-                    <p class="body-text" style="font-size: 17px;">Learn how to create content and positioning that AI can actually use, instead of content that disappears.</p>
+                    <p class="body-text" style="font-size: 17px;">Learn how to create content that AI uses as a "source of truth."</p>
                 </div>
                 <div class="depth-card">
                     <h3 class="sub-title" style="font-size: 24px;">5. Direct Access</h3>
-                    <p class="body-text" style="font-size: 17px;">While the group is small, ask questions and get feedback. Once the price rises, this level of access changes.</p>
+                    <p class="body-text" style="font-size: 17px;">Ask questions. Get feedback. Stop guessing.</p>
                 </div>
                 <div class="depth-card">
                     <h3 class="sub-title" style="font-size: 24px;">6. Focused Peer Group</h3>
-                    <p class="body-text" style="font-size: 17px;">You are not dropped into a loud, random crowd. You are surrounded by people at your experience level.</p>
+                    <p class="body-text" style="font-size: 17px;">Surround yourself with people who are implementing, not just talking.</p>
                 </div>
             </div>
-            
             <div style="text-align: center; margin-top: 60px;">
-                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="display: inline-block; font-size: 20px; padding: 15px 40px;">Claim Your Founding Member Rate</a>
+                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="display: inline-block; font-size: 20px; padding: 15px 40px;">Get Access Now</a>
             </div>
         </div>
     </section>
@@ -286,30 +302,39 @@
 
     <section id="pricing" class="bg-dark" style="padding: 120px 0; text-align: center;">
         <div class="container">
-            <h2 class="section-title text-ochre">Founding Member Enrollment</h2>
+            <h2 class="section-title text-ochre">The Logic of Investment</h2>
             
             <div class="depth-card bg-cream" style="max-width: 750px; margin: 60px auto; padding: 50px; border: 4px solid var(--primary-rust);">
-                <h3 class="sub-title text-dark">Available Until December 15, 2025</h3>
-                <h1 style="font-size: 100px; color: var(--primary-rust); font-weight: 700; margin: 20px 0; line-height: 1;">$97</h1>
-                <p class="body-text" style="text-transform: uppercase; font-weight: 700; letter-spacing: 2px;">For the Full Year</p>
+                <h3 class="sub-title text-dark">Access The Community & Frameworks</h3>
                 
+                <div style="margin: 30px 0;">
+                    <span style="font-size: 24px; font-weight: 700; color: #666; text-decoration: line-through;">$97/mo</span>
+                    <h1 style="font-size: 80px; color: var(--primary-rust); font-weight: 700; margin: 10px 0; line-height: 1;">$49<span style="font-size: 30px; color: #444;">/mo</span></h1>
+                    <p class="body-text" style="font-weight: 700; color: var(--accent-ochre);">AFTER 7-DAY FREE TRIAL</p>
+                </div>
+
                 <hr style="border: 0; border-top: 1px solid rgba(146, 63, 38, 0.3); margin: 30px 0;">
                 
-                <p class="body-text" style="font-size: 18px;">After December 15, enrollment reopens at <br><strong>$297/year</strong> or <strong>$29.99/month</strong>.</p>
-                
-                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="width: 100%; font-size: 24px; padding: 20px;">Join Gen X AI Rising for $97</a>
+                <p class="body-text" style="font-size: 18px; text-align: left;">
+                    <strong>Here is the math:</strong><br><br>
+                    Is it worth <strong>$49</strong> to finally learn how to be trusted, get found, and become the recommended resource?<br><br>
+                    Or does it make more sense to chase another coaching program for <strong>thousands of dollars</strong> in hopes that you will make money—even though you are invisible?<br><br>
+                    <em>Fix the visibility first. The rest becomes easy.</em>
+                </p>
 
+                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="width: 100%; font-size: 24px; padding: 20px; margin-top: 20px;">Start My 7-Day Free Trial</a>
+                
                 <div style="margin-top: 40px; text-align: left;">
                     <ul class="check-list">
                         <li><i class="fas fa-check-circle"></i> <strong>Become the Trusted Authority</strong> AI LLMs Recommend</li>
                         <li><i class="fas fa-check-circle"></i> <strong>Capture High-Intent Clients</strong> Searching for You</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Outpace Competitors</strong> with Strategic Positioning</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Stop Wasting Money</strong> on courses you can't monetize</li>
                     </ul>
                 </div>
             </div>
             
             <div style="max-width: 800px; margin: 40px auto 0;">
-                <p class="body-text text-light" style="font-size: 22px; font-weight: 600;">One client covers your year. Making your business visible in AI search is not negotiable.</p>
+                <p class="body-text text-light" style="font-size: 22px; font-weight: 600;">One client covers your entire year of membership. Making your business visible in AI search is not negotiable.</p>
             </div>
         </div>
     </section>
@@ -324,9 +349,12 @@
                     <h2 class="section-title text-rust">Who Is Behind Gen X AI Rising</h2>
                     <h3 class="sub-title text-dark">I am Nicole Jolie.</h3>
                     <p class="body-text">I work with Gen X entrepreneurs who are excellent at what they do and tired of not being seen.</p>
-                    <p class="body-text">I have spent years around best-selling authors, podcasters, real estate agents, and seven-figure team leaders who have one thing in common: <strong>their experience is real, but their digital structure does not reflect it.</strong></p>
+                    <p class="body-text">I have spent years around best-selling authors, podcasters, and seven-figure leaders. Their experience is real, but their digital structure does not reflect it.</p>
+                    
                     <div style="margin-top: 30px; background: white; padding: 30px; border-left: 5px solid var(--primary-rust); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 8px;">
-                        <p class="body-text" style="margin-bottom: 0; font-style: italic;">I built Gen X AI Rising for people like you: experienced, driven, and unwilling to disappear just because the rules of visibility changed.</p>
+                        <p class="body-text" style="margin-bottom: 0; font-style: italic;">
+                            I built Gen X AI Rising for people like you: experienced, driven, and unwilling to disappear just because the rules of visibility changed.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -345,28 +373,24 @@
             <h2 class="section-title text-rust" style="text-align: center; margin-bottom: 60px;">Frequently Asked Questions</h2>
             <div class="faq-container">
                 <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">Why is the founding-member price only $97? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">Because this offer is for the people who recognize value when it appears. It is a gift for early adopters.</div>
+                    <div class="faq-question">Why is there a 7-Day Free Trial? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Because talk is cheap. I want you to enter the community, see the frameworks, and understand the value before you pay a single dime. I am taking all the risk.</div>
                 </div>
                 <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">Will this $97 price ever be offered again? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">No. After December 15, 2025, enrollment reopens at $297 per year or $29.99 per month.</div>
+                    <div class="faq-question">Why is it $49/month? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Because access beats theory. For less than the cost of a daily coffee, you get continuous access to 20+ years of SEO and AI experience. Compare that to the $5,000+ you'd spend on a coaching package just to learn "theory."</div>
                 </div>
                 <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">Is the $97 payment refundable? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">No. This is a one-time, non-refundable annual membership.</div>
+                    <div class="faq-question">Is there a contract? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">No. You can cancel at any time. If you feel you no longer need to be visible to AI, you can leave with one click.</div>
                 </div>
                 <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">What do I get as a founding member? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">Weekly live calls, live business reviews, actionable Q&A sessions, AI frameworks, and automation playbooks.</div>
-                </div>
-                <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">When do the weekly calls begin? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">After December 15th, 2025. Exact schedule will be posted in the community.</div>
+                    <div class="faq-question">What exactly am I paying for? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">You are paying for <strong>Access</strong>. Access to the Weekly Live Sessions. Access to the specific prompts that rank businesses. Access to a group that is actually implementing, not just talking.</div>
                 </div>
                 <div class="faq-item" onclick="this.classList.toggle('active')">
                     <div class="faq-question">What if I'm not tech-savvy? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">Perfect. This community is built for clarity, not chaos.</div>
+                    <div class="faq-answer">Perfect. This community is built for clarity, not chaos. We break things down so you can implement them immediately.</div>
                 </div>
             </div>
         </div>
@@ -374,14 +398,16 @@
 
     <section class="bg-dark" style="padding: 120px 0;">
         <div class="container">
-            
             <div style="background: #F5F0E7; padding: 40px; border-radius: 20px; max-width: 800px; margin: 0 auto; box-shadow: 0 20px 60px rgba(0,0,0,0.5); border: 2px solid var(--accent-ochre);">
-                <h2 class="section-title text-rust" style="text-align: center; margin-bottom: 20px; font-size: 36px;">The Real Risk Is Not Joining.</h2>
-                <p class="body-text text-dark" style="font-size: 22px; text-align: center; line-height: 1.5;">The real risk is spending the next year guessing how AI works, hoping visibility improves, and watching competitors rise because AI can understand them better.</p>
+                <h2 class="section-title text-rust" style="text-align: center; margin-bottom: 20px; font-size: 36px;">The Real Risk Is Staying Invisible.</h2>
+                <p class="body-text text-dark" style="font-size: 22px; text-align: center; line-height: 1.5;">
+                    The risk isn't $49. The risk is spending the next year invisible to the machines that control your future. The risk is buying another high-ticket course to learn "how to sell" when you have no one to sell <em>to</em>.
+                    <br><br>
+                    <strong>If they can't find you, they can't buy from you.</strong>
+                </p>
             </div>
-
             <div style="text-align: center; margin-top: 50px;">
-                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="font-size: 26px; padding: 25px 70px; border-radius: 50px; background-color: var(--accent-ochre); color: black;">Join Gen X AI Rising</a>
+                <a href="https://www.skool.com/genx-ai-rising-6973/about?ref=b677809dd0124d69af879acf97ea65eb" target="_blank" class="btn-primary" style="font-size: 26px; padding: 25px 70px; border-radius: 50px; background-color: var(--accent-ochre); color: black;">Start Your Free Trial</a>
             </div>
         </div>
     </section>
@@ -394,6 +420,7 @@
             <h3 class="text-rust" style="font-size: 32px; line-height: 1.2; margin-bottom: 15px;">Stop Losing Clients to Your Competition.</h3>
             <h4 style="font-family: 'Cormorant Garamond'; font-size: 28px; font-weight: 500;">Start ranking in AI Search.</h4>
             <p style="margin-top: 25px; font-weight: bold; font-size: 18px;">Get the FREE Download Now!</p>
+            
             <form id="leadForm" style="margin-top: 30px;">
                 <input type="text" id="name" placeholder="First Name" required style="width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
                 <input type="email" id="email" placeholder="Email Address" required style="width: 100%; padding: 15px; margin-bottom: 25px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
@@ -410,7 +437,7 @@
     <script>
         const SUPABASE_URL = 'https://exdstuwcxfcrtcrtextsob.supabase.co';
         // PASTE YOUR ANON KEY BELOW
-        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV4ZHN0dXdjeGZ0Y3J0ZXh0c29iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMyMzcyNDYsImV4cCI6MjA3ODgxMzI0Nn0.dGhuF6fET9TgdM2pKuqj5qNGlsq-vqgZhWHCO4Nmf78';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NilsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZil6lmV4ZHN0dXdj eGZ0Y3J0ZXh0c29iliwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMyMzcyNDYsImV4cC16MjA3ODgx MzI0Nn0.dGhuF6fET9TgdM2pKuqj5qNGlsq-vqgZhWHCO4Nmf78';
         const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
         function openModal() { document.getElementById('popupModal').style.display = 'block'; }
@@ -423,6 +450,7 @@
             const email = document.getElementById('email').value;
             const statusMsg = document.getElementById('formStatus');
             statusMsg.innerText = "Processing...";
+            
             try {
                 const { error } = await supabase.from('optin_contacts').insert([{ name: name, email: email, source: 'genx_ai_waitlist' }]);
                 if (error) throw error;
