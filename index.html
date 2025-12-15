@@ -12,6 +12,8 @@
     <meta property="og:image" content="https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/Nicole_red_suit_512x512.png" />
     <meta property="og:type" content="website" />
     
+    <script async src="https://tally.so/widgets/embed.js"></script>
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -125,6 +127,7 @@
         .text-rust { color: var(--primary-rust); }
         .text-ochre { color: var(--accent-ochre); }
         .text-light { color: #f0f0f0; }
+        .text-white { color: #ffffff !important; }
         
         /* BUTTONS */
         .btn-primary {
@@ -137,8 +140,25 @@
             transition: background 0.3s;
             border: none;
             cursor: pointer;
+            display: inline-block;
         }
         .btn-primary:hover { background-color: #7a3320; }
+
+        /* HERO SPECIFIC STYLES */
+        .hero-section {
+            /* The image is loaded here with a dark overlay (rgba 0,0,0,0.6) to "mute" it */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/nicole+at+computer+in+cafe.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 160px 0;
+            color: white;
+        }
+        
+        .hero-content-left {
+            text-align: left;
+            max-width: 750px;
+        }
 
         /* LISTS */
         .check-list { list-style: none; padding: 0; }
@@ -196,6 +216,7 @@
             h1.hero-title { font-size: 38px; }
             h2.section-title { font-size: 32px; }
             .reviews-grid { grid-template-columns: 1fr; }
+            .hero-section { padding: 100px 0; }
         }
     </style>
 </head>
@@ -203,15 +224,17 @@
 
     <div id="global-header"></div>
 
-    <section class="bg-cream" style="padding: 120px 0;">
-        <div class="container" style="max-width: 950px; text-align: center;">
-            <h1 class="hero-title text-rust">Serious companies audit before they act.</h1>
-            <h3 class="sub-title text-dark" style="margin-bottom: 40px; line-height: 1.4; max-width: 800px; margin-left: auto; margin-right: auto;">
-                AI is already deciding which businesses get recommended. If you don't know how AI sees you, you're guessing at the exact moment clarity matters most.
-            </h3>
-            
-            <div>
-                <a href="https://tally.so/r/q4LIEk" target="_blank" class="btn-primary" style="font-size: 22px; padding: 20px 40px; box-shadow: 0 10px 20px rgba(146, 63, 38, 0.2);">See If Your Business Qualifies for an AI Visibility Audit</a>
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content-left">
+                <h1 class="hero-title text-white">Serious companies audit before they act.</h1>
+                <h3 class="sub-title text-white" style="margin-bottom: 40px; line-height: 1.4; opacity: 0.9;">
+                    AI is already deciding which businesses get recommended. If you don't know how AI sees you, you're guessing at the exact moment clarity matters most.
+                </h3>
+                
+                <div>
+                    <button data-tally-open="q4LlEk" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" class="btn-primary" style="font-size: 22px; padding: 20px 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.5);">See If Your Business Qualifies for an AI Visibility Audit</button>
+                </div>
             </div>
         </div>
     </section>
@@ -409,7 +432,7 @@
             </div>
             
             <div style="margin-top: 50px;">
-                <a href="https://tally.so/r/q4LIEk" target="_blank" class="btn-primary" style="font-size: 24px; padding: 25px 50px;">See If Your Business Qualifies</a>
+                <button data-tally-open="q4LlEk" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" class="btn-primary" style="font-size: 24px; padding: 25px 50px;">See If Your Business Qualifies</button>
             </div>
         </div>
     </section>
