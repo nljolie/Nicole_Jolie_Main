@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#pricing">Join GenX AI</a></li> 
+                    <li><a href="/publications/index.html">Publications</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#about">About</a></li>
                     <li><button class="btn-primary" onclick="openModal()" style="padding: 8px 16px; font-size: 12px;">Get Your Audit</button></li>
@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
     </header>
     `;
-
     const headerContainer = document.getElementById('global-header');
     if (headerContainer) {
         headerContainer.innerHTML = headerHTML;
