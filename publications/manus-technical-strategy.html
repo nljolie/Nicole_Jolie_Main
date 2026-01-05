@@ -10,7 +10,7 @@
     <meta name="citation_publication_date" content="2025/12/15">
     <meta name="citation_language" content="en">
     
-    <style>
+<style>
         :root {
             --primary-rust: #923f26;
             --accent-ochre: #d4a056;
@@ -25,11 +25,19 @@
         .author-line { font-size: 22px; font-weight: 600; margin-bottom: 40px; border-bottom: 2px solid var(--accent-ochre); display: inline-block; padding-bottom: 10px; }
         h2 { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: var(--primary-rust); margin-top: 50px; border-left: 4px solid var(--accent-ochre); padding-left: 20px; }
         h3 { font-size: 26px; color: var(--text-dark); margin-top: 40px; }
+        
+        /* GLOBAL PARAGRAPH RULE */
         p { font-size: 20px; margin-bottom: 25px; text-align: justify; }
+
+        /* FOOTER OVERRIDES - FORCING 12PT (16PX) UNIFORMITY */
+        footer p { font-size: 16px !important; margin-bottom: 15px !important; text-align: center !important; line-height: 1.6 !important; }
+        footer a { font-size: 16px !important; color: white !important; text-decoration: none !important; opacity: 0.9; }
+        footer ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+
         .abstract { background: white; padding: 40px; border: 1px solid #ddd; border-left: 8px solid var(--primary-rust); font-style: italic; margin-bottom: 50px; font-size: 21px; }
         .methodology { background: #eee; padding: 30px; margin: 40px 0; border-radius: 8px; font-size: 18px; }
+        .ref-section { margin-top: 80px; padding-top: 50px; border-top: 2px solid var(--primary-rust); font-size: 18px; }
     </style>
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
