@@ -3,18 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicole Jolie | AI Audit</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Nicole Jolie | AI Search Visibility Audits</title>
+    <meta name="description" content="Serious companies audit before they act. See if your business qualifies for an AI Visibility Audit.">
     
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Nicole Jolie",
+          "jobTitle": "AI Search Consulting and Strategy",
+          "url": "https://nicolejolie.com",
+          "image": "https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/Nicole_red_suit_512x512.png",
+          "sameAs": ["https://www.linkedin.com/in/nicolejolie/", "https://www.skool.com/genx-ai-rising-6973"]
+        },
+        {
+          "@type": "Service",
+          "name": "AI Visibility Audit",
+          "description": "An audit that shows service based businesses how AI systems like ChatGPT, Gemini, and Perplexity understand, trust, and recommend their business.",
+          "provider": { "@type": "Person", "name": "Nicole Jolie" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What exactly is included in the AI Visibility Audit?",
+              "acceptedAnswer": { "@type": "Answer", "text": "You receive a detailed AI Visibility Report that analyzes how multiple AI systems interpret, describe, and recommend your business. It examines visibility signals, language patterns, competitive positioning, and trust indicators." }
+            },
+            {
+              "@type": "Question",
+              "name": "How in depth is this audit?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Very. This is not a 10 page overview. The audit produces a long form visibility report built to stand on its own as a reference document for your strategy." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this audit the same for every company?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. Every audit is tailored to your specific business model, industry, competitive set, and audience's real search behavior." }
+            },
+            {
+              "@type": "Question",
+              "name": "Which AI systems are evaluated in the audit?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The audit evaluates platforms including but not limited to ChatGPT, Gemini, Perplexity, Claude, DeepSeek, and other LLM-driven search experiences." }
+            },
+            {
+              "@type": "Question",
+              "name": "What questions does the audit actually answer?",
+              "acceptedAnswer": { "@type": "Answer", "text": "It answers: How do AI systems describe my business? Am I being recommended? Which competitors are surfaced instead? Where do trust signals break down?" }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens after I receive the audit?",
+              "acceptedAnswer": { "@type": "Answer", "text": "You receive the report, review it, and decide your next steps. You can use it to guide internal teams or inform strategy. There is no obligation attached." }
+            },
+            {
+              "@type": "Question",
+              "name": "Who is this audit for?",
+              "acceptedAnswer": { "@type": "Answer", "text": "This audit is for service-based businesses that care about being recommended by AI, understand AI search influence, and want clarity before making future investments." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #f3f4f6; }
-        .text-rust { color: #923f26; } /* Matching Footer Color */
+        /* CSS VARIABLES (Strict Adherence to PDF) */
+        :root {
+            --primary-rust: #923f26;
+            --accent-ochre: #d4a056;
+            --text-dark: #333;
+            --bg-cream: #f9f7f2;
+            --bg-dark: #1a1a1a;
+        }
+
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); background-color: #FAFAFA; overflow-x: hidden; }
         
-        /* Smooth Scroll behavior */
-        html { scroll-behavior: smooth; }
+        /* Utility Classes */
+        .bg-cream { background-color: var(--bg-cream); }
+        .bg-dark { background-color: var(--bg-dark); color: white; }
+        .text-rust { color: var(--primary-rust); }
+        .text-ochre { color: var(--accent-ochre); }
+        .text-light { color: #f0f0f0; }
+        
+        /* Fonts */
+        h1, h2 { font-weight: 900; letter-spacing: -1px; }
+        .serif-font { font-family: 'Cormorant Garamond', serif; }
+
+        /* Navigation */
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+
+        /* Video Wrappers (From PDF) */
+        .video-wrapper {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 4px solid white;
+            border-radius: 20px;
+            background: #000;
+        }
+        .video-wrapper video { width: 100%; display: block; }
+
+        /* Review Cards (From PDF) */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .review-card-static {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .review-stars { color: var(--accent-ochre); margin-bottom: 15px; font-size: 14px; }
+        .review-body { font-size: 16px; font-style: italic; color: #555; line-height: 1.6; margin-bottom: 20px; }
+        .review-name { font-weight: 700; color: var(--primary-rust); display: block; font-family: 'Cormorant Garamond', serif; font-size: 20px; }
+        .review-title { font-size: 14px; color: #888; display: block; margin-top: 2px; }
+
+        /* FAQ Accordion */
+        .faq-item { border-bottom: 1px solid rgba(146, 63, 38, 0.15); padding: 25px 0; }
+        .faq-question {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer { font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.6; margin-top: 15px; color: #444; display: none; }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-item.active .faq-question { color: var(--primary-rust); }
 
         /* Animations */
         .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s ease-out forwards; }
@@ -23,185 +153,232 @@
         @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-<body class="bg-[#FAFAFA] text-black antialiased">
+<body class="antialiased">
 
-    <nav class="glass-nav fixed top-0 w-full z-50 h-20 flex items-center transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
-            <div class="text-xl font-black tracking-tighter uppercase">Nicole Jolie</div>
+    <nav class="glass-nav fixed top-0 w-full z-50 h-20 flex items-center">
+        <div class="max-w-[1100px] mx-auto px-6 w-full flex justify-between items-center">
+            <div class="text-xl font-black tracking-tighter uppercase text-[#333]">Nicole Jolie</div>
             <div class="hidden md:block">
-                <a href="#audit-anchor" class="bg-black text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-gray-800 transition-colors">
+                <a href="#audit-anchor" class="bg-[var(--primary-rust)] text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-[#7a3320] transition-colors">
                     Click here to get your audit
                 </a>
             </div>
         </div>
     </nav>
 
-    <main class="pt-32 pb-16 px-6">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div class="fade-up">
-                <div class="inline-block px-3 py-1 mb-6 border border-black rounded-full bg-black text-white text-[10px] font-bold uppercase tracking-widest">
-                    New for 2026
-                </div>
-                <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-8">
-                    STOP CHASING ALGORITHMS.<br>
-                    <span class="text-gray-400">START BUILDING AUTHORITY.</span>
-                </h1>
-                <p class="text-lg text-gray-600 max-w-lg leading-relaxed mb-8">
-                    The web has evolved from "Search" to "Answers." 
-                    Old SEO tricked robots with keywords. The new AI Reality demands 
-                    <strong>Entity Trust</strong>. Is your business built to be the answer?
-                </p>
-                <a href="#audit-anchor" class="inline-block bg-black text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-800 transition-colors">
-                    Click here to get your audit
-                </a>
+    <header class="relative pt-40 pb-20 px-6 min-h-[80vh] flex items-center justify-center bg-cover bg-center" 
+            style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/nicole+at+computer+in+cafe.png');">
+        <div class="max-w-[1100px] mx-auto w-full text-center text-white fade-up">
+            <div class="inline-block px-4 py-1 mb-6 border border-white/30 rounded-full bg-white/10 backdrop-blur-sm text-xs font-bold uppercase tracking-widest">
+                New for 2026
             </div>
-            
-            <div class="fade-up delay-100 aspect-video bg-gray-100 rounded-xl border border-gray-200 flex items-center justify-center relative shadow-lg">
-                <span class="text-gray-400 font-bold flex flex-col items-center gap-2">
-                    <i class="fas fa-play-circle text-4xl"></i>
-                    <span>[Insert Your 60s Video Here]</span>
-                </span>
-            </div>
+            <h1 class="text-5xl md:text-7xl mb-8 leading-tight">
+                STOP CHASING ALGORITHMS.<br>
+                <span class="text-gray-400">START BUILDING AUTHORITY.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+                The web has evolved from "Search" to "Answers." 
+                Old SEO tricked robots with keywords. The new AI Reality demands 
+                <strong>Entity Trust</strong>. Is your business built to be the answer?
+            </p>
+            <a href="#audit-anchor" class="inline-block bg-[var(--primary-rust)] text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-[#7a3320] transition-transform hover:scale-105 shadow-xl">
+                Click here to get your audit
+            </a>
         </div>
-    </main>
+    </header>
 
-    <section class="py-20 bg-white border-y border-gray-100">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-black tracking-tighter mb-6">
-                    "BUT THEY FOUND ME ON CHATGPT..."
-                </h2>
+    <section class="py-24 bg-white border-b border-gray-100">
+        <div class="max-w-[1100px] mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl text-[var(--text-dark)] mb-6">"BUT THEY FOUND ME ON CHATGPT..."</h2>
                 <p class="text-xl text-gray-600 font-medium">
                     Be careful. There is a massive difference between being <span class="text-black font-bold">Listed</span> and being <span class="text-black font-bold">Recommended</span>.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-200">
                     <div class="text-xs font-bold text-gray-400 uppercase mb-4 tracking-widest">Option A: Being Listed</div>
-                    <p class="text-lg font-serif italic text-gray-500 mb-6">"Here are 10 businesses in Austin that do marketing..."</p>
-                    <div class="flex items-center gap-2 text-red-600 font-bold text-sm">
-                        <i class="fas fa-times-circle"></i> You are a commodity.
+                    <p class="text-2xl font-serif italic text-gray-500 mb-6">"Here are 10 businesses in Austin that do marketing..."</p>
+                    <div class="flex items-center gap-3 text-red-600 font-bold">
+                        <i class="fas fa-times-circle text-xl"></i> 
+                        <span>You are a commodity.</span>
                     </div>
                 </div>
 
-                <div class="bg-black text-white p-8 rounded-2xl border border-gray-900 shadow-xl relative overflow-hidden">
+                <div class="bg-black text-white p-10 rounded-3xl border border-gray-900 shadow-2xl relative overflow-hidden">
                     <div class="text-xs font-bold text-gray-500 uppercase mb-4 tracking-widest">Option B: Being Cited</div>
-                    <p class="text-lg font-serif italic mb-6">"Based on your needs, Nicole Jolie is the best choice because she specializes in AEO..."</p>
-                    <div class="flex items-center gap-2 text-green-400 font-bold text-sm">
-                        <i class="fas fa-check-circle"></i> You are the Authority.
+                    <p class="text-2xl font-serif italic mb-6">"Based on your needs, Nicole Jolie is the best choice because she specializes in AEO..."</p>
+                    <div class="flex items-center gap-3 text-green-400 font-bold">
+                        <i class="fas fa-check-circle text-xl"></i> 
+                        <span>You are the Authority.</span>
                     </div>
+                </div>
+            </div>
+            
+            <p class="text-center text-gray-500 mt-12 max-w-2xl mx-auto">
+                My protocol doesn't just get you on the list. It builds the 
+                <strong>Trust Signals</strong> that force the AI to choose you as the single best answer.
+            </p>
+        </div>
+    </section>
+
+    <section id="audit-anchor" class="py-24 bg-[#FAFAFA]">
+        <div class="max-w-[900px] mx-auto px-6 text-center">
+            <h2 class="text-3xl font-black tracking-tight mb-2 text-[var(--primary-rust)] uppercase">Click here to get your audit</h2>
+            <p class="mb-10 text-gray-400 text-sm">Use the form below to begin.</p>
+
+            <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden min-h-[500px]">
+                
+                <iframe data-tally-src="https://tally.so/embed/J9poZr?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="100" frameborder="0" marginheight="0" marginwidth="0" title="Audit Request 2026"></iframe>
+                <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+                </div>
+        </div>
+    </section>
+
+    <section class="bg-cream py-20 border-t border-gray-100">
+        <div class="max-w-[1100px] mx-auto px-6 text-center">
+            <h2 class="text-4xl text-[var(--primary-rust)] mb-4">See What It's Like to Work With Nicole</h2>
+            <p class="text-xl mb-12">Real results from entrepreneurs who transformed their visibility.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="video-wrapper">
+                    <video controls preload="none">
+                        <source src="https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/%5BTestimonial%5D+Client+Success!.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-4 font-bold text-[var(--primary-rust)] bg-white p-3">Client Success Story</p>
+                </div>
+                <div class="video-wrapper">
+                    <video controls preload="none">
+                        <source src="https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/%5BTestimonial%5D+I+Love+This%2C+Nicole!.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-4 font-bold text-[var(--primary-rust)] bg-white p-3">"I Love This, Nicole!"</p>
+                </div>
+                <div class="video-wrapper">
+                    <video controls preload="none">
+                        <source src="https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/%5BTestimonial%5D+Shopify+Success!.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-4 font-bold text-[var(--primary-rust)] bg-white p-3">Shopify Success</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="audit-anchor" class="py-20 bg-[#FAFAFA]">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-black tracking-tight mb-2 uppercase">Click here to get your audit</h2>
-            <p class="text-gray-500 mb-8 text-sm">
-                Strictly limited to 1 run per IP address.
-            </p>
+    <section id="reviews" class="bg-cream pb-24 pt-10">
+        <div class="max-w-[1100px] mx-auto px-6">
+            <h2 class="text-4xl text-center text-[var(--primary-rust)] mb-4">Client Testimonials</h2>
+            <p class="text-center text-xl mb-6">Real results from real clients.</p>
 
-            <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden p-4 min-h-[500px]">
-                
-                <div class="flex items-center justify-center h-full text-gray-400 text-sm py-20 border-2 border-dashed border-gray-100 rounded-xl">
-                    [ PASTE TALLY EMBED CODE HERE ]
+            <div class="reviews-grid">
+                <div class="review-card-static">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-body">"Nicole is absolutely amazing at delivering ideas and step-by-step processes to create content and videos. She can use 10 seconds of a pitch to create several month's worth of content to be posted. Not only does she give you the material she gives you the confidence to really go for it. After a few discussions with her I finally jumped on the Tik Tok train to promote my book. Since joining with her steps I made 40+ videos in one week and posted them to gain traction on Tik Tok. Without her help I would never have been able to get these done or feel confident making them. She is incredible!!"</p>
+                    <span class="review-name">April Waverly</span>
                 </div>
+                <div class="review-card-static">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-body">"Nicole did an outstanding job for me and my business. I'm not one that has much experience or knowledge in this area, but she made it easy and guided me through what we needed. And to top that, everything was finished early than promised. I'd refer Nicole to anyone needing help in making your business presence known and bringing in more clients."</p>
+                    <span class="review-name">Bill Williams</span>
                 </div>
+                <div class="review-card-static">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-body">"I was in a group with Nicole. She was so up front and clear on what her mission was to help so many others. To know what tools and skills they need to have, put in place so they can reach their goals. Great Lady. 12 out of 10!"</p>
+                    <span class="review-name">Tracy Shudo</span>
+                </div>
+                <div class="review-card-static">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-body">"The content and the character shown and implemented by Nicole is something everyone should strive for. Her ability to understand the problem and then create a unique solution is fantastic"</p>
+                    <span class="review-name">Jonathan Drake</span>
+                </div>
+                <div class="review-card-static">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-body">"Nicole is absolutely amazing! I found her on Clubhouse and have become a huge fan and just want to soak up her guidance and value 24/7. She is so passionate about helping others and is incredibly responsive. She is also very inclusive and has this magic way of bringing out the questions that you didn't even know you had, then answer them with mind-blowing techniques!"</p>
+                    <span class="review-name">Leah Day</span>
+                </div>
+                <div class="review-card-static">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-body">"Nicole Jolie is very experienced and very helpful when it comes to marketing advice and best practices. I listen and follow her advice as she is so good. I know the advice is accurate and very trustable. Mary Sloane."</p>
+                    <span class="review-name">Mary Sloane</span>
+                </div>
+                <div class="review-card-static">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-body">"We highly recommend working with Nicole. We could not be happier with the service that she provided for our company. The newfound understanding of our business operations, brand visibility, and how we can use AI to advance our business will definitely lead to growth. Her dedication to a breakthrough for us was super appreciated - a benefit above and beyond our expectations. Thank you, Nicole!"</p>
+                    <span class="review-name">Anne Murphy</span>
+                    <span class="review-title">AI Operations Consultant</span>
+                </div>
+                <div class="review-card-static">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-body">"Nicole has a deep understanding of how to use AI automation to simplify business growth and was able to clearly explain complex ideas in a practical, results-focused way. I'd recommend her to any leader looking to modernize their client acquisition and marketing systems."</p>
+                    <span class="review-name">Curt Kempf</span>
+                    <span class="review-title">Solutions Engineer</span>
+                </div>
+                <div class="review-card-static">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-body">"Nicole is very professional and is an expert in creating quality product launches. I first engaged with Nicole back in 2011. She was the person that helped me think about getting online. I joined her newsletter and have since utilized portions of her template to create my own winning campaigns. In addition to marketing, Nicole is an incredible trainer, assisting triathletes with the swimming portion of the competition. I have an aspiration to compete in an Ironman and I will definitely consult with her when I am ready to pursue that goal."</p>
+                    <span class="review-name">Flo Bradley</span>
+                </div>
+                <div class="review-card-static">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-body">"I was working out in the gym shortly after making a 3rd degree sprained ankle from playing soccer. I had just started marathon training. I was in the gym limping around when I was approached by Nicole. She reccommeded a work out routine and it was a kick in my pants. She had me start on the TRX cables (which I now own). It was a work out everytime I got on. In regards to my ankle, she was able to rehabilitate myself and actually get me ready for my marathon despite the fact that I was 6 weeks behind in my running schedule. Her training and knowledge lead me finsish the Santa Barbara Marathon in a respectable time for a first time runner. Thank you Nicole, I would reccomened Nicole and the TRX workout."</p>
+                    <span class="review-name">Scott Allen</span>
+                    <span class="review-title">Welding Engineer Specialist</span>
+                </div>
+                <div class="review-card-static">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-body">"I personally endorse Nicole, for any Internet Marketing needs. She knows how to get immediate results and demonstrates that on a daily basis in her own business, while assisting others to do the same."</p>
+                    <span class="review-name">Mark Hayes</span>
+                    <span class="review-title">Business Consultant</span>
+                </div>
+                <div class="review-card-static">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-body">"Nicole is such a pleasure to talk to and work with because of her upbeat personality. She is goal-oriented and informed about the services and programs she participates in. Combining the total body, mind and spirit in whatever she puts her skills toward, Nicole is also more than willing to extend a hand and help others achieve their dreams."</p>
+                    <span class="review-name">Theresa Cahill</span>
+                    <span class="review-title">Writer & Editor</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="py-20 bg-[#FFFDD0] text-black"> <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-[#923f26] mb-2">Client Testimonials</h2>
-            <p class="text-center text-xl mb-12">Real results from real clients.</p>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm leading-relaxed mb-6">"Nicole is absolutely amazing at delivering ideas and step-by-step processes to create content and videos. She can use 10 seconds of a pitch to create several month's worth of content to be posted. Not only does she give you the material she gives you the confidence to really go for it. After a few discussions with her I finally jumped on the Tik Tok train to promote my book. Since joining with her steps I made 40+ videos in one week and posted them to gain traction on Tik Tok. Without her help I would never have been able to get these done or feel confident making them. She is incredible!!"</p>
-                    <span class="font-bold block">April Waverly</span>
+    <section id="faq" class="bg-cream py-24">
+        <div class="max-w-[900px] mx-auto px-6">
+            <h2 class="text-4xl text-center text-[var(--primary-rust)] mb-16">Frequently Asked Questions</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">What exactly is included in the AI Visibility Audit? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">This is a comprehensive, multi-layer audit. You receive a detailed AI Visibility Report that analyzes how multiple AI systems interpret, describe, and recommend your business. It examines visibility signals, language patterns, competitive positioning, trust indicators, and gaps across AI search environments.</div>
                 </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm leading-relaxed mb-6">"Nicole did an outstanding job for me and my business. I'm not one that has much experience or knowledge in this area, but she made it easy and guided me through what we needed. And to top that, everything was finished early than promised. I'd refer Nicole to anyone needing help in making your business presence known and bringing in more clients."</p>
-                    <span class="font-bold block">Bill Williams</span>
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">How in depth is this audit? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Very. This is not a 10-page overview or a lightweight scan. The audit produces a long-form visibility report that reflects the complexity of your business, your market, and your competitive landscape. Each report is built to stand on its own as a reference document.</div>
                 </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm leading-relaxed mb-6">"I was in a group with Nicole. She was so up front and clear on what her mission was to help so many others. To know what tools and skills they need to have, put in place so they can reach their goals. Great Lady. 12 out of 10!"</p>
-                    <span class="font-bold block">Tracy Shudo</span>
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">Is this audit the same for every company? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">No. And that is the point. Every audit is tailored to your specific business model, your industry and niche, your competitive set, and your audience's real search behavior. There are no templates copied from other companies.</div>
                 </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm leading-relaxed mb-6">"The content and the character shown and implemented by Nicole is something everyone should strive for. Her ability to understand the problem and then create a unique solution is fantastic"</p>
-                    <span class="font-bold block">Jonathan Drake</span>
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">Which AI systems are evaluated in the audit? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">The audit evaluates how your business appears across modern AI platforms, including but not limited to: ChatGPT, Gemini, Perplexity, Claude, DeepSeek, and other large language model driven search experiences.</div>
                 </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm leading-relaxed mb-6">"Nicole is absolutely amazing! I found her on Clubhouse and have become a huge fan and just want to soak up her guidance and value 24/7. She is so passionate about helping others and is incredibly responsive. She is also very inclusive and has this magic way of bringing out the questions that you didn't even know you had, then answer them with mind-blowing techniques!"</p>
-                    <span class="font-bold block">Leah Day</span>
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">What questions does the audit actually answer? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">It answers: How do AI systems currently describe my business? Am I being recommended when people search for services like mine? Which competitors are being surfaced instead? Where do trust and clarity break down? What signals matter most to fix first?</div>
                 </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm leading-relaxed mb-6">"Nicole Jolie is very experienced and very helpful when it comes to marketing advice and best practices. I listen and follow her advice as she is so good. I know the advice is accurate and very trustable. Mary Sloane."</p>
-                    <span class="font-bold block">Mary Sloane</span>
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">What happens after I receive the audit? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">You receive the report. You review it. You decide what to do next. Some businesses use the audit to guide internal teams, others use it to inform future strategy, and some choose to get implementation support. There is no obligation built into the audit itself.</div>
                 </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm leading-relaxed mb-6">"We highly recommend working with Nicole. We could not be happier with the service that she provided for our company. The newfound understanding of our business operations, brand visibility, and how we can use AI to advance our business will definitely lead to growth. Her dedication to a breakthrough for us was super appreciated - a benefit above and beyond our expectations. Thank you, Nicole!"</p>
-                    <span class="font-bold block">Anne Murphy</span>
-                    <span class="text-xs text-gray-500 uppercase tracking-wide">AI Operations Consultant</span>
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">Who is this audit for? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">This audit is for service-based businesses that care about being recommended, not just visible. It is for those who understand that AI search is already influencing decisions and want clarity before making investments for 2026 and beyond.</div>
                 </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm leading-relaxed mb-6">"Nicole has a deep understanding of how to use AI automation to simplify business growth and was able to clearly explain complex ideas in a practical, results-focused way. I'd recommend her to any leader looking to modernize their client acquisition and marketing systems."</p>
-                    <span class="font-bold block">Curt Kempf</span>
-                    <span class="text-xs text-gray-500 uppercase tracking-wide">Solutions Engineer</span>
-                </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm leading-relaxed mb-6">"Nicole is very professional and is an expert in creating quality product launches. I first engaged with Nicole back in 2011. She was the person that helped me think about getting online. I joined her newsletter and have since utilized portions of her template to create my own winning campaigns. In addition to marketing, Nicole is an incredible trainer, assisting triathletes with the swimming portion of the competition. I have an aspiration to compete in an Ironman and I will definitely consult with her when I am ready to pursue that goal."</p>
-                    <span class="font-bold block">Flo Bradley</span>
-                </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm leading-relaxed mb-6">"I was working out in the gym shortly after making a 3rd degree sprained ankle from playing soccer. I had just started marathon training. I was in the gym limping around when I was approached by Nicole. She reccommeded a work out routine and it was a kick in my pants. She had me start on the TRX cables (which I now own). It was a work out everytime I got on. In regards to my ankle, she was able to rehabilitate myself and actually get me ready for my marathon despite the fact that I was 6 weeks behind in my running schedule. Her training and knowledge lead me finsish the Santa Barbara Marathon in a respectable time for a first time runner. Thank you Nicole, I would reccomened Nicole and the TRX workout."</p>
-                    <span class="font-bold block">Scott Allen</span>
-                    <span class="text-xs text-gray-500 uppercase tracking-wide">Welding Engineer Specialist</span>
-                </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm leading-relaxed mb-6">"I personally endorse Nicole, for any Internet Marketing needs. She knows how to get immediate results and demonstrates that on a daily basis in her own business, while assisting others to do the same."</p>
-                    <span class="font-bold block">Mark Hayes</span>
-                    <span class="text-xs text-gray-500 uppercase tracking-wide">Business Consultant</span>
-                </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm leading-relaxed mb-6">"Nicole is such a pleasure to talk to and work with because of her upbeat personality. She is goal-oriented and informed about the services and programs she participates in. Combining the total body, mind and spirit in whatever she puts her skills toward, Nicole is also more than willing to extend a hand and help others achieve their dreams."</p>
-                    <span class="font-bold block">Theresa Cahill</span>
-                    <span class="text-xs text-gray-500 uppercase tracking-wide">Writer & Editor</span>
-                </div>
-
             </div>
         </div>
     </section>
 
     <footer style="background-color: #1a1a1a; color: white; padding: 60px 0 30px; font-family: 'Inter', sans-serif;">
-        <div class="max-w-[1100px] mx-auto px-5">
+        <div class="max-w-[1100px] mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-left">
-                
                 <div>
                     <h3 style="color: #923f26; font-size: 18px; margin-bottom: 15px; text-transform: uppercase;">Nicole Jolie</h3>
                     <p style="color: #f9f7f2; opacity: 0.8; font-size: 14px; line-height: 1.6;">
@@ -209,13 +386,11 @@
                         AI agent consulting for service businesses.
                     </p>
                 </div>
-
                 <div>
                     <h3 style="color: #923f26; font-size: 18px; margin-bottom: 15px; text-transform: uppercase;">Contact</h3>
                     <p style="color: #f9f7f2; font-size: 14px; margin-bottom: 5px;">nicole@sociallysmashing.com</p>
                     <p style="color: #f9f7f2; font-size: 14px;">Austin, TX 78701</p>
                 </div>
-
                 <div>
                     <h3 style="color: #923f26; font-size: 18px; margin-bottom: 15px; text-transform: uppercase;">Legal</h3>
                     <ul style="list-style: none; padding: 0; margin: 0;">
@@ -227,7 +402,6 @@
                         <li style="margin-bottom: 8px;"><a href="../anti-class-action.html" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.8;">Anti Class Action</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h3 style="font-size: 18px; margin-bottom: 15px;">&nbsp;</h3>
                     <ul style="list-style: none; padding: 0; margin: 0;">
@@ -238,31 +412,29 @@
                         <li style="margin-bottom: 8px;"><a href="../dmca-policy.html" style="color: white; text-decoration: none; font-size: 14px; opacity: 0.8;">DMCA Policy</a></li>
                     </ul>
                 </div>
-
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: left; font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 40px;">
+                <p>&copy; 2026 Nicole Jolie. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <div id="floating-bar" class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 shadow-2xl flex items-center justify-between md:justify-center gap-4 z-50 transform translate-y-full transition-transform duration-500">
-        <div class="hidden md:block text-sm font-medium text-gray-500 mr-4">
-            30-Day Audit Series <span class="mx-2">|</span> 1 Check Per IP
-        </div>
-        <a href="#audit-anchor" class="w-full md:w-auto text-center bg-black text-white px-8 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors">
+    <div id="floating-bar" class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 shadow-2xl flex items-center justify-center gap-4 z-50 transform translate-y-full transition-transform duration-500">
+        <a href="#audit-anchor" class="bg-[var(--primary-rust)] text-white px-8 py-3 rounded-full font-bold hover:bg-[#7a3320] transition-colors shadow-lg">
             Click here to get your audit
         </a>
     </div>
 
     <script>
-        // Floating Bar appears after scrolling 300px
+        // Floating Bar Logic
         window.addEventListener('scroll', () => {
             const bar = document.getElementById('floating-bar');
-            if (window.scrollY > 300) {
+            if (window.scrollY > 500) {
                 bar.classList.remove('translate-y-full');
             } else {
                 bar.classList.add('translate-y-full');
             }
         });
     </script>
-
 </body>
 </html>
