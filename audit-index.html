@@ -605,13 +605,14 @@
     </div>
 </footer>
 
-    <div id="floating-bar" class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-300 p-6 shadow-2xl flex items-center justify-between md:justify-center gap-8 z-50 transform translate-y-full">
-        <div class="hidden md:block font-bold text-gray-900 text-lg">Don't leave without getting your Authority Roadmap.</div>
-        <a href="#authority-roadmap-anchor" class="bg-[var(--primary-rust)] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#7a3320] shadow-xl hover:scale-105 transition-transform">
-            Get My Authority Roadmap
-        </a>
+<div id="floating-bar" class="fixed bottom-0 left-0 w-full border-t border-gray-300 p-6 shadow-2xl flex items-center justify-between md:justify-center gap-8 z-50 transform translate-y-full" style="background-color: #ff6b36;">
+    <div class="hidden md:block font-bold text-lg" style="color: #ede0c7;">
+        Don't leave without getting your Authority Roadmap.
     </div>
-
+    <a href="#authority-roadmap-anchor" class="bg-[var(--primary-rust)] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#7a3320] shadow-xl hover:scale-105 transition-transform">
+        Get My Authority Roadmap
+    </a>
+</div>
     <script>
         window.addEventListener('scroll', () => {
             const bar = document.getElementById('floating-bar');
