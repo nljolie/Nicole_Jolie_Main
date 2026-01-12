@@ -3,271 +3,373 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startup Junkie Proposal | Nicole Jolie</title>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DN6ZNJJWP1"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DN6ZNJJWP1');</script>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link href="https://fonts.googleapis.com/css?family=Inter:wght@400;600;700;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>Startup Junkie Distribution Engine</title>
     <style>
-        :root { 
-            --primary-rust: #923f26; 
-            --accent-ochre: #d4a056; 
-            --bg-dark: #000421; 
-            --bg-cream: #f9f7f2; 
-        }
-        body { 
-            font-family: 'Inter', sans-serif; 
-            color: #111; 
-            background-color: white; 
-            line-height: 1.6;
-        }
-        h1, h2, h3, h4 { letter-spacing: -0.02em; }
-        .serif-font { font-family: 'Cormorant Garamond', serif; }
-        .text-rust { color: var(--primary-rust); }
-        .text-ochre { color: var(--accent-ochre); }
-        
-        /* Buttons */
-        .btn-rust { 
-            background-color: var(--primary-rust); 
-            color: white; 
-            transition: all 0.2s ease; 
-            box-shadow: 0 4px 14px 0 rgba(146, 63, 38, 0.39);
-        }
-        .btn-rust:hover { 
-            background-color: #7a3320; 
-            transform: translateY(-2px); 
+        /* RESET & BASE STYLES */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-        /* FAQ Toggles */
-        .faq-answer { display: none; margin-top: 1rem; color: #4b5563; }
-        .faq-item.active .faq-answer { display: block; }
-        .faq-item.active .fa-chevron-down { transform: rotate(180deg); }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            color: #1a202c;
+            background-color: #f7fafc;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #0f172a; /* Dark Blue */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            font-size: 1.125rem;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            font-size: 1.125rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            color: #ff6b6b; /* Warm Coral */
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            width: 1rem;
+        }
+
+        /* UTILITIES */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff6b6b; /* Warm Coral */
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background-color: #e05252;
+        }
+
+        .text-center { text-align: center; }
+        .text-small { font-size: 0.9rem; color: #4a5568; }
+        .italic { font-style: italic; }
+        .bold { font-weight: 700; }
+        .mb-0 { margin-bottom: 0; }
+        
+        /* SECTIONS */
+        section {
+            padding: 5rem 0;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); /* Deep Blue Gradient */
+            color: white;
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        .hero h1, .hero h2, .hero h3 {
+            color: white;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-subhead {
+            font-size: 1.25rem;
+            color: #e2e8f0;
+            margin-bottom: 2rem;
+            border-left: 4px solid #ff6b6b;
+            padding-left: 1rem;
+        }
+
+        .hero-bullets li::before {
+            color: #f6e05e; /* Soft Yellow */
+        }
+
+        .screenshot-box {
+            background-color: #000;
+            border: 4px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* COMPARISON SECTION */
+        .comparison-section {
+            background-color: #ffffff;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .col-left h3 { color: #4a5568; }
+        .col-right {
+            background-color: #ebf8ff; /* Very Light Teal/Blue */
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid #38b2ac; /* Teal */
+        }
+        
+        .col-right h3 { color: #2c7a7b; }
+
+        .ghost-money {
+            background-color: #fff5f5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #fc8181;
+            margin-top: 2rem;
+        }
+
+        .ghost-money h4 {
+            color: #c53030;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* COST SECTION */
+        .cost-section {
+            background: linear-gradient(to bottom, #f7fafc 0%, #edf2f7 100%);
+        }
+
+        .cost-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-highlight {
+            border: 2px solid #ff6b6b; /* Warm Coral */
+            position: relative;
+        }
+
+        .card-highlight::after {
+            content: "Recommended";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #ff6b6b;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-bottom-left-radius: 8px;
+        }
+
+        .price-tag {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 1.5rem 0;
+        }
+
+        /* MONETIZATION SECTION */
+        .monetization-section {
+            background-color: #0f172a; /* Dark Blue */
+            color: white;
+        }
+        .monetization-section h2 { color: white; }
+        .monetization-section p, .monetization-section li { color: #cbd5e0; }
+        .monetization-section li::before { color: #f6e05e; } /* Soft Yellow */
+        
+        .pull-quote {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #f6e05e;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 3rem;
+        }
+
+        /* WHO I AM SECTION */
+        .who-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-box {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-top: 4px solid #38b2ac; /* Teal */
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #38b2ac 0%, #319795 100%); /* Teal Gradient */
+            padding: 4rem 2rem;
+            border-radius: 16px;
+            color: white;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-box h2 { color: white; }
+        .cta-box .btn {
+            background-color: white;
+            color: #2c7a7b;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .cta-box .btn:hover {
+            background-color: #f7fafc;
+        }
+
+        /* RESPONSIVE MEDIA QUERIES */
+        @media (min-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .cost-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .who-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            h1 { font-size: 3.5rem; }
+        }
+        
+        /* FOOTER */
+        footer {
+            background-color: #1a202c;
+            color: #718096;
+            padding: 3rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
-    <nav class="fixed top-0 w-full z-50 h-20 flex items-center bg-white shadow-sm">
-        <div class="max-w-[1100px] mx-auto px-6 w-full flex justify-between items-center">
-            <div class="text-xl font-black tracking-tighter uppercase text-black">Nicole Jolie</div>
-            <a href="#build-phase" class="btn-rust px-5 py-3 rounded-full text-sm md:text-base font-bold">
-                Start The Build
-            </a>
-        </div>
-    </nav>
-
-    <header class="pt-32 pb-20 px-6 bg-[#000421] text-white">
-        <div class="max-w-[1100px] mx-auto w-full">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <span class="inline-block px-3 py-1 mb-6 border border-[#d4a056] rounded-full text-[#d4a056] text-xs font-bold uppercase tracking-widest">
-                        For Startup Junkie
-                    </span>
-                    <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
-                        Distribution is changing.
-                        <span class="text-[#d4a056] serif-font italic block mt-2">Don't get left behind.</span>
-                    </h1>
-                    <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-                        Whether you work with me or not, this is where distribution is going: <strong>AI-assisted content engines</strong> that sit on top of strong brands.
-                    </p>
-                    <div class="border-l-4 border-[#d4a056] pl-6 mb-10">
-                        <p class="text-lg text-gray-200">
-                            The advantage you have is that the content and the reputation already exist. The missing piece is the system.
-                        </p>
+    <header class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>Whether you work with me or not, this is where distribution is going: AI-assisted, automation-backed content engines that sit on top of strong brands.</h1>
+                    
+                    <div class="hero-subhead">
+                        Startup Junkie already has the content and the reputation. The missing piece is the system, which is exactly what I can help you build inside your software accounts, under your control.
                     </div>
-                    <a href="#build-phase" class="btn-rust inline-block w-full md:w-auto text-center px-8 py-4 rounded-full font-bold text-lg">
-                        Optimize The Channel
-                    </a>
-                </div>
 
-                <div class="lg:w-1/2 w-full">
-                    <div class="rounded-xl overflow-hidden shadow-2xl border-4 border-white/20 bg-black">
-                        <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/startupunkieoutube.png" 
-                             alt="Startup Junkie YouTube Analysis" 
-                             class="w-full object-cover">
-                        <div class="p-6 bg-gray-900 text-white">
-                            <h3 class="font-bold text-lg mb-2 text-[#d4a056]">Current Status: ~1,300 Subscribers</h3>
-                            <p class="text-gray-300 text-sm">Great content acting as an archive, not a growth engine.</p>
-                        </div>
+                    <ul class="hero-bullets">
+                        <li>Your podcast has 400+ episodes and a respected brand.</li>
+                        <li>Your YouTube channel has roughly 1,300 subscribers, not 13,000-30,000.</li>
+                        <li>You are not yet optimized or monetized, and everything is still mostly manual.</li>
+                    </ul>
+
+                    <a href="#cta" class="btn">Talk With Me About Optimizing Startup Junkie's Channel</a>
+                    <p class="text-small" style="margin-top: 1rem; color: #cbd5e0;">No new headcount. No loss of control. Just a smarter engine around what you already have.</p>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="screenshot-box">
+                        <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/startupunkieoutube.png" alt="Startup Junkie YouTube Channel">
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="py-20 bg-white">
-        <div class="max-w-[1100px] mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-black mb-6 text-black">
-                    What You Have Now vs.<br>
-                    <span class="text-[#923f26] serif-font italic">What You Could Have</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    The work is the same: record great conversations. The difference is what happens to those conversations once they're recorded.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 p-8 md:p-10 rounded-3xl border border-gray-200 shadow-sm">
-                    <div class="text-sm font-bold text-gray-500 uppercase mb-4 tracking-widest">The Current State</div>
-                    <h3 class="text-2xl font-bold mb-6 text-black">A Traditional Podcast Feed</h3>
-                    <ul class="space-y-4 text-gray-700 font-medium">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-archive text-gray-400 mt-1"></i> 
-                            <span>Functions as an archive instead of a growth engine.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-times text-red-400 mt-1"></i> 
-                            <span>Titles & thumbnails not optimized for click-through.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-exclamation-circle text-orange-500 mt-1"></i> 
-                            <span><strong>Ghost Money:</strong> Fewer views, fewer leads, and a weaker story for funders.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-[#000421] text-white p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-[#d4a056] text-black text-xs font-bold px-4 py-2 rounded-bl-xl">THE FUTURE</div>
-                    <h3 class="text-2xl font-bold mb-6 mt-4">A Distribution Engine</h3>
-                    <ul class="space-y-4 text-gray-200 font-medium">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-robot text-[#d4a056] mt-1"></i> 
-                            <span><strong>AI-Assisted:</strong> Detects new episodes and auto-prepares titles, Shorts, and posts.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-sync text-[#d4a056] mt-1"></i> 
-                            <span><strong>Automated Workflows:</strong> Moves information, not people. Sends episodes into a repeatable pipeline.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-chart-line text-[#d4a056] mt-1"></i> 
-                            <span><strong>Monetizable Assets:</strong> Re-packaged backlog that drives watch time and revenue.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-[#f9f7f2] border-y border-gray-200">
-        <div class="max-w-[900px] mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-black mb-12 text-center text-[#923f26]">
-                The Cost of Doing It Manually vs. Building a System
-            </h2>
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 3rem;">What You Have Now vs. What You Could Have</h2>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-2xl border border-gray-200">
-                    <h4 class="font-bold text-lg mb-2 text-gray-600">Hiring a Specialist</h4>
-                    <p class="text-3xl md:text-4xl font-black text-gray-900 mb-4">$30k - $50k<span class="text-base font-normal text-gray-500">/year</span></p>
-                    <p class="text-gray-600 mb-4">
-                        Hiring a seasoned YouTube growth operator for serious part-time work is a big ongoing step for an entrepreneurial support organization.
-                    </p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-xl border-2 border-[#923f26] relative transform md:-translate-y-4">
-                    <div class="absolute top-0 right-0 bg-[#923f26] text-white text-xs font-bold px-3 py-1 rounded-bl-lg">SMART CHOICE</div>
-                    <h4 class="font-bold text-lg mb-2 text-[#923f26]">System Build Phase</h4>
-                    <p class="text-3xl md:text-4xl font-black text-gray-900 mb-4">$5,500 - $7,500<span class="text-base font-normal text-gray-500"> total</span></p>
-                    <p class="text-gray-700 font-bold mb-4">
-                        One-time investment. You own the engine forever.
-                    </p>
-                    <ul class="text-sm space-y-2 text-gray-600">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-600"></i> Deep channel review</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-600"></i> Re-titling high-impact episodes</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-600"></i> AI workflow setup (n8n, Blotato)</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-600"></i> Team training included</li>
+            <div class="comparison-grid">
+                <div class="col-left">
+                    <h3>What You Have Now</h3>
+                    <ul>
+                        <li>A strong "OG" brand in Arkansas, a 400+ episode podcast, and a YouTube channel that functions as an archive instead of a growth engine.</li>
+                        <li>Titles, descriptions, and thumbnails built like a traditional podcast feed, not for YouTube click-through, binge-watching, or Shorts discovery.</li>
+                        <li>No consistent system to turn each episode into multiple Shorts, TikToks, LinkedIn posts, and newsletter assets.</li>
+                        <li>Internal manual effort: someone has to remember to post, rewrite, and log into each platform, and nothing about that work compounds.</li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="py-20 bg-[#000421] text-white">
-        <div class="max-w-[1100px] mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-black mb-12 text-center">Why this matters to donors</h2>
-            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
-                <div class="bg-white/10 p-8 rounded-2xl border border-white/10">
-                    <i class="fas fa-building text-[#d4a056] text-3xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Corporate Partners</h3>
-                    <p class="text-gray-300">Deciding where to place sponsorships requires visible reach. 13,000 subscribers tells a very different story than 1,300.</p>
-                </div>
-                <div class="bg-white/10 p-8 rounded-2xl border border-white/10">
-                    <i class="fas fa-flag-usa text-[#d4a056] text-3xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Gov Programs</h3>
-                    <p class="text-gray-300">Evaluating reach and impact. You need to turn "we have a great show" into "we have a visible, growing channel".</p>
-                </div>
-                <div class="bg-white/10 p-8 rounded-2xl border border-white/10">
-                    <i class="fas fa-hand-holding-heart text-[#d4a056] text-3xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Foundations</h3>
-                    <p class="text-gray-300">Donors want to see that your content actually gets seen. Monetization is proof of audience attention.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-[900px] mx-auto px-6">
-            <h2 class="text-4xl font-black mb-8 text-center text-black">What You Keep</h2>
-            <p class="text-xl text-gray-600 mb-12 text-center">
-                My goal is not to "own your channel." My goal is to optimize the assets you already have and hand them back to you.
-            </p>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-6 bg-gray-50 rounded-xl">
-                    <div class="text-[#923f26] font-bold text-xl mb-2">1. Control</div>
-                    <p class="text-gray-700">All software and API keys are in your name. I build inside your environment.</p>
-                </div>
-                <div class="p-6 bg-gray-50 rounded-xl">
-                    <div class="text-[#923f26] font-bold text-xl mb-2">2. No Lock-In</div>
-                    <p class="text-gray-700">You are not buying a permanent headcount. You own the system.</p>
-                </div>
-                <div class="p-6 bg-gray-50 rounded-xl">
-                    <div class="text-[#923f26] font-bold text-xl mb-2">3. The Engine</div>
-                    <p class="text-gray-700">I build a repeatable engine, then hand it to your team with clear guidance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-[#f9f7f2] py-20 border-t border-gray-200">
-        <div class="max-w-[800px] mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl text-center text-[#923f26] mb-12 font-black">Frequently Asked Questions</h2>
-            <div class="space-y-4">
-                <div class="faq-item bg-white p-6 rounded-lg shadow-sm cursor-pointer" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between font-serif text-xl font-bold">Is this a retainer model? <i class="fas fa-chevron-down transition-transform duration-300"></i></div>
-                    <div class="faq-answer">Primarily, no. This is a one-time "Build Phase" project to set up the system. After the build, there is an optional light retainer if you want me to review performance, but it is not required.</div>
-                </div>
-                <div class="faq-item bg-white p-6 rounded-lg shadow-sm cursor-pointer" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between font-serif text-xl font-bold">What are the software costs? <i class="fas fa-chevron-down transition-transform duration-300"></i></div>
-                    <div class="faq-answer">You will pay for the tools directly so you own the accounts. This typically includes n8n, Blotato, Claude, and VidIQ. The combined monthly budget is a few hundred dollars, not thousands.</div>
-                </div>
-                <div class="faq-item bg-white p-6 rounded-lg shadow-sm cursor-pointer" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between font-serif text-xl font-bold">How long does the build phase take? <i class="fas fa-chevron-down transition-transform duration-300"></i></div>
-                    <div class="faq-answer">The build phase is a focused project. Payment is structured as 50% upfront to begin work, and 50% due when the system is complete and in use by your team.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="build-phase" class="py-24 bg-[#000421] text-white text-center">
-        <div class="max-w-[800px] mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-black mb-6">Ready to Optimize Startup Junkie?</h2>
-            <p class="text-xl text-gray-300 mb-10">
-                If you want Startup Junkie's YouTube presence to match the impact you already have on the ground, the next step is simple.
-            </p>
-            <a href="mailto:nicole@sociallysmashing.com?subject=Startup%20Junkie%20Distribution%20Build" class="btn-rust inline-block px-10 py-5 rounded-full font-bold text-xl">
-                Let's Talk About The Build Phase
-            </a>
-        </div>
-    </section>
-
-    <footer class="bg-[#000421] text-gray-500 py-10 text-center border-t border-white/10 text-sm">
-        <p>&copy; 2026 Nicole Jolie. Proposal for Startup Junkie.</p>
-    </footer>
-
-</body>
-</html>
+                    <div class="ghost-money">
+                        <h4>What this is costing you (ghost money)</h4>
+                        <ul>
+                            <li>Fewer views and subscribers than you could have with
