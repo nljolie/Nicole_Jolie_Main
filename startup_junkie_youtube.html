@@ -4,510 +4,261 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startup Junkie Distribution Engine</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Inter:wght@400;600;700;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        /* RESET & BASE STYLES */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        :root { 
+            --primary-rust: #923f26; 
+            --accent-ochre: #d4a056; 
+            --bg-dark: #000421; 
+            --bg-cream: #f9f7f2; 
         }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: #1a202c; 
+            background-color: white; 
             line-height: 1.6;
-            color: #1a202c;
-            background-color: #f7fafc;
-            -webkit-font-smoothing: antialiased;
         }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
+        .serif-font { font-family: 'Cormorant Garamond', serif; }
+        
+        /* Custom Button Styles */
+        .btn-rust { 
+            background-color: var(--primary-rust); 
+            color: white; 
+            transition: all 0.2s ease; 
         }
-
-        /* TYPOGRAPHY */
-        h1, h2, h3, h4, h5, h6 {
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: #0f172a; /* Dark Blue */
+        .btn-rust:hover { 
+            background-color: #7a3320; 
+            transform: translateY(-2px); 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-        }
-
-        h2 {
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        p {
-            margin-bottom: 1.25rem;
-            font-size: 1.125rem;
-        }
-
-        ul {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-
-        li {
-            margin-bottom: 0.75rem;
-            font-size: 1.125rem;
-            padding-left: 1.5rem;
+        
+        /* List Item Bullets */
+        ul.custom-bullets li {
             position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
         }
-
-        li::before {
+        ul.custom-bullets li::before {
             content: "•";
-            color: #ff6b6b; /* Warm Coral */
+            color: var(--primary-rust);
             font-weight: bold;
             position: absolute;
             left: 0;
             width: 1rem;
         }
-
-        /* UTILITIES */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #ff6b6b; /* Warm Coral */
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-size: 1.25rem;
-            font-weight: 700;
-            text-decoration: none;
-            text-align: center;
-            transition: background-color 0.2s;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .btn:hover {
-            background-color: #e05252;
-        }
-
-        .text-center { text-align: center; }
-        .text-small { font-size: 0.9rem; color: #4a5568; }
-        .italic { font-style: italic; }
-        .bold { font-weight: 700; }
-        .mb-0 { margin-bottom: 0; }
         
-        /* SECTIONS */
-        section {
-            padding: 5rem 0;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); /* Deep Blue Gradient */
-            color: white;
-            padding-top: 6rem;
-            padding-bottom: 6rem;
-        }
-
-        .hero h1, .hero h2, .hero h3 {
-            color: white;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .hero-subhead {
-            font-size: 1.25rem;
-            color: #e2e8f0;
-            margin-bottom: 2rem;
-            border-left: 4px solid #ff6b6b;
-            padding-left: 1rem;
-        }
-
-        .hero-bullets li::before {
-            color: #f6e05e; /* Soft Yellow */
-        }
-
-        .screenshot-box {
-            background-color: #000;
-            border: 4px solid rgba(255,255,255,0.1);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-        }
-
-        /* COMPARISON SECTION */
-        .comparison-section {
-            background-color: #ffffff;
-        }
-
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-        }
-
-        .col-left h3 { color: #4a5568; }
-        .col-right {
-            background-color: #ebf8ff; /* Very Light Teal/Blue */
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid #38b2ac; /* Teal */
-        }
-        
-        .col-right h3 { color: #2c7a7b; }
-
-        .ghost-money {
-            background-color: #fff5f5;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #fc8181;
-            margin-top: 2rem;
-        }
-
-        .ghost-money h4 {
-            color: #c53030;
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* COST SECTION */
-        .cost-section {
-            background: linear-gradient(to bottom, #f7fafc 0%, #edf2f7 100%);
-        }
-
-        .cost-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-        }
-
-        .card-highlight {
-            border: 2px solid #ff6b6b; /* Warm Coral */
-            position: relative;
-        }
-
-        .card-highlight::after {
-            content: "Recommended";
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: #ff6b6b;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.8rem;
-            font-weight: bold;
-            border-bottom-left-radius: 8px;
-        }
-
-        .price-tag {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #0f172a;
-            margin: 1.5rem 0;
-        }
-
-        /* MONETIZATION SECTION */
-        .monetization-section {
-            background-color: #0f172a; /* Dark Blue */
-            color: white;
-        }
-        .monetization-section h2 { color: white; }
-        .monetization-section p, .monetization-section li { color: #cbd5e0; }
-        .monetization-section li::before { color: #f6e05e; } /* Soft Yellow */
-        
-        .pull-quote {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #f6e05e;
-            text-align: center;
-            margin-top: 3rem;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            padding-top: 3rem;
-        }
-
-        /* WHO I AM SECTION */
-        .who-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-box {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            border-top: 4px solid #38b2ac; /* Teal */
-        }
-
-        /* CTA SECTION */
-        .cta-section {
-            background-color: #ffffff;
-            text-align: center;
-        }
-
-        .cta-box {
-            background: linear-gradient(135deg, #38b2ac 0%, #319795 100%); /* Teal Gradient */
-            padding: 4rem 2rem;
-            border-radius: 16px;
-            color: white;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .cta-box h2 { color: white; }
-        .cta-box .btn {
-            background-color: white;
-            color: #2c7a7b;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        .cta-box .btn:hover {
-            background-color: #f7fafc;
-        }
-
-        /* RESPONSIVE MEDIA QUERIES */
-        @media (min-width: 768px) {
-            .hero-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .comparison-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .cost-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .who-grid {
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-
-            h1 { font-size: 3.5rem; }
-        }
-        
-        /* FOOTER */
-        footer {
-            background-color: #1a202c;
-            color: #718096;
-            padding: 3rem 0;
-            text-align: center;
-            font-size: 0.9rem;
+        /* Hero Bullets */
+        ul.hero-bullets li::before {
+            color: var(--accent-ochre);
         }
     </style>
 </head>
-<body>
+<body class="antialiased">
 
-    <header class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <h1>Whether you work with me or not, this is where distribution is going: AI-assisted, automation-backed content engines that sit on top of strong brands.</h1>
+    <nav class="fixed top-0 w-full z-50 h-20 flex items-center bg-white shadow-sm">
+        <div class="max-w-[1100px] mx-auto px-6 w-full flex justify-between items-center">
+            <div class="text-xl font-black tracking-tighter uppercase text-black">Nicole Jolie</div>
+            <a href="#cta" class="btn-rust px-5 py-3 rounded-full text-sm md:text-base font-bold">
+                Talk With Me
+            </a>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-20 px-6 bg-[#000421] text-white">
+        <div class="max-w-[1100px] mx-auto w-full">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h1 class="text-3xl md:text-5xl font-black mb-6 leading-tight">
+                        Whether you work with me or not, this is where distribution is going: AI-assisted, automation-backed content engines that sit on top of strong brands.
+                    </h1>
                     
-                    <div class="hero-subhead">
+                    <p class="text-lg md:text-xl text-gray-200 mb-8 border-l-4 border-[#d4a056] pl-6">
                         Startup Junkie already has the content and the reputation. The missing piece is the system, which is exactly what I can help you build inside your software accounts, under your control.
-                    </div>
+                    </p>
 
-                    <ul class="hero-bullets">
+                    <ul class="custom-bullets hero-bullets text-gray-300 mb-8 text-lg">
                         <li>Your podcast has 400+ episodes and a respected brand.</li>
                         <li>Your YouTube channel has roughly 1,300 subscribers, not 13,000-30,000.</li>
                         <li>You are not yet optimized or monetized, and everything is still mostly manual.</li>
                     </ul>
 
-                    <a href="#cta" class="btn">Talk With Me About Optimizing Startup Junkie's Channel</a>
-                    <p class="text-small" style="margin-top: 1rem; color: #cbd5e0;">No new headcount. No loss of control. Just a smarter engine around what you already have.</p>
+                    <a href="#cta" class="btn-rust inline-block w-full md:w-auto text-center px-8 py-4 rounded-lg font-bold text-lg">
+                        Talk With Me About Optimizing Startup Junkie's Channel
+                    </a>
+                    <p class="text-sm text-gray-400 mt-4">No new headcount. No loss of control. Just a smarter engine around what you already have.</p>
                 </div>
-                
-                <div class="hero-image">
-                    <div class="screenshot-box">
-                        <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/startupunkieoutube.png" alt="Startup Junkie YouTube Channel">
+
+                <div class="lg:w-1/2 w-full">
+                    <div class="rounded-xl overflow-hidden shadow-2xl border-4 border-white/10 bg-black">
+                        <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/startupunkieoutube.png" 
+                             alt="Startup Junkie YouTube Channel" 
+                             class="w-full object-cover">
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="comparison-section">
-        <div class="container">
-            <h2 class="text-center" style="margin-bottom: 3rem;">What You Have Now vs. What You Could Have</h2>
-            
-            <div class="comparison-grid">
-                <div class="col-left">
-                    <h3>What You Have Now</h3>
-                    <ul>
+    <section class="py-20 bg-white">
+        <div class="max-w-[1100px] mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-4 text-[#0f172a]">
+                    What You Have Now vs. What You Could Have
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-700">What You Have Now</h3>
+                    <ul class="custom-bullets text-gray-800 mb-8">
                         <li>A strong "OG" brand in Arkansas, a 400+ episode podcast, and a YouTube channel that functions as an archive instead of a growth engine.</li>
                         <li>Titles, descriptions, and thumbnails built like a traditional podcast feed, not for YouTube click-through, binge-watching, or Shorts discovery.</li>
                         <li>No consistent system to turn each episode into multiple Shorts, TikToks, LinkedIn posts, and newsletter assets.</li>
                         <li>Internal manual effort: someone has to remember to post, rewrite, and log into each platform, and nothing about that work compounds.</li>
                     </ul>
 
-                    <div class="ghost-money">
-                        <h4>What this is costing you (ghost money)</h4>
-                        <ul>
-                            <li>Fewer views and subscribers than you could have with the same content.</li>
-                            <li>Fewer warm leads into your programs, accelerators, and partnerships.</li>
-                            <li>A weaker story when you talk to funders and government programs: "Great content, limited distribution."</li>
+                    <div class="bg-red-50 p-6 rounded-xl border-l-4 border-red-400">
+                        <h4 class="font-bold text-red-800 mb-3 uppercase text-sm tracking-widest">What this is costing you (ghost money)</h4>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li class="flex items-start gap-2"><i class="fas fa-times text-red-400 mt-1"></i> Fewer views and subscribers than you could have with the same content.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-times text-red-400 mt-1"></i> Fewer warm leads into your programs, accelerators, and partnerships.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-times text-red-400 mt-1"></i> A weaker story when you talk to funders and government programs: "Great content, limited distribution."</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-right">
-                    <h3>What You Could Have With an AI-Assisted System</h3>
-                    <ul>
-                        <li>An AI-assisted content engine that detects each new episode and automatically prepares titles, descriptions, Shorts scripts, and multi-platform posts in your voice.</li>
-                        <li>Automations that move information, not people: workflows that send each episode into a repeatable pipeline instead of a one-off task list.</li>
-                        <li>A repackaged backlog: a curated set of your best episodes retitled, re-thumbnailed, and supported by Shorts and clips.</li>
-                        <li>A channel that makes more sense to donors, partners, and government programs: more subscribers, better engagement, clearer calls-to-action.</li>
+                <div class="bg-[#ebf8ff] p-8 rounded-3xl border-2 border-[#38b2ac] relative overflow-hidden">
+                    <h3 class="text-2xl font-bold mb-6 text-[#2c7a7b]">What You Could Have With an AI-Assisted System</h3>
+                    <ul class="space-y-6 text-gray-800">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-[#38b2ac] mt-1"></i>
+                            <span>An AI-assisted content engine that detects each new episode and automatically prepares titles, descriptions, Shorts scripts, and multi-platform posts in your voice.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-[#38b2ac] mt-1"></i>
+                            <span>Automations that move information, not people: workflows that send each episode into a repeatable pipeline instead of a one-off task list.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-[#38b2ac] mt-1"></i>
+                            <span>A repackaged backlog: a curated set of your best episodes retitled, re-thumbnailed, and supported by Shorts and clips.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-[#38b2ac] mt-1"></i>
+                            <span>A channel that makes more sense to donors, partners, and government programs: more subscribers, better engagement, clearer calls-to-action.</span>
+                        </li>
                     </ul>
-                    <p class="italic bold" style="margin-top: 2rem; color: #2c7a7b;">The work is the same: record great conversations. The difference is what happens to those conversations once they're recorded.</p>
+                    <p class="mt-8 pt-6 border-t border-[#38b2ac]/30 text-[#2c7a7b] font-bold italic">
+                        The work is the same: record great conversations. The difference is what happens to those conversations once they're recorded.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cost-section">
-        <div class="container">
-            <h2 class="text-center" style="margin-bottom: 3rem;">The Real Cost: Manual vs. System</h2>
-
-            <div class="cost-grid">
-                <div class="card">
-                    <h3>Doing This Manually</h3>
-                    <p>A seasoned YouTube growth operator, able to handle strategy, thumbnails, titles, Shorts, and distribution, will realistically cost in the $30,000-$50,000/year range for serious part-time work.</p>
-                    <p>If you aim for a "MrBeast-style" or "Flight Story-style" treatment, you're talking about small teams (strategist, editors, thumbnail designer, data person) and annual budgets in the high five figures to low six figures.</p>
-                    <p>That level of spend can be worth it for a pure media brand. For an entrepreneurial support organization, it is a big step.</p>
+    <section class="py-20 bg-[#f7fafc] border-y border-gray-200">
+        <div class="max-w-[1100px] mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-black mb-12 text-center text-[#923f26]">
+                The Real Cost: Manual vs. System
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-700">Doing This Manually</h3>
+                    <p class="text-gray-600 mb-6">
+                        A seasoned YouTube growth operator, able to handle strategy, thumbnails, titles, Shorts, and distribution, will realistically cost in the <strong>$30,000-$50,000/year</strong> range for serious part-time work.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        If you aim for a "MrBeast-style" or "Flight Story-style" treatment, you're talking about small teams (strategist, editors, thumbnail designer, data person) and annual budgets in the high five figures to low six figures.
+                    </p>
+                    <p class="text-sm text-gray-500 italic border-t pt-4">
+                        That level of spend can be worth it for a pure media brand. For an entrepreneurial support organization, it is a big step.
+                    </p>
                 </div>
 
-                <div class="card card-highlight">
-                    <h3>Building a System Around What You Already Have</h3>
-                    <p>Instead of hiring a full production team, you can invest once in a Startup-Junkie-specific engine that keeps working as long as you keep publishing.</p>
+                <div class="bg-white p-10 rounded-2xl shadow-xl border-2 border-[#923f26] relative">
+                    <div class="absolute top-0 right-0 bg-[#923f26] text-white text-xs font-bold px-4 py-2 rounded-bl-lg">RECOMMENDED</div>
+                    <h3 class="text-2xl font-bold mb-4 text-[#923f26]">Building a System Around What You Already Have</h3>
                     
-                    <ul>
-                        <li>Deep review of the channel and podcast as they are today.</li>
-                        <li>Re-titling and re-describing an initial slate of high-impact episodes.</li>
-                        <li>Defining thumbnail directions and templates for a designer to execute.</li>
-                        <li>Designing and setting up AI and automation workflows (cloud-hosted n8n, Blotato, Claude).</li>
-                        <li>Setting up YouTube optimization tools (VidIQ or TubeBuddy) and basic testing habits.</li>
-                        <li>Training your team to run the system.</li>
+                    <p class="text-gray-700 mb-6">Instead of hiring a full production team, you can invest once in a Startup-Junkie-specific engine that keeps working as long as you keep publishing.</p>
+                    
+                    <ul class="text-sm space-y-2 text-gray-700 mb-8">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-green-600 mt-1"></i> Deep review of the channel and podcast as they are today.</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-green-600 mt-1"></i> Re-titling and re-describing an initial slate of high-impact episodes.</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-green-600 mt-1"></i> Defining thumbnail directions and templates for a designer to execute.</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-green-600 mt-1"></i> Designing and setting up AI and automation workflows (cloud-hosted n8n, Blotato, Claude).</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-green-600 mt-1"></i> Setting up YouTube optimization tools (VidIQ or TubeBuddy) and basic testing habits.</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-green-600 mt-1"></i> Training your team to run the system.</li>
                     </ul>
 
-                    <div class="price-tag">Optimization & System Build Phase Investment: $7,500</div>
-                    <p>50% due upfront to begin work. 50% due when the system is complete and in use.</p>
+                    <div class="bg-[#923f26]/5 p-6 rounded-lg mb-6">
+                        <div class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Optimization & System Build Phase Investment</div>
+                        <div class="text-4xl font-black text-[#923f26]">$7,500</div>
+                        <div class="text-sm text-gray-600 mt-2">50% due upfront to begin work. 50% due when the system is complete and in use.</div>
+                    </div>
 
-                    <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0;">
-                        <h4>Software (Paid by Startup Junkie)</h4>
-                        <ul>
+                    <div class="text-sm text-gray-600 border-t pt-4">
+                        <p class="font-bold mb-2">Software (Paid by Startup Junkie):</p>
+                        <ul class="list-disc pl-5 mb-2">
                             <li>Cloud-hosted automation platform (n8n).</li>
                             <li>AI social & templating (Blotato).</li>
                             <li>High-quality AI model access (Claude or similar).</li>
                             <li>YouTube optimization tool (VidIQ or TubeBuddy).</li>
                         </ul>
-                        <p class="bold">Combined monthly budget: a few hundred dollars per month, not thousands.</p>
+                        <p class="italic text-gray-500">Combined monthly budget: a few hundred dollars per month, not thousands.</p>
                     </div>
-
-                    <p class="italic text-small" style="margin-top: 1rem;">You are not buying a permanent headcount. You are investing once to build a smarter engine.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="monetization-section">
-        <div class="container">
-            <h2 class="text-center" style="margin-bottom: 3rem;">Monetization Potential (Not Guarantees, But Real Options)</h2>
+    <section class="py-20 bg-[#000421] text-white">
+        <div class="max-w-[1100px] mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">Monetization Potential (Not Guarantees, But Real Options)</h2>
             
-            <p>You already clear the basic subscriber number YouTube requires to start thinking about monetization. What you're missing is watch time, Shorts velocity, and packaging that reliably turns attention into opportunity.</p>
-            
-            <p>If this channel grows from roughly 1,300 subscribers into the 13,000-30,000 range over time, it becomes a very different asset in conversations with:</p>
-            
-            <ul>
-                <li>Government-funded programs evaluating reach and impact.</li>
-                <li>Corporate partners deciding where to place sponsorships.</li>
-                <li>Foundations and donors who want to see that your content actually gets seen.</li>
-            </ul>
+            <div class="max-w-3xl mx-auto space-y-6 text-lg text-gray-300">
+                <p>
+                    You already clear the basic subscriber number YouTube requires to start thinking about monetization. What you're missing is watch time, Shorts velocity, and packaging that reliably turns attention into opportunity.
+                </p>
+                <p>
+                    If this channel grows from roughly 1,300 subscribers into the 13,000-30,000 range over time, it becomes a very different asset in conversations with:
+                </p>
+                
+                <ul class="hero-bullets custom-bullets ml-6 text-white">
+                    <li>Government-funded programs evaluating reach and impact.</li>
+                    <li>Corporate partners deciding where to place sponsorships.</li>
+                    <li>Foundations and donors who want to see that your content actually gets seen.</li>
+                </ul>
 
-            <p style="margin-top: 2rem;">Monetization is not just ad revenue. It's also:</p>
-            <ul>
-                <li>More applications and stronger pipelines into your programs and accelerators.</li>
-                <li>Sponsored segments and ecosystem partnerships that make sense for your audience.</li>
-                <li>The option to layer in branded merch or member-only offers later, once the channel and Shorts viewership justify it.</li>
-            </ul>
-
-            <div class="pull-quote">
-                This is about turning "we have a great show" into "we have a visible, growing channel that drives outcomes our funders care about."
+                <p>Monetization is not just ad revenue. It's also:</p>
+                <ul class="hero-bullets custom-bullets ml-6 text-white">
+                    <li>More applications and stronger pipelines into your programs and accelerators.</li>
+                    <li>Sponsored segments and ecosystem partnerships that make sense for your audience.</li>
+                    <li>The option to layer in branded merch or member-only offers later, once the channel and Shorts viewership justify it.</li>
+                </ul>
+                
+                <p class="text-center text-[#d4a056] font-bold text-2xl mt-12 pt-12 border-t border-white/20">
+                    This is about turning "we have a great show" into "we have a visible, growing channel that drives outcomes our funders care about."
+                </p>
             </div>
         </div>
     </section>
 
-    <section class="who-section">
-        <div class="container">
-            <h2 class="text-center">Who I Am and How I Work With You</h2>
-            <p class="text-center" style="max-width: 800px; margin: 0 auto 2rem;">I specialize in AI-assisted distribution and optimization for founders and small-to-mid-sized organizations. My role is to build a system around the content and brand you already have, not to take control away from you.</p>
+    <section class="py-20 bg-white">
+        <div class="max-w-[1100px] mx-auto px-6">
+            <h2 class="text-3xl font-black mb-4 text-center text-[#0f172a]">Who I Am and How I Work With You</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                I specialize in AI-assisted distribution and optimization for founders and small-to-mid-sized organizations. My role is to build a system around the content and brand you already have, not to take control away from you.
+            </p>
 
-            <div class="who-grid">
-                <div class="feature-box">
-                    <h3>You Own the Tools and Accounts</h3>
-                    <p class="mb-0">All software and API keys are in your name, on your accounts. I configure and build inside your environment, and you keep access and control.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#38b2ac]">
+                    <h3 class="font-bold text-xl mb-4 text-gray-800">You Own the Tools and Accounts</h3>
+                    <p class="text-gray-600">All software and API keys are in your name, on your accounts. I configure and build inside your environment, and you keep access and control.</p>
                 </div>
-
-                <div class="feature-box">
-                    <h3>My Intellectual Property, Your License to Use It</h3>
-                    <p>The system design and methodology remain my intellectual property; you license them to use internally.</p>
-                    <p class="mb-0">You are not locked into me to keep things running, but you benefit from my ongoing refinement of these frameworks.</p>
-                </div>
-
-                <div class="feature-box">
-                    <h3>My Goal</h3>
-                    <ul class="mb-0">
-                        <li>Optimize the assets you already have.</li>
-                        <li>Build a repeatable engine.</li>
-                        <li>Hand it to your team with clear guidance and the option for ongoing help.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section" id="cta">
-        <div class="container">
-            <div class="cta-box">
-                <h2>If You Want Startup Junkie's Reach To Match Its Impact, Let's Talk About the Build Phase</h2>
-                <p>The alternative to this is not "do nothing." The alternative is to keep paying in ghost money—lost views, lost leads, and lost opportunities with donors and partners—while others build systems around their content.</p>
-                <a href="mailto:nicole@sociallysmashing.com" class="btn">Schedule a Conversation About Your YouTube Engine</a>
-                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">After you submit, I'll follow up with a short set of questions and a proposed start date.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>Footer & schema will be added here.</p>
-        </footer>
-
-</body>
-</html>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#38b2ac]">
