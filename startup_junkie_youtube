@@ -1,224 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DN6ZNJJWP1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DN6ZNJJWP1');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startup Junkie: Distribution Engine Proposal</title>
+    <title>Proposal for Startup Junkie | Distribution Engine Build | Nicole Jolie</title>
+    <link rel="icon" type="image/png" href="https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/Favicon+64x64+NJ+Site+Trust+Tr+iang.png">
+    
+    <meta name="description" content="A proposal for Startup Junkie: Moving from manual content posting to an AI-assisted, automation-backed distribution engine.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Inter:wght@400;600;700;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "name": "Nicole Jolie",
+          "url": "https://nicolejolie.com",
+          "image": "https://meetnicolejolie.s3.us-east-2.amazonaws.com/startupunkieoutube.png",
+          "description": "Specialist in AI-assisted distribution and optimization for founders and organizations.",
+          "knowsAbout": ["AI Automation", "YouTube Growth", "Content Distribution", "Answer Engine Optimization"]
+        },
+        {
+          "@type": "Offer",
+          "name": "Startup Junkie Distribution Engine Build",
+          "description": "A one-time project to build an AI-assisted content engine that sits on top of the Startup Junkie brand.",
+          "priceCurrency": "USD",
+          "price": "5500.00",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": "5500.00",
+            "maxPrice": "7500.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is this a permanent headcount or retainer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. You are not buying a permanent headcount. You are investing once to build a Startup-Junkie-specific engine that keeps working as long as you keep publishing. There is an optional light retainer for review, but the system is yours."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I keep control of the accounts?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. All software and API keys are in your name, on your accounts. I configure and build inside your environment, and you keep access and control."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the ongoing software costs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The combined monthly budget for the software stack (n8n, Blotato, Claude, VidIQ) is a few hundred dollars per month, not thousands."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why not just hire a traditional social media manager?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A seasoned YouTube growth operator will realistically cost $30,000-$50,000/year. This system builds the same capacity using AI and automation for a one-time investment of $5,500-$7,500."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        :root {
+            --primary-rust: #923f26;
+            --accent-ochre: #d4a056;
+            --text-dark: #111111;
+            --bg-cream: #f9f7f2;
+            --bg-dark: #000421;
+        }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); background-color: #FAFAFA; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Inter', sans-serif; }
+        .serif-font { font-family: 'Cormorant Garamond', serif; }
+        .text-rust { color: var(--primary-rust); }
+        .bg-cream { background-color: var(--bg-cream); }
+        .bg-dark { background-color: var(--bg-dark); }
+        
+        /* FAQ Styles */
+        .faq-item { border-bottom: 1px solid rgba(146, 63, 38, 0.2); padding: 25px 0; }
+        .faq-question { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; color: #000; }
+        .faq-answer { display: none; margin-top: 15px; color: #444; font-size: 18px; line-height: 1.6; }
+        .faq-item.active .faq-answer { display: block; }
+        
+        /* Custom Buttons */
+        .btn-rust {
+            background-color: var(--primary-rust);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-rust:hover {
+            background-color: #7a3320;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body class="antialiased pb-24">
 
-    <header class="hero-gradient text-white pt-16 pb-24">
-        <div class="container mx-auto px-6 lg:px-12">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <span class="inline-block bg-blue-900 bg-opacity-50 text-blue-100 px-3 py-1 rounded-full text-sm font-semibold mb-6">
-                        Proposal for Startup Junkie
-                    </span>
-                    <h1 class="text-4xl lg:text-5xl font-bold leading-tight mb-6">
-                        AI-assisted, automation-backed content engines that sit on top of strong brands.
+    <nav class="fixed top-0 w-full z-50 h-20 flex items-center bg-white/95 backdrop-blur-sm border-b border-gray-100">
+        <div class="max-w-[1100px] mx-auto px-6 w-full flex justify-between items-center">
+            <div class="text-xl font-black tracking-tighter uppercase text-black">Nicole Jolie</div>
+            <div class="hidden md:block">
+                <a href="#build-phase" class="btn-rust px-6 py-3 rounded-full text-base font-bold">
+                    Start The Build
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-20 px-6 min-h-[90vh] flex items-center bg-dark relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-[#051040] skew-x-12 opacity-50 pointer-events-none"></div>
+
+        <div class="max-w-[1100px] mx-auto w-full relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <div class="inline-block px-4 py-2 mb-6 border border-gray-500 rounded-full bg-white/10 text-xs font-bold uppercase tracking-widest text-[#d4a056]">
+                        For Startup Junkie
+                    </div>
+                    <h1 class="text-4xl md:text-6xl leading-tight font-black mb-6">
+                        Distribution is changing.
+                        <span class="text-[#d4a056] serif-font italic block mt-2">Don't get left behind.</span>
                     </h1>
-                    <p class="text-lg text-blue-100 mb-8 leading-relaxed">
-                        The advantage you have is that the content and the reputation already exist; the missing piece is the system. I can help you build this inside your accounts, under your control.
-                    </p>
-                    
-                    <div class="bg-white/10 rounded-lg p-6 mb-8 border border-white/20">
-                        <p class="font-semibold text-yellow-300 mb-2">The Risk:</p>
-                        <p class="text-sm">Right now Startup Junkie has a respected brand, but the YouTube channel is not monetized. Others will build distribution engines while you keep doing this by hand.</p>
-                    </div>
-
-                    <a href="#contact" class="inline-block bg-white text-blue-700 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg shadow-lg transition transform hover:-translate-y-1">
-                        Talk With Me About Optimizing The Channel
-                    </a>
-                </div>
-
-                <div class="lg:w-1/2">
-                    <div class="bg-white text-gray-800 rounded-xl shadow-2xl overflow-hidden">
-                        <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/startupunkieoutube.png" alt="Startup Junkie YouTube Channel" class="w-full object-cover border-b">
-                        <div class="p-8">
-                            <h3 class="text-xl font-bold mb-4">Current Status: ~1,300 Subscribers</h3>
-                            <ul class="space-y-3">
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                                    <span>Not optimized to reliably grow watch time or Shorts views.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                                    <span>Not consistently repurposing content.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                                    <span>Not using AI to scale what you already have.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section class="py-20">
-        <div class="container mx-auto px-6 lg:px-12">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">What You Have Now vs. What You Could Have</h2>
-                <p class="text-gray-600">The work is the same: record great conversations. The difference is what happens next.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
-                    <h3 class="text-2xl font-bold text-gray-500 mb-6">What You Have Now</h3>
-                    <ul class="space-y-4 text-gray-600 mb-8">
-                        <li class="flex items-start"><span class="mr-2">•</span> A strong "OG" brand that functions as an archive, not a growth engine.</li>
-                        <li class="flex items-start"><span class="mr-2">•</span> Titles/Thumbnails built for podcast feeds, not YouTube click-throughs.</li>
-                        <li class="flex items-start"><span class="mr-2">•</span> <strong>Ghost Money:</strong> Manual effort that doesn't compound.</li>
-                    </ul>
-                    <div class="bg-red-50 p-4 rounded-lg border border-red-100">
-                        <p class="font-bold text-red-800 text-sm uppercase tracking-wide mb-2">The Cost</p>
-                        <p class="text-sm text-red-700">Fewer views, fewer warm leads for accelerators, and a weaker story when talking to funders ("Great content, limited distribution").</p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-xl border-2 border-blue-500 shadow-xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">THE SOLUTION</div>
-                    <h3 class="text-2xl font-bold text-blue-600 mb-6">With an AI-Assisted System</h3>
-                    <ul class="space-y-4 text-gray-700">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span><strong>AI Content Engine:</strong> Detects new episodes, auto-prepares scripts, titles, and posts.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span><strong>Automated Workflows:</strong> Move information, not people.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span><strong>Repackaged Backlog:</strong> Curated sets of your best episodes retitled and re-thumbnailed.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-gray-900 text-white py-20">
-        <div class="container mx-auto px-6 lg:px-12">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-12 text-center">Investment: Building The System</h2>
-                
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div class="opacity-60 p-6 border border-gray-700 rounded-lg">
-                        <h4 class="text-xl font-semibold mb-2">Traditional Method</h4>
-                        <p class="text-sm mb-4">Hiring a YouTube specialist or Agency</p>
-                        <p class="text-3xl font-bold mb-4">$30k - $50k<span class="text-base font-normal">/year</span></p>
-                        <p class="text-sm">Ongoing headcount costs. High friction for an entrepreneurial support organization.</p>
-                    </div>
-
-                    <div class="bg-blue-600 p-8 rounded-xl shadow-2xl transform scale-105">
-                        <h4 class="text-2xl font-bold mb-2">Build Phase (My Offer)</h4>
-                        <p class="text-blue-100 text-sm mb-4">One-time project to build the engine</p>
-                        <p class="text-4xl font-bold mb-6">$5,500 - $7,500<span class="text-lg font-normal"> (Total)</span></p>
-                        
-                        <div class="space-y-3 mb-8 text-sm">
-                            <p>✅ Deep review of channel & podcast</p>
-                            <p>✅ Re-titling high-impact episodes</p>
-                            <p>✅ Setting up AI workflows (n8n, Blotato, Claude)</p>
-                            <p>✅ Training your team to run it</p>
-                        </div>
-                        <p class="text-xs text-blue-200 italic mb-4">*Software costs (approx $200/mo) paid directly by you. You own the accounts.</p>
-                        <a href="#contact" class="block w-full text-center bg-white text-blue-700 font-bold py-3 rounded hover:bg-gray-100 transition">Start The Build</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 lg:px-12">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8">Why this matters to donors & partners</h2>
-                <p class="text-lg text-gray-600 mb-8">
-                    You already clear the baseline subscriber number for monetization. What is missing is the velocity to turn that into opportunity. Growing from ~1,300 to 13,000+ subscribers changes the conversation with:
-                </p>
-                <div class="grid gap-6">
-                    <div class="flex items-start">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4 text-blue-600 font-bold">1</div>
-                        <div>
-                            <h4 class="font-bold">Government-funded programs</h4>
-                            <p class="text-gray-600">Evaluating reach and actual impact.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4 text-blue-600 font-bold">2</div>
-                        <div>
-                            <h4 class="font-bold">Corporate Partners</h4>
-                            <p class="text-gray-600">Deciding where to place sponsorships.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4 text-blue-600 font-bold">3</div>
-                        <div>
-                            <h4 class="font-bold">Foundations & Donors</h4>
-                            <p class="text-gray-600">Who want to see that your content actually gets seen.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-gray-50 py-20 border-t border-gray-200">
-        <div class="container mx-auto px-6 lg:px-12 text-center max-w-4xl">
-            <h2 class="text-2xl font-bold mb-8">How I work, and what you keep</h2>
-            <div class="grid md:grid-cols-3 gap-6 text-left">
-                <div class="bg-white p-6 rounded shadow-sm">
-                    <h5 class="font-bold mb-2">You Own Everything</h5>
-                    <p class="text-sm text-gray-600">All software and API keys are in your name. I build inside your environment.</p>
-                </div>
-                <div class="bg-white p-6 rounded shadow-sm">
-                    <h5 class="font-bold mb-2">No Lock-In</h5>
-                    <p class="text-sm text-gray-600">You are not buying a permanent headcount. You are investing once to build an engine.</p>
-                </div>
-                <div class="bg-white p-6 rounded shadow-sm">
-                    <h5 class="font-bold mb-2">Team Handover</h5>
-                    <p class="text-sm text-gray-600">My goal is to optimize assets and hand the keys to your team with clear guidance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="hero-gradient text-white py-24">
-        <div class="container mx-auto px-6 lg:px-12 text-center max-w-2xl">
-            <h2 class="text-3xl font-bold mb-6">Let's build your distribution engine.</h2>
-            <p class="mb-10 text-blue-100">
-                If you want Startup Junkie's YouTube presence to match the impact you already have on the ground, the next step is simple.
-            </p>
-            
-            <form class="bg-white rounded-lg p-8 text-left shadow-2xl text-gray-800">
-                <div class="mb-4">
-                    <label class="block text-sm font-bold mb-2">Name</label>
-                    <input type="text" placeholder="Your Name" class="w-full border p-3 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
-                </div>
-                <div class="mb-4">
-                    <label class="block text-sm font-bold mb-2">Email</label>
-                    <input type="email" placeholder="email@startupjunkie.org" class="w-full border p-3 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
-                </div>
-                <button type="button" class="w-full bg-blue-600 text-white font-bold py-4 rounded hover:bg-blue-700 transition" onclick="alert('Thank you! I will be in touch shortly to schedule the scoping call.')">
-                    Let's Talk About The Build Phase
-                </button>
-                <p class="text-center text-xs text-gray-400 mt-4">No commitment required. Just a conversation.</p>
-            </form>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 text-gray-500 py-8 text-center text-sm">
-        <p>&copy; 2024 Distribution Strategy. Proposal for Startup Junkie.</p>
-    </footer>
-
-</body>
-</html>
+                    <p class="
