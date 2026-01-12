@@ -1,179 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DN6ZNJJWP1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-DN6ZNJJWP1');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proposal for Startup Junkie | Distribution Engine Build | Nicole Jolie</title>
-    <link rel="icon" type="image/png" href="https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/Favicon+64x64+NJ+Site+Trust+Tr+iang.png">
-    
-    <meta name="description" content="A proposal for Startup Junkie: Moving from manual content posting to an AI-assisted, automation-backed distribution engine.">
+    <title>Startup Junkie Proposal | Nicole Jolie</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DN6ZNJJWP1"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DN6ZNJJWP1');</script>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="https://fonts.googleapis.com/css?family=Inter:wght@400;600;700;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "ProfessionalService",
-          "name": "Nicole Jolie",
-          "url": "https://nicolejolie.com",
-          "image": "https://meetnicolejolie.s3.us-east-2.amazonaws.com/startupunkieoutube.png",
-          "description": "Specialist in AI-assisted distribution and optimization for founders and organizations.",
-          "knowsAbout": ["AI Automation", "YouTube Growth", "Content Distribution", "Answer Engine Optimization"]
-        },
-        {
-          "@type": "Offer",
-          "name": "Startup Junkie Distribution Engine Build",
-          "description": "A one-time project to build an AI-assisted content engine that sits on top of the Startup Junkie brand.",
-          "priceCurrency": "USD",
-          "price": "5500.00",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "5500.00",
-            "maxPrice": "7500.00",
-            "priceCurrency": "USD"
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Is this a permanent headcount or retainer?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. You are not buying a permanent headcount. You are investing once to build a Startup-Junkie-specific engine that keeps working as long as you keep publishing. There is an optional light retainer for review, but the system is yours."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do I keep control of the accounts?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. All software and API keys are in your name, on your accounts. I configure and build inside your environment, and you keep access and control."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What are the ongoing software costs?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The combined monthly budget for the software stack (n8n, Blotato, Claude, VidIQ) is a few hundred dollars per month, not thousands."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Why not just hire a traditional social media manager?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A seasoned YouTube growth operator will realistically cost $30,000-$50,000/year. This system builds the same capacity using AI and automation for a one-time investment of $5,500-$7,500."
-              }
-            }
-          ]
-        }
-      ]
-    }
-    </script>
-
     <style>
-        /* YOUR BRAND COLORS */
-        :root {
-            --primary-rust: #923f26;
-            --accent-ochre: #d4a056;
-            --text-dark: #111111;
-            --bg-cream: #f9f7f2;
-            --bg-dark: #000421;
-        }
-        body { font-family: 'Inter', sans-serif; color: var(--text-dark); background-color: var(--bg-cream); overflow-x: hidden; }
-        h1, h2, h3, h4 { font-family: 'Inter', sans-serif; }
+        :root { --primary-rust: #923f26; --accent-ochre: #d4a056; --bg-dark: #000421; --bg-cream: #f9f7f2; }
+        body { font-family: 'Inter', sans-serif; color: #111; background-color: var(--bg-cream); overflow-x: hidden; }
         .serif-font { font-family: 'Cormorant Garamond', serif; }
-        .text-rust { color: var(--primary-rust); }
         .text-ochre { color: var(--accent-ochre); }
-        .bg-rust { background-color: var(--primary-rust); }
-        .bg-dark { background-color: var(--bg-dark); }
-        .bg-cream { background-color: var(--bg-cream); }
-        
-        /* FAQ Styles */
-        .faq-item { border-bottom: 1px solid rgba(146, 63, 38, 0.2); padding: 25px 0; }
-        .faq-question { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; color: #000; }
-        .faq-answer { display: none; margin-top: 15px; color: #444; font-size: 18px; line-height: 1.6; }
+        .btn-rust { background-color: var(--primary-rust); color: white; transition: all 0.3s ease; }
+        .btn-rust:hover { background-color: #7a3320; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .faq-answer { display: none; }
         .faq-item.active .faq-answer { display: block; }
-        .faq-item.active .faq-question i { transform: rotate(180deg); }
-        
-        /* Custom Buttons */
-        .btn-rust {
-            background-color: var(--primary-rust);
-            color: white;
-            transition: all 0.3s ease;
-        }
-        .btn-rust:hover {
-            background-color: #7a3320;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        /* Smooth Scroll */
-        html { scroll-behavior: smooth; }
+        .faq-item.active .fa-chevron-down { transform: rotate(180deg); }
     </style>
 </head>
-<body class="antialiased pb-24">
+<body class="antialiased">
 
     <nav class="fixed top-0 w-full z-50 h-20 flex items-center bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div class="max-w-[1100px] mx-auto px-6 w-full flex justify-between items-center">
-            <div class="text-xl font-black tracking-tighter uppercase text-black">Nicole Jolie</div>
-            <div class="hidden md:block">
-                <a href="#build-phase" class="btn-rust px-6 py-3 rounded-full text-base font-bold">
-                    Start The Build
-                </a>
-            </div>
+            <div class="text-xl font-black tracking-tighter uppercase">Nicole Jolie</div>
+            <a href="#build-phase" class="btn-rust px-6 py-3 rounded-full text-base font-bold">Start The Build</a>
         </div>
     </nav>
 
-    <header class="pt-40 pb-20 px-6 min-h-[90vh] flex items-center bg-dark relative overflow-hidden">
+    <header class="pt-32 pb-20 px-6 bg-[#000421] relative">
         <div class="absolute top-0 right-0 w-1/2 h-full bg-[#051040] skew-x-12 opacity-50 pointer-events-none"></div>
 
         <div class="max-w-[1100px] mx-auto w-full relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="text-white">
-                    <div class="inline-block px-4 py-2 mb-6 border border-gray-500 rounded-full bg-white/10 text-xs font-bold uppercase tracking-widest text-ochre">
-                        Proposal for Startup Junkie
+                    <div class="inline-block px-4 py-2 mb-6 border border-gray-500 rounded-full bg-white/10 text-xs font-bold uppercase tracking-widest text-[#d4a056]">
+                        For Startup Junkie
                     </div>
                     <h1 class="text-4xl md:text-6xl leading-tight font-black mb-6">
                         Distribution is changing.
-                        <span class="text-ochre serif-font italic block mt-2">Don't get left behind.</span>
+                        <span class="text-[#d4a056] serif-font italic block mt-2">Don't get left behind.</span>
                     </h1>
                     <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                        Whether you work with me or not, this is where distribution is going: <strong>AI-assisted, automation-backed content engines</strong> that sit on top of strong brands.
+                        Whether you work with me or not, this is where distribution is going: <strong>AI-assisted content engines</strong> that sit on top of strong brands.
                     </p>
-                    <p class="text-lg text-gray-400 mb-10 border-l-4 border-[var(--accent-ochre)] pl-6">
-                        [cite_start]You have the content and the reputation[cite: 4]. The missing piece is the system. [cite_start]That is exactly what I can help you build—inside your accounts, under your control[cite: 5].
+                    <p class="text-lg text-gray-400 mb-10 border-l-4 border-[#d4a056] pl-6">
+                        The content and reputation already exist. The missing piece is the system. I can help you build this inside your accounts, under your control.
                     </p>
                     <a href="#build-phase" class="btn-rust inline-block px-10 py-5 rounded-full font-bold text-lg shadow-xl">
-                        Talk With Me About Optimizing The Channel
+                        Optimize The Channel
                     </a>
                 </div>
 
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-[var(--accent-ochre)] to-[var(--primary-rust)] rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative group mt-8 lg:mt-0">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-[#d4a056] to-[#923f26] rounded-xl blur opacity-25"></div>
                     <div class="relative rounded-xl overflow-hidden shadow-2xl border-4 border-white/10 bg-black">
                         <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/startupunkieoutube.png" 
-                             alt="Startup Junkie YouTube Channel Analysis" 
-                             class="w-full object-cover">
-                        <div class="p-6 bg-gray-900">
-                            [cite_start]<h3 class="text-white font-bold text-lg mb-2">Current Status: ~1,300 Subscribers [cite: 14]</h3>
-                            [cite_start]<p class="text-gray-400 text-sm">Great content acting as an archive, not a growth engine[cite: 24].</p>
+                             alt="Startup Junkie YouTube" class="w-full object-cover">
+                        <div class="p-6 bg-gray-900 text-white">
+                            <h3 class="font-bold text-lg mb-2">Current Status: ~1,300 Subscribers</h3>
+                            <p class="text-gray-400 text-sm">An archive, not a growth engine.</p>
                         </div>
                     </div>
                 </div>
@@ -184,239 +74,128 @@
     <section class="py-24 bg-white">
         <div class="max-w-[1100px] mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-black mb-6 text-dark">What You Have Now vs.<br><span class="text-rust serif-font italic">What You Could Have</span></h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    The work is the same: record great conversations. [cite_start]The difference is what happens to those conversations once they're recorded[cite: 40].
-                </p>
+                <h2 class="text-4xl md:text-5xl font-black mb-6 text-black">What You Have Now vs.<br><span class="text-[#923f26] serif-font italic">What You Could Have</span></h2>
             </div>
 
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="bg-gray-50 p-10 rounded-3xl border border-gray-200">
                     <div class="text-sm font-bold text-gray-500 uppercase mb-4 tracking-widest">The Current State</div>
-                    <h3 class="text-2xl font-bold mb-6">A Traditional Podcast Feed</h3>
+                    <h3 class="text-2xl font-bold mb-6 text-black">A Traditional Podcast Feed</h3>
                     <ul class="space-y-4 text-gray-700">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-archive text-gray-400 mt-1"></i>
-                            [cite_start]<span>Functions as an archive instead of a growth engine[cite: 24].</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-times text-red-400 mt-1"></i>
-                            [cite_start]<span>Titles & thumbnails not optimized for click-through or binge-watching[cite: 25].</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-exclamation-triangle text-orange-400 mt-1"></i>
-                            [cite_start]<span><strong>Ghost Money:</strong> Fewer views and leads than you could have with the same content [cite: 29-31].</span>
-                        </li>
+                        <li class="flex items-start gap-3"><i class="fas fa-archive text-gray-400 mt-1"></i> Functions as an archive.</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-times text-red-400 mt-1"></i> Titles not optimized for clicks.</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-exclamation-triangle text-orange-400 mt-1"></i> <strong>Ghost Money:</strong> Leaving views on the table.</li>
                     </ul>
                 </div>
 
-                <div class="bg-dark text-white p-10 rounded-3xl shadow-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-rust text-white text-xs font-bold px-4 py-2 rounded-bl-xl">THE SYSTEM</div>
-                    <div class="text-sm font-bold text-gray-400 uppercase mb-4 tracking-widest">With AI + Automation</div>
-                    <h3 class="text-2xl font-bold mb-6">A Distribution Engine</h3>
+                <div class="bg-[#000421] text-white p-10 rounded-3xl shadow-2xl relative">
+                    <div class="absolute top-0 right-0 bg-[#d4a056] text-black text-xs font-bold px-4 py-2 rounded-bl-xl">THE SYSTEM</div>
+                    <h3 class="text-2xl font-bold mb-6 mt-8">A Distribution Engine</h3>
                     <ul class="space-y-4 text-gray-200">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-robot text-ochre mt-1"></i>
-                            [cite_start]<span><strong>AI-Assisted:</strong> Detects new episodes and automatically prepares titles, Shorts scripts, and posts[cite: 35].</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-sync text-ochre mt-1"></i>
-                            <span><strong>Automated Workflows:</strong> Moves information, not people. [cite_start]Sends episodes into a repeatable pipeline[cite: 36].</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-chart-line text-ochre mt-1"></i>
-                            [cite_start]<span><strong>Monetizable Assets:</strong> Re-packaged backlog with Shorts and clips that drive watch time[cite: 37].</span>
-                        </li>
+                        <li class="flex items-start gap-3"><i class="fas fa-robot text-[#d4a056] mt-1"></i> <strong>AI-Assisted:</strong> Auto-prepares titles & shorts.</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-sync text-[#d4a056] mt-1"></i> <strong>Automated:</strong> Moves information, not people.</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-chart-line text-[#d4a056] mt-1"></i> <strong>Monetizable:</strong> Drives watch time.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-cream border-y border-gray-200">
+    <section class="py-24 bg-[#f9f7f2] border-y border-gray-200">
         <div class="max-w-[900px] mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-black mb-12 text-rust">The Cost of Doing It Manually vs. Building a System</h2>
-            
-            <div class="grid md:grid-cols-2 gap-8 items-center text-left">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 opacity-70 hover:opacity-100 transition">
+            <h2 class="text-3xl md:text-4xl font-black mb-12 text-[#923f26]">Manual Cost vs. System Build</h2>
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 opacity-75">
                     <h4 class="font-bold text-lg mb-2">Hiring a Specialist</h4>
-                    <p class="text-3xl font-black text-gray-800 mb-4">$30k - $50k<span class="text-base font-normal text-gray-500">/year</span></p>
-                    <p class="text-sm text-gray-600">
-                        [cite_start]For serious part-time work on strategy, thumbnails, and distribution[cite: 44]. [cite_start]A big step for an entrepreneurial support organization[cite: 47].
-                    </p>
+                    <p class="text-3xl font-black text-gray-800 mb-4">$30k - $50k<span class="text-base font-normal text-gray-500">/yr</span></p>
+                    <p class="text-sm text-gray-600">Serious ongoing headcount cost.</p>
                 </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-xl border-2 border-rust transform md:scale-105">
-                    <div class="inline-block bg-rust text-white text-xs font-bold px-2 py-1 rounded mb-2">SMART CHOICE</div>
-                    <h4 class="font-bold text-lg mb-2 text-rust">System Build Phase</h4>
-                    <p class="text-4xl font-black text-dark mb-4">$5,500 - $7,500<span class="text-base font-normal text-gray-500"> total</span></p>
-                    <p class="text-sm text-gray-600 mb-6">
-                        One-time investment to build the engine. [cite_start]You own it forever[cite: 71].
-                    </p>
-                    <ul class="text-sm space-y-2 mb-6">
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-2 border-[#923f26] transform md:scale-105">
+                    <div class="inline-block bg-[#923f26] text-white text-xs font-bold px-2 py-1 rounded mb-2">SMART CHOICE</div>
+                    <h4 class="font-bold text-lg mb-2 text-[#923f26]">System Build Phase</h4>
+                    <p class="text-4xl font-black text-black mb-4">$5.5k - $7.5k<span class="text-base font-normal text-gray-500"> total</span></p>
+                    <p class="text-sm text-gray-600 mb-4">One-time investment. You own the engine.</p>
+                    <ul class="text-sm space-y-2">
                         <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Deep channel review</li>
                         <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> AI workflow setup (n8n, Blotato)</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Team training included</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-dark text-white">
+    <section class="py-24 bg-[#000421] text-white">
         <div class="max-w-[1100px] mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-black mb-12 text-center">Why this matters to donors & partners</h2>
-            <div class="grid md:grid-cols-3 gap-8">
+            <h2 class="text-3xl md:text-5xl font-black mb-12 text-center">Why this matters to donors</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
                 <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
-                    <i class="fas fa-building text-ochre text-3xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Corporate Partners</h3>
-                    [cite_start]<p class="text-gray-300">Deciding where to place sponsorships requires visible reach[cite: 80]. 1,300 subs vs 13,000 subs tells a different story.</p>
+                    <i class="fas fa-building text-[#d4a056] text-3xl mb-4"></i>
+                    <h3 class="font-bold">Corporate Partners</h3>
+                    <p class="text-gray-300 text-sm">Sponsorships require visible reach. 13k+ subs tells a better story.</p>
                 </div>
                 <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
-                    <i class="fas fa-flag-usa text-ochre text-3xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Gov Programs</h3>
-                    <p class="text-gray-300">Evaluating reach and impact. [cite_start]You need to turn "we have a great show" into "we have a visible, growing channel"[cite: 87].</p>
+                    <i class="fas fa-flag-usa text-[#d4a056] text-3xl mb-4"></i>
+                    <h3 class="font-bold">Gov Programs</h3>
+                    <p class="text-gray-300 text-sm">Evaluating impact. Turn "great show" into "visible channel."</p>
                 </div>
                 <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
-                    <i class="fas fa-hand-holding-heart text-ochre text-3xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Foundations</h3>
-                    [cite_start]<p class="text-gray-300">Donors want to see that your content actually gets seen[cite: 81]. Monetization is proof of audience attention.</p>
+                    <i class="fas fa-hand-holding-heart text-[#d4a056] text-3xl mb-4"></i>
+                    <h3 class="font-bold">Foundations</h3>
+                    <p class="text-gray-300 text-sm">Donors want to see that your content actually gets seen.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="py-24 bg-white">
-        <div class="max-w-[900px] mx-auto px-6">
-            <h2 class="text-4xl font-black mb-8 text-center text-dark">What I Do, How I Work, <br>and What You Keep</h2>
-            <p class="text-xl text-gray-600 text-center mb-16">
-                My goal is not to "own your channel." [cite_start]My goal is to optimize the assets you already have and hand them back to you[cite: 100].
-            </p>
-
-            <div class="space-y-6">
-                <div class="flex gap-6 items-start">
-                    <div class="w-12 h-12 rounded-full bg-rust flex items-center justify-center shrink-0 text-white font-bold text-xl">1</div>
-                    <div>
-                        <h4 class="text-xl font-bold mb-2">You Keep Control</h4>
-                        <p class="text-gray-600">All software and API keys are in your name, on your accounts. [cite_start]I configure and build inside your environment[cite: 94].</p>
-                    </div>
+        <div class="max-w-[900px] mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black mb-12 text-black">What You Keep</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="p-4">
+                    <div class="font-bold text-xl mb-2 text-[#923f26]">1. Control</div>
+                    <p class="text-gray-600 text-sm">All software/API keys are in your name. I build inside your environment.</p>
                 </div>
-                <div class="flex gap-6 items-start">
-                    <div class="w-12 h-12 rounded-full bg-rust flex items-center justify-center shrink-0 text-white font-bold text-xl">2</div>
-                    <div>
-                        <h4 class="text-xl font-bold mb-2">No Lock-In</h4>
-                        <p class="text-gray-600">The system design remains my intellectual property that you license to use internally. [cite_start]You are not locked into me to keep things running[cite: 98].</p>
-                    </div>
+                <div class="p-4">
+                    <div class="font-bold text-xl mb-2 text-[#923f26]">2. No Lock-In</div>
+                    <p class="text-gray-600 text-sm">You are not buying a permanent headcount. You own the system.</p>
                 </div>
-                <div class="flex gap-6 items-start">
-                    <div class="w-12 h-12 rounded-full bg-rust flex items-center justify-center shrink-0 text-white font-bold text-xl">3</div>
-                    <div>
-                        <h4 class="text-xl font-bold mb-2">Repeatable Engine</h4>
-                        [cite_start]<p class="text-gray-600">I build a repeatable engine, then hand it to your team with clear guidance and the option for ongoing help[cite: 102].</p>
-                    </div>
+                <div class="p-4">
+                    <div class="font-bold text-xl mb-2 text-[#923f26]">3. Repeater</div>
+                    <p class="text-gray-600 text-sm">I build a repeatable engine, then hand it to your team with training.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-cream py-24 border-t border-gray-200">
-        <div class="max-w-[900px] mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl text-center text-rust mb-16 font-black">Frequently Asked Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">Is this a retainer model? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">
-                        Primarily, no. This is a one-time "Build Phase" project to set up the system. [cite_start]After the build, there is an optional light retainer (4-6 hours/month) if you want me to review performance and refine the system, but it is not required[cite: 69].
-                    </div>
-                </div>
-                <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">What software do we need to pay for? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">
-                        You will pay for the tools directly so you own the accounts. This typically includes n8n (automation), Blotato (AI social), Claude (AI model), and VidIQ. [cite_start]The combined monthly budget is a few hundred dollars, not thousands [cite: 62-67].
-                    </div>
-                </div>
-                <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">How long does the build phase take? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">
-                        The build phase is a focused project. [cite_start]Payment is structured as 50% upfront to begin work, and 50% due when the system is complete and in use by your team [cite: 60-61].
-                    </div>
-                </div>
-                <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <div class="faq-question">Will this really help with funding? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">
-                        Yes. Government programs and foundations want to see impact. [cite_start]A channel with 13k+ subscribers and high watch time demonstrates that your educational content is actually reaching the entrepreneurs you are funded to help [cite: 78-79].
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="build-phase" class="py-24 bg-dark text-white text-center">
+    <section class="bg-[#f9f7f2] py-24 border-t border-gray-200">
         <div class="max-w-[800px] mx-auto px-6">
-            <h2 class="text-4xl font-black mb-8">Ready to Optimize Startup Junkie?</h2>
-            <p class="text-xl text-gray-300 mb-12">
-                If you want Startup Junkie's YouTube presence to match the impact you already have on the ground, the next step is simple.
-            </p>
-            
-            <a href="mailto:nicole@sociallysmashing.com?subject=Startup%20Junkie%20Distribution%20Build" class="btn-rust px-12 py-5 rounded-full font-bold text-xl inline-block shadow-2xl hover:scale-105 transition-transform">
+            <h2 class="text-4xl text-center text-[#923f26] mb-12 font-black">FAQ</h2>
+            <div class="space-y-4">
+                <div class="faq-item border-b border-gray-300 pb-4 cursor-pointer" onclick="this.classList.toggle('active')">
+                    <div class="flex justify-between font-serif text-xl font-bold">Is this a retainer? <i class="fas fa-chevron-down transition-transform"></i></div>
+                    <div class="faq-answer mt-2 text-gray-700">No. It's a one-time build. Optional maintenance is available later, but not required.</div>
+                </div>
+                <div class="faq-item border-b border-gray-300 pb-4 cursor-pointer" onclick="this.classList.toggle('active')">
+                    <div class="flex justify-between font-serif text-xl font-bold">What are the software costs? <i class="fas fa-chevron-down transition-transform"></i></div>
+                    <div class="faq-answer mt-2 text-gray-700">You pay for tools directly (n8n, Blotato, Claude, VidIQ). Approx $200/month total.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="build-phase" class="py-24 bg-[#000421] text-white text-center">
+        <div class="max-w-[800px] mx-auto px-6">
+            <h2 class="text-4xl font-black mb-6">Ready to Optimize Startup Junkie?</h2>
+            <p class="text-gray-300 mb-10 text-lg">Let's make your YouTube presence match your real-world impact.</p>
+            <a href="mailto:nicole@sociallysmashing.com?subject=Startup%20Junkie%20Distribution%20Build" class="btn-rust px-12 py-5 rounded-full font-bold text-xl inline-block shadow-2xl">
                 Let's Talk About The Build Phase
             </a>
-            <p class="mt-6 text-sm text-gray-500">No pressure. Just a conversation about distribution.</p>
         </div>
     </section>
 
-    <footer class="site-footer bg-[#000421] text-white py-[60px] font-sans border-t border-white/10">
-        <div class="max-w-[1100px] mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div>
-                    <h3 class="text-ochre text-lg uppercase mb-4 tracking-widest">Nicole Jolie</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        AI visibility and content distribution engines for service businesses and organizations.
-                    </p>
-                </div>
-
-                <div>
-                    <h3 class="text-ochre text-lg uppercase mb-4 tracking-widest">Contact</h3>
-                    <p class="text-gray-400 text-sm mb-1">nicole@sociallysmashing.com</p>
-                    <p class="text-gray-400 text-sm">Austin, TX 78701</p>
-                </div>
-
-                <div>
-                    <h3 class="text-ochre text-lg uppercase mb-4 tracking-widest">Legal</h3>
-                    <ul class="text-sm text-gray-400 space-y-2">
-                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-white transition">Disclaimer</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-white/10 mt-10 pt-6 text-xs text-gray-500">
-                <p>&copy; 2026 Nicole Jolie. All Rights Reserved. Proposal for Startup Junkie.</p>
-            </div>
-        </div>
+    <footer class="bg-[#000421] text-gray-500 py-10 text-center border-t border-white/10 text-sm">
+        <p>&copy; 2026 Nicole Jolie. Proposal for Startup Junkie.</p>
     </footer>
 
-    <script>
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-                
-                // Close all others
-                document.querySelectorAll('.faq-item').forEach(other => {
-                    other.classList.remove('active');
-                    const icon = other.querySelector('.fa-chevron-down');
-                    if(icon) icon.style.transform = 'rotate(0deg)';
-                });
-
-                // Toggle click
-                if (!isActive) {
-                    item.classList.add('active');
-                    const icon = item.querySelector('.fa-chevron-down');
-                    if(icon) icon.style.transform = 'rotate(180deg)';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
