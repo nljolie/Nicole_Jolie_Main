@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <h3>&nbsp;</h3>
                     <ul class="footer-links">
                         <li><a href="terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                        <li><a href="refund-chargeback-policy.html">Refund Policy</a></li>
                         <li><a href="earnings-disclaimer.html">Earnings Disclaimer</a></li>
                         <li><a href="affiliate-disclaimer.html">Affiliate Disclaimer</a></li>
                         <li><a href="dmca-policy.html">DMCA Policy</a></li>
