@@ -262,7 +262,112 @@
         @media (max-width: 600px) {
             .reviews-grid { grid-template-columns: 1fr; }
         }
-
+.credentials-section {
+background-color: var(--bg-cream);
+padding: 80px 0;
+border-top: 1px solid rgba(146, 63, 38, 0.2);
+}
+.credential-item {
+border-bottom: 1px solid rgba(146, 63, 38, 0.2);
+padding: 25px 0;
+}
+.credential-question {
+font-family: 'Cormorant Garamond', serif;
+font-size: 26px;
+font-weight: 700;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: #000;
+transition: color 0.3s ease;
+}
+.credential-question:hover {
+color: var(--primary-rust);
+}
+.credential-answer {
+display: none;
+margin-top: 20px;
+color: #222;
+font-weight: 500;
+}
+.credential-item.active .credential-answer {
+display: block;
+}
+.credential-item.active .credential-question i {
+transform: rotate(180deg);
+}
+.credential-question i {
+transition: transform 0.3s ease;
+color: var(--primary-rust);
+}
+.credential-card {
+background: white;
+padding: 20px 25px;
+border-radius: 12px;
+margin-bottom: 15px;
+border-left: 4px solid var(--primary-rust);
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.credential-title {
+font-weight: 700;
+color: var(--primary-rust);
+font-size: 18px;
+margin-bottom: 8px;
+}
+.credential-org {
+color: #555;
+font-size: 16px;
+margin-bottom: 6px;
+}
+.credential-id {
+font-family: 'Courier New', monospace;
+font-size: 13px;
+color: #666;
+background: #f5f5f5;
+padding: 6px 10px;
+border-radius: 6px;
+display: inline-block;
+margin-top: 8px;
+}
+.education-card {
+background: white;
+padding: 20px 25px;
+border-radius: 12px;
+margin-bottom: 15px;
+border-left: 4px solid var(--accent-ochre);
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.education-school {
+font-weight: 700;
+color: var(--primary-rust);
+font-size: 18px;
+margin-bottom: 8px;
+}
+.education-degree {
+color: #333;
+font-size: 16px;
+margin-bottom: 6px;
+}
+.education-dates {
+color: #666;
+font-size: 14px;
+font-style: italic;
+}
+@media (max-width: 768px) {
+.credential-question {
+font-size: 22px;
+}
+.credential-card,
+.education-card {
+padding: 16px 20px;
+}
+.credential-title,
+.education-school {
+font-size: 16px;
+}
+}
+        
     </style>
 </head>
 
