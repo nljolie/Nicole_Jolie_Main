@@ -15,10 +15,6 @@
     
     <link rel="icon" type="image/png" href="https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/Favicon+64x64+NJ+Site+Trust+Triang.png">
 
-    <meta name="citation_title" content="The Governance of Action: Auditing ISO/IEC 42001 and W3C Agentic Protocols">
-    <meta name="citation_author" content="Nicole Jolie">
-    <meta name="citation_publication_date" content="2025/12/21">
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -30,26 +26,14 @@
         "name": "Nicole Jolie",
         "jobTitle": "AI Authority Strategist",
         "url": "https://nicolejolie.com",
-        "sameAs": [
-          "https://www.linkedin.com/in/nicolejolie/",
-          "https://nicolejolie.com/robots.txt"
-        ]
+        "sameAs": ["https://www.linkedin.com/in/nicolejolie/", "https://nicolejolie.com/robots.txt"]
       },
       "publisher": {
         "@type": "Organization",
         "name": "Be Socially Smashing, LLC",
         "url": "https://nicolejolie.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/TT+200x200+Dark+Background.png"
-        },
-        "sameAs": [
-          "https://nicolejolie.com/sitemap.xml"
-        ]
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://nicolejolie.com/publications/fulfillment-governance-audit.html"
+        "logo": { "@type": "ImageObject", "url": "https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/TT+200x200+Dark+Background.png" },
+        "sameAs": ["https://nicolejolie.com/sitemap.xml"]
       }
     }
     </script>
@@ -63,51 +47,25 @@
             --bg-light: #f8f9fa;
         }
 
-        body { 
-            font-family: 'Georgia', serif; 
-            line-height: 1.8; 
-            color: var(--text-dark); 
-            background: var(--bg-light); 
-            margin: 0; 
-            padding: 0; 
-        }
+        body { font-family: 'Georgia', serif; line-height: 1.8; color: var(--text-dark); background: var(--bg-light); margin: 0; padding: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-        .blog-header { 
-            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--forest-green) 100%); 
-            color: white; 
-            padding: 8rem 0 3rem; 
-            text-align: center; 
-        }
-
-        .blog-header h1 { font-size: 3.5rem; color: var(--accent-gold); margin-bottom: 1rem; }
-
-        .blog-card { 
-            background: white; 
-            border-radius: 15px; 
-            padding: 4rem; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            margin: -60px auto 60px; 
-            max-width: 950px; 
-            position: relative; 
-            z-index: 10; 
-        }
-
-        .author-line { 
-            font-family: 'Inter', sans-serif; 
-            font-size: 1.1rem; 
-            font-weight: 800; 
-            color: var(--primary-navy); 
-            border-bottom: 3px solid var(--accent-gold); 
-            display: inline-block; 
-            margin-bottom: 2rem; 
-            text-transform: uppercase; 
-        }
-
-        h2 { color: var(--primary-navy); margin-top: 3rem; font-size: 2.2rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+        .blog-header { background: linear-gradient(135deg, var(--primary-navy) 0%, var(--forest-green) 100%); color: white; padding: 8rem 0 3rem; text-align: center; }
         
-        p { font-size: 1.25rem; margin-bottom: 1.8rem; text-align: left !important; }
+        /* Fixed H1 size and Mobile responsiveness */
+        .blog-header h1 { font-size: 3.5rem; color: var(--accent-gold); margin-bottom: 1rem; line-height: 1.2; }
+        @media (max-width: 768px) { .blog-header h1 { font-size: 2.2rem; padding: 0 10px; } .blog-header { padding: 6rem 0 2rem; } }
+
+        .blog-card { background: white; border-radius: 15px; padding: 4rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: -60px auto 60px; max-width: 950px; position: relative; z-index: 10; width: calc(100% - 40px); }
+        @media (max-width: 768px) { .blog-card { padding: 2rem 1.5rem; margin-top: -40px; } }
+
+        .author-line { font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--primary-navy); border-bottom: 3px solid var(--accent-gold); display: inline-block; margin-bottom: 2rem; text-transform: uppercase; }
+        
+        h2 { color: var(--primary-navy); margin-top: 3rem; font-size: 2.2rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; line-height: 1.3; }
+        @media (max-width: 768px) { h2 { font-size: 1.8rem; } }
+        
+        /* Fixed spacing between paragraphs */
+        p { font-size: 1.25rem; margin-bottom: 1.8rem !important; text-align: left !important; }
 
         .ref-section { margin-top: 60px; padding-top: 30px; border-top: 2px solid var(--primary-navy); }
         .ref-section ul { list-style: none; padding: 0; }
@@ -124,7 +82,7 @@
 <header class="blog-header">
     <div class="container">
         <h1>The Governance of Action</h1>
-        <p>Technical Standards of the Sovereign Execution Layer</p>
+        <p style="text-align: center !important;">Technical Standards of the Sovereign Execution Layer</p>
     </div>
 </header>
 
