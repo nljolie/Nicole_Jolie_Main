@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 <div class="footer-col">
                     <h3 style="color: var(--primary-rust);">CONTACT</h3>
-                    <p style="color: var(--bg-ivory); margin-top: 10px;">nicole@sociallysmashing.com</p>
+                    <p style="color: var(--bg-ivory); margin-top: 10px;">nicole@nicolejolie.com</p>
                     <p style="color: var(--bg-ivory);">Austin, TX 78701</p>
                 </div>
 
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
 
             <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: left; font-size: 12px; color: rgba(255,255,255,0.5);">
-                <p>&copy; 2025 Nicole Jolie. All Rights Reserved.</p>
+                <p>&copy; 2025 Be Socially Smashing, LLC. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
