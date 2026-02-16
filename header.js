@@ -8,10 +8,15 @@ document.addEventListener("DOMContentLoaded", function() {
             <nav>
                 <ul class="nav-links">
                     <li><a href="/publications/index.html">Publications</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><button class="btn-primary" onclick="openModal()" style="padding: 8px 16px; font-size: 12px;">Get Your Audit</button></li>
-                </ul>
+                    <li><a href="/#faq-section">FAQ</a></li>
+                    <li><a href="/#about-nicole">About</a></li>
+   <li>
+    <a href="https://nicolejolie.com/work_with_nicole.html" style="text-decoration: none;">
+        <button class="btn-primary" style="padding: 8px 16px; font-size: 12px; cursor: pointer;">
+            Work With Nicole
+        </button>
+    </a>
+</li>
             </nav>
         </div>
     </header>
