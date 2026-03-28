@@ -534,44 +534,50 @@
 </head>
 
 <body class="antialiased pb-24">
+<!-- HEADER — inline HTML for AI/LLM crawlability — do not replace with header.js reference -->
+<header style="background-color: #000421; padding: 20px 0; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;">
+  <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
 
-    <!-- NAVIGATION -->
-    <nav class="glass-nav fixed top-0 w-full z-50 h-20 flex items-center">
-        <div class="max-w-[1100px] mx-auto px-6 w-full flex justify-between items-center">
-            <div class="text-xl font-black tracking-tighter uppercase text-black">Nicole Jolie</div>
-            <div class="hidden md:flex items-center gap-6">
-                <a href="#about-nicole" class="text-sm font-semibold text-gray-700 hover:text-[var(--primary-rust)] transition-colors">About</a>
-                <a href="#how-ai-affects-you" class="text-sm font-semibold text-gray-700 hover:text-[var(--primary-rust)] transition-colors">Why This Matters</a>
-                <a href="#faq-section" class="text-sm font-semibold text-gray-700 hover:text-[var(--primary-rust)] transition-colors">FAQ</a>
-                <a href="https://nicolejolie.com/work_with_nicole.html" class="bg-[var(--primary-rust)] text-white px-6 py-3 rounded-full text-base font-bold hover:bg-[#7a3320] transition-colors">
-                    Work With Nicole
-                </a>
-            </div>
-        </div>
+    <!-- LOGO -->
+    <a href="/index.html" style="color: white; text-decoration: none; font-weight: 900; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 18px; letter-spacing: 1px; text-transform: uppercase;">
+      Nicole Jolie
+    </a>
+
+    <!-- NAV -->
+    <nav>
+      <ul style="list-style: none; display: flex; gap: 24px; align-items: center; margin: 0; padding: 0;">
+        <li>
+          <a href="/#how-ai-affects-you" style="color: white; text-decoration: none; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; font-weight: 600;">
+            AI Biz Affects
+          </a>
+        </li>
+        <li>
+          <a href="/checklist_47.html" style="color: white; text-decoration: none; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; font-weight: 600;">
+            Free AI List
+          </a>
+        </li>
+        <li>
+          <a href="/publications/index.html" style="color: white; text-decoration: none; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; font-weight: 600;">
+            Publications
+          </a>
+        </li>
+        <li>
+          <a href="/work_with_nicole.html" style="display: inline-block; background-color: #923f26; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 50px; font-weight: 700; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; text-decoration: none;">
+            Work With Nicole
+          </a>
+        </li>
+      </ul>
     </nav>
 
+  </div>
+</header>
+
+<!-- SPACER — pushes page content below fixed header -->
+<div style="height: 72px;"></div>
+
+    <!-- NAVIGATION -->
+
     <!-- HERO -->
-    <header class="relative pt-40 pb-20 px-6 min-h-[85vh] flex items-center justify-center bg-cover bg-center" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/nicole+at+computer+in+cafe.png');">
-        <div class="max-w-[1100px] mx-auto w-full text-center text-white">
-            <div class="inline-block px-4 py-2 mb-6 border-2 border-white rounded-full bg-black/40 backdrop-blur-md text-sm font-bold uppercase tracking-widest shadow-lg">
-                Cross Platform AI Authority Reports
-            </div>
-            <div class="typing-container mb-8">
-                <h1 class="text-4xl md:text-7xl leading-tight font-black drop-shadow-lg">
-                    <span id="typewriter-text"></span><span class="typing-cursor"></span>
-                </h1>
-            </div>
-            <p class="text-xl md:text-2xl text-white max-w-3xl mx-auto mb-6 leading-relaxed font-semibold drop-shadow-md">
-                AI systems are deciding who gets recommended to investors, partners, and customers. Most organizations assume they are visible. Most are structurally invisible.
-            </p>
-            <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-12 leading-relaxed drop-shadow-md">
-                I conduct Cross Platform AI Authority Reports that diagnose how ChatGPT, Claude, Gemini, Perplexity, and Manus currently evaluate your organization. The Trust Triangle Framework shows exactly where authority signals break and what needs to change.
-            </p>
-            <a href="https://nicolejolie.com/work_with_nicole.html" class="inline-block bg-[var(--primary-rust)] text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-[#7a3320] shadow-2xl hover:scale-105 transition-transform">
-                Work With Nicole
-            </a>
-        </div>
-    </header>
 
     <!-- LISTED vs RECOMMENDED -->
     <section class="py-24 bg-white border-b border-gray-200">
