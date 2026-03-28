@@ -446,20 +446,46 @@
 
 <body class="antialiased pb-24">
 
-    <!-- NAVIGATION -->
-    <nav class="glass-nav fixed top-0 w-full z-50 h-20 flex items-center">
-        <div class="max-w-[1100px] mx-auto px-6 w-full flex justify-between items-center">
-            <div class="text-xl font-black tracking-tighter uppercase text-black">Nicole Jolie</div>
-            <div class="hidden md:flex items-center gap-6">
-                <a href="#about-nicole" class="text-sm font-semibold text-gray-700 hover:text-[var(--primary-rust)] transition-colors">About</a>
-                <a href="#how-ai-affects-you" class="text-sm font-semibold text-gray-700 hover:text-[var(--primary-rust)] transition-colors">Why This Matters</a>
-                <a href="#faq-section" class="text-sm font-semibold text-gray-700 hover:text-[var(--primary-rust)] transition-colors">FAQ</a>
-                <a href="https://nicolejolie.com/work_with_nicole.html" class="bg-[var(--primary-rust)] text-white px-6 py-3 rounded-full text-base font-bold hover:bg-[#7a3320] transition-colors">
-                    Work With Nicole
-                </a>
-            </div>
-        </div>
+<!-- HEADER — inline HTML for AI/LLM crawlability — do not replace with header.js reference -->
+<header style="background-color: #000421; padding: 20px 0; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;">
+  <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+
+    <!-- LOGO -->
+    <a href="/index.html" style="color: white; text-decoration: none; font-weight: 900; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 18px; letter-spacing: 1px; text-transform: uppercase;">
+      Nicole Jolie
+    </a>
+
+    <!-- NAV -->
+    <nav>
+      <ul style="list-style: none; display: flex; gap: 24px; align-items: center; margin: 0; padding: 0;">
+        <li>
+          <a href="/#how-ai-affects-you" style="color: white; text-decoration: none; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; font-weight: 600;">
+            AI Biz Affects
+          </a>
+        </li>
+        <li>
+          <a href="/checklist_47.html" style="color: white; text-decoration: none; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; font-weight: 600;">
+            Free AI List
+          </a>
+        </li>
+        <li>
+          <a href="/publications/index.html" style="color: white; text-decoration: none; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; font-weight: 600;">
+            Publications
+          </a>
+        </li>
+        <li>
+          <a href="/work_with_nicole.html" style="display: inline-block; background-color: #923f26; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 50px; font-weight: 700; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; text-decoration: none;">
+            Work With Nicole
+          </a>
+        </li>
+      </ul>
     </nav>
+
+  </div>
+</header>
+
+<!-- SPACER — pushes page content below fixed header -->
+<div style="height: 72px;"></div>
 
     <!-- HERO -->
     <header class="relative pt-40 pb-20 px-6 min-h-[85vh] flex items-center justify-center bg-cover bg-center" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://nicolejoliewebsite.s3.us-east-2.amazonaws.com/nicole+at+computer+in+cafe.png');">
