@@ -30,6 +30,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '1982838');
+    </script>
+    <!-- End MailerLite Universal -->
+
    <!-- SITEWIDE GRAPH — copy this block to every page on nicolejolie.com -->
   <script type="application/ld+json">
   {
@@ -506,9 +516,9 @@
             <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-12 leading-relaxed drop-shadow-md">
                 I conduct Cross Platform AI Authority Reports that diagnose how ChatGPT, Claude, Gemini, Perplexity, and Manus currently evaluate your organization. The Trust Triangle Framework shows exactly where authority signals break and what needs to change.
             </p>
-            <a href="https://nicolejolie.com/work_with_nicole.html" class="inline-block bg-[var(--primary-rust)] text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-[#7a3320] shadow-2xl hover:scale-105 transition-transform">
-                Work With Nicole
-            </a>
+            <button class="ml-onclick-form inline-block bg-[var(--primary-rust)] text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-[#7a3320] shadow-2xl hover:scale-105 transition-transform" onclick="ml('show', 'd4A7QP', true)">
+                Get Your AI Checklist
+            </button>
         </div>
     </header>
 
@@ -1023,9 +1033,10 @@
 
 <script>
   const phrases = [
-    "Is AI Recommending You?",
-    "Or Your Competitor?",
-    "Find Out With an AI Authority Report."
+    "Right Now, Someone Is Asking AI Who to Trust.",
+    "AI Just Gave Them One Name.",
+    "Was It Yours?",
+    "Get Your Free 47-Point AI Checklist ↓"
   ];
   let phraseIndex = 0;
   let charIndex = 0;
