@@ -1021,5 +1021,40 @@
         });
     </script>
 
+<script>
+  const phrases = [
+    "Is AI Recommending You?",
+    "Or Your Competitor?",
+    "Find Out With an AI Authority Report."
+  ];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+  const el = document.getElementById('typewriter-text');
+
+  function type() {
+    const current = phrases[phraseIndex];
+    if (!deleting) {
+      el.textContent = current.substring(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === current.length) {
+        deleting = true;
+        setTimeout(type, 2000);
+        return;
+      }
+    } else {
+      el.textContent = current.substring(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+    }
+    setTimeout(type, deleting ? 50 : 80);
+  }
+
+  document.addEventListener('DOMContentLoaded', type);
+</script>
+
 </body>
 </html>
